@@ -2,9 +2,453 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Poker Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evolve Poker Academy — Devenez un meilleur joueur de poker</title>
+  <meta name="description" content="Evolve Poker Academy est l'application mobile qui vous guide des bases jusqu'aux stratégies avancées. Leçons interactives, mathématiques, psychologie et les légendes du poker.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Evolve Poker Academy">
+  <meta property="og:description" content="Maîtrisez le poker avec des leçons structurées, de la stratégie et du mindset.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leaked-pok.github.io/evolve-web/">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Bientôt disponible</h1>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <header class="nav">
+    <div class="container">
+      <nav class="nav__inner">
+
+        <!-- Logo -->
+        <a href="/" class="nav__logo">
+          <img src="assets/images/logo.png" alt="Evolve Poker" class="nav__logo-img">
+        </a>
+
+        <!-- Liens centraux -->
+        <ul class="nav__links">
+
+          <!-- Apps (dropdown) -->
+          <li class="nav__item">
+            <button class="nav__link">
+              Apps <span class="nav__link-arrow">▾</span>
+            </button>
+            <div class="nav__dropdown">
+              <a href="#" class="nav__dropdown-store">
+                <div class="nav__dropdown-store__icon">&#xF8FF;</div>
+                <div class="nav__dropdown-store__text">
+                  <span class="nav__dropdown-store__sub">Télécharger sur l'</span>
+                  <span class="nav__dropdown-store__name">App Store</span>
+                </div>
+              </a>
+              <div class="nav__dropdown-divider"></div>
+              <a href="#" class="nav__dropdown-store">
+                <div class="nav__dropdown-store__icon">▶</div>
+                <div class="nav__dropdown-store__text">
+                  <span class="nav__dropdown-store__sub">Disponible sur</span>
+                  <span class="nav__dropdown-store__name">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <li class="nav__item">
+            <a href="pages/academy/academy.html" class="nav__link">Academy</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="pages/features/features.html" class="nav__link">Fonctionnalités</a>
+          </li>
+
+
+          <li class="nav__item">
+            <a href="pages/next/lasuite.html" class="nav__link">La suite</a>
+          </li>
+          <li class="nav__item">
+            <a href="pages/contact/contact.html" class="nav__link">Contact</a>
+          </li>
+
+        </ul>
+
+        <!-- Globe langue -->
+        <div class="nav__actions">
+          <div class="nav__item">
+            <button class="nav__globe-btn" aria-label="Changer de langue">🌐</button>
+            <div class="nav__dropdown nav__dropdown--right">
+              <button class="nav__dropdown-lang nav__dropdown-lang--active">
+                <span class="nav__dropdown-lang__flag">🇫🇷</span> Français
+              </button>
+              <button class="nav__dropdown-lang">
+                <span class="nav__dropdown-lang__flag">🇬🇧</span> English
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════ -->
+    <section class="hero glow-bg">
+      <div class="hero__bg">
+        <div class="hero__bg-gradient"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero__content">
+
+          <h1 class="heading-display hero__title">
+            Devenez un joueur<br>
+            <span class="text-gradient">redoutable</span>
+          </h1>
+
+          <p class="hero__subtitle">
+            Evolve Poker Academy transforme la façon dont vous apprenez le poker.
+            Des bases aux stratégies avancées, apprenez à votre rythme avec des leçons
+            structurées et interactives.
+          </p>
+
+          <div class="hero__actions" id="download">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         STATS BAND
+    ════════════════════════════════════════════ -->
+    <div class="stats-band">
+      <div class="container">
+        <div class="stats-band__inner">
+          <div class="stat-item">
+            <span class="stat-item__value">400+</span>
+            <span class="stat-item__label">Leçons</span>
+          </div>
+          <div class="stat-item__sep"></div>
+          <div class="stat-item">
+            <span class="stat-item__value">5+</span>
+            <span class="stat-item__label">Fonctionnalités</span>
+          </div>
+          <div class="stat-item__sep"></div>
+          <div class="stat-item">
+            <span class="stat-item__value">Gratuit</span>
+            <span class="stat-item__label">Pour toujours</span>
+          </div>
+          <div class="stat-item__sep"></div>
+          <div class="stat-item">
+            <span class="stat-item__value">Android</span>
+            <span class="stat-item__label">Disponible sur</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         FEATURES
+    ════════════════════════════════════════════ -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="label-overline">Pourquoi Evolve</span>
+          <h2 class="heading-section">Tout ce qu'il faut pour progresser</h2>
+          <p>Une approche pédagogique complète, du débutant au joueur confirmé.</p>
+        </div>
+
+        <div class="features-grid">
+
+          <!-- Academy — colonne gauche, 2 rangées -->
+          <div class="feature-card feature-card--academy">
+            <div class="feature-card__illus">
+              <span class="feature-card__illus-label">Illustration</span>
+            </div>
+            <div class="feature-card__body">
+              <h3 class="feature-card__title">Academy</h3>
+              <div class="feature-card__expand">
+                <div class="feature-card__expand-inner">
+                  <p class="feature-card__desc">Des centaines de leçons structurées pour apprendre le poker de A à Z, du débutant au joueur avancé.</p>
+                  <a href="academy/" class="btn btn--primary btn--sm">Découvrir</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ranges -->
+          <div class="feature-card">
+            <div class="feature-card__illus">
+              <span class="feature-card__illus-label">Illustration</span>
+            </div>
+            <div class="feature-card__body">
+              <h3 class="feature-card__title">Ranges</h3>
+              <div class="feature-card__expand">
+                <div class="feature-card__expand-inner">
+                  <p class="feature-card__desc">Visualisez et maîtrisez les ranges de mises préflop et postflop pour chaque position.</p>
+                  <a href="pages/features/features.html" class="btn btn--primary btn--sm">En savoir plus</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mains -->
+          <div class="feature-card">
+            <div class="feature-card__illus">
+              <span class="feature-card__illus-label">Illustration</span>
+            </div>
+            <div class="feature-card__body">
+              <h3 class="feature-card__title">Mains</h3>
+              <div class="feature-card__expand">
+                <div class="feature-card__expand-inner">
+                  <p class="feature-card__desc">Enregistrez et rejouez vos mains pour analyser vos décisions et progresser rapidement.</p>
+                  <a href="pages/features/features.html" class="btn btn--primary btn--sm">En savoir plus</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendrier -->
+          <div class="feature-card">
+            <div class="feature-card__illus">
+              <span class="feature-card__illus-label">Illustration</span>
+            </div>
+            <div class="feature-card__body">
+              <h3 class="feature-card__title">Calendrier</h3>
+              <div class="feature-card__expand">
+                <div class="feature-card__expand-inner">
+                  <p class="feature-card__desc">Suivez les tournois à venir, planifiez vos sessions et ne manquez plus aucune opportunité.</p>
+                  <a href="pages/features/features.html" class="btn btn--primary btn--sm">En savoir plus</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Classement -->
+          <div class="feature-card">
+            <div class="feature-card__illus">
+              <span class="feature-card__illus-label">Illustration</span>
+            </div>
+            <div class="feature-card__body">
+              <h3 class="feature-card__title">Classement</h3>
+              <div class="feature-card__expand">
+                <div class="feature-card__expand-inner">
+                  <p class="feature-card__desc">Mesurez-vous aux autres joueurs, grimpez dans les classements et suivez votre évolution.</p>
+                  <a href="pages/features/features.html" class="btn btn--primary btn--sm">En savoir plus</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ACADEMY TEASER
+    ════════════════════════════════════════════ -->
+    <section class="section section--academy" id="academy">
+      <div class="container">
+        <div class="academy-teaser">
+
+          <div class="academy-teaser__text">
+            <span class="label-overline">Academy</span>
+            <h2 class="heading-section mt-4">
+              Un curriculum<br>complet et structuré
+            </h2>
+            <p class="mt-6">
+              Chaque catégorie est divisée en modules progressifs. Vous avancez
+              étape par étape, en construisant vos connaissances sur des bases solides.
+            </p>
+            <p class="mt-4">
+              Parcourez le catalogue librement — les leçons complètes sont disponibles
+              dans l'application.
+            </p>
+            <div class="academy-teaser__actions mt-8">
+              <a href="academy/" class="btn btn--primary btn--lg">Voir le catalogue</a>
+              <a href="#download" class="btn btn--secondary btn--lg">Télécharger l'app</a>
+            </div>
+          </div>
+
+          <div class="academy-teaser__preview">
+            <div class="academy-teaser__illus">
+              <span class="academy-teaser__illus-label">Illustration</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LA SUITE
+    ════════════════════════════════════════════ -->
+    <section class="section section--sm">
+      <div class="container">
+        <div class="section-header">
+          <span class="label-overline">Encore plus</span>
+          <h2 class="heading-section">La suite</h2>
+          <p>Des fonctionnalités pensées pour jouer, analyser et progresser ensemble.</p>
+        </div>
+
+        <div class="la-suite-grid">
+
+          <!-- Jeux -->
+          <a href="pages/next/lasuite.html" class="la-suite-card">
+            <span class="la-suite-card__icon">🎮</span>
+            <p class="la-suite-card__title">Jeux</p>
+            <p class="la-suite-card__desc">Mettez vos connaissances à l'épreuve avec des exercices interactifs et des mains à analyser.</p>
+            <span class="la-suite-card__arrow">En savoir plus →</span>
+          </a>
+
+          <!-- Analyse -->
+          <a href="pages/next/lasuite.html" class="la-suite-card">
+            <span class="la-suite-card__icon">📊</span>
+            <p class="la-suite-card__title">Analyse</p>
+            <p class="la-suite-card__desc">Rejouez vos sessions, identifiez vos erreurs et progressez grâce à des outils d'analyse intégrés.</p>
+            <span class="la-suite-card__arrow">En savoir plus →</span>
+          </a>
+
+          <!-- Communauté -->
+          <a href="pages/next/lasuite.html" class="la-suite-card">
+            <span class="la-suite-card__icon">👥</span>
+            <p class="la-suite-card__title">Communauté</p>
+            <p class="la-suite-card__desc">Rejoignez des milliers de joueurs, partagez vos mains et progressez ensemble.</p>
+            <span class="la-suite-card__arrow">En savoir plus →</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         DOWNLOAD CTA
+    ════════════════════════════════════════════ -->
+    <section class="section cta-section glow-bg">
+      <div class="container">
+        <div class="cta-section__inner">
+          <div class="cta-section__content">
+            <span class="label-overline">Prêt à progresser ?</span>
+            <h2 class="heading-section mt-4">Commencez gratuitement</h2>
+            <p class="mt-4">
+              Téléchargez Evolve Poker Academy et accédez à des dizaines de leçons
+              pour transformer votre jeu.
+            </p>
+          </div>
+          <div class="cta-section__stores">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT BAND
+    ════════════════════════════════════════════ -->
+    <div class="contact-band">
+      <div class="container">
+        <div class="contact-band__inner">
+          <div class="contact-band__text">
+            <h2>Vous voulez nous aider<br>ou nous contacter ?</h2>
+            <p>Des questions, des retours, ou envie de contribuer ? Notre équipe est à l'écoute.</p>
+          </div>
+          <a href="pages/contact/contact.html" class="btn btn--lg">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="/">
+            <img src="assets/images/logo.png" alt="Evolve Poker" class="footer__logo-img">
+          </a>
+          <p>L'application mobile pour apprendre le poker de façon structurée et progressive.</p>
+          <div class="footer__social">
+            <!-- Instagram -->
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="#" class="footer__social-link" aria-label="X (Twitter)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" class="footer__social-link" aria-label="TikTok">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.02-.08z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <ul class="footer__links">
+            <li><a href="pages/academy/academy.html" class="footer__link">Academy</a></li>
+            <li><a href="pages/features/features.html" class="footer__link">Fonctionnalités</a></li>
+            <li><a href="pages/next/lasuite.html" class="footer__link">La suite</a></li>
+            <li><a href="pages/contact/contact.html" class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Evolve Poker Academy. Tous droits réservés.</p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Politique de confidentialité</a>
+          <a href="#" class="footer__legal-link">Conditions d'utilisation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
