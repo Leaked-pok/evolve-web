@@ -170,27 +170,37 @@
       {
         "overline": "Leçons",
         "title": "Apprenez le poker comme il devrait être enseigné",
-        "desc": "Pas de vidéos interminables, pas de contenu dilué. Evolve Poker vous propose des leçons structurées, pensées pour aller droit au but et construire vos connaissances sur des bases solides. Des règles fondamentales aux spots les plus complexes — chaque module avance étape par étape, sans jamais brûler les étapes."
+        "desc": "Pas de vidéos interminables, pas de contenu dilué. Evolve Poker vous propose des leçons structurées, pensées pour aller droit au but et construire vos connaissances sur des bases solides. Des règles fondamentales aux spots les plus complexes — chaque module avance étape par étape, sans jamais brûler les étapes.",
+        "link": "/pages/academy/academies.html",
+        "cta": "Découvrir les modules →"
       },
       {
         "overline": "Ranges",
         "title": "Maîtrisez les ranges, maîtrisez le jeu",
-        "desc": "Comprendre pourquoi certaines mains se jouent et d'autres non, c'est ce qui sépare un joueur instinctif d'un joueur solide. Evolve Poker vous donne les outils pour ça : visualisez les ranges pour chaque position, créez et sauvegardez vos propres grilles, et suivez votre progression dans leur maîtrise. De la consultation à la création — tout ce qu'il faut pour intégrer les ranges pour de bon."
+        "desc": "Comprendre pourquoi certaines mains se jouent et d'autres non, c'est ce qui sépare un joueur instinctif d'un joueur solide. Evolve Poker vous donne les outils pour ça : visualisez les ranges pour chaque position, créez et sauvegardez vos propres grilles, et suivez votre progression dans leur maîtrise. De la consultation à la création — tout ce qu'il faut pour intégrer les ranges pour de bon.",
+        "link": "/pages/features/ranges.html",
+        "cta": "Découvrir →"
       },
       {
         "overline": "Calendrier",
         "title": "Ne manquez plus jamais un tournoi",
-        "desc": "Live ou online, en France ou à l'international — Evolve Poker centralise tous les tournois qui comptent dans un calendrier clair et toujours à jour. WSOP, EPT, WPT côté live ; WCOOP, SCOOP et les grandes Series online côté virtuel. Dates, formats, buy-ins : tout ce qu'il faut pour planifier votre année poker sans passer des heures à chercher l'information sur dix sites différents."
+        "desc": "Live ou online, en France ou à l'international — Evolve Poker centralise tous les tournois qui comptent dans un calendrier clair et toujours à jour. WSOP, EPT, WPT côté live ; WCOOP, SCOOP et les grandes Series online côté virtuel. Dates, formats, buy-ins : tout ce qu'il faut pour planifier votre année poker sans passer des heures à chercher l'information sur dix sites différents.",
+        "link": "/pages/features/calendrier.html",
+        "cta": "Découvrir →"
       },
       {
         "overline": "News",
         "title": "Restez dans la boucle, sans effort",
-        "desc": "Le monde du poker bouge vite — nouveaux tournois, résultats marquants, évolutions réglementaires, tendances stratégiques. Evolve Poker vous donne accès à une sélection d'actualités pertinentes, directement dans l'application. Restez informé sans avoir à jongler entre dix sources différentes."
+        "desc": "Le monde du poker bouge vite — nouveaux tournois, résultats marquants, évolutions réglementaires, tendances stratégiques. Evolve Poker vous donne accès à une sélection d'actualités pertinentes, directement dans l'application. Restez informé sans avoir à jongler entre dix sources différentes.",
+        "link": "/pages/features/news.html",
+        "cta": "Découvrir →"
       },
       {
         "overline": "Mains",
         "title": "Notez vos mains, rejouez-les, progressez",
-        "desc": "Un spot difficile, une décision douteuse, une main que vous n'êtes pas sûr d'avoir bien jouée — notez-la en quelques secondes dans Evolve Poker pendant que c'est frais. Retrouvez-la plus tard, analysez-la à tête reposée et identifiez exactement où votre jeu peut progresser. C'est le genre de travail qui fait la différence sur le long terme."
+        "desc": "Un spot difficile, une décision douteuse, une main que vous n'êtes pas sûr d'avoir bien jouée — notez-la en quelques secondes dans Evolve Poker pendant que c'est frais. Retrouvez-la plus tard, analysez-la à tête reposée et identifiez exactement où votre jeu peut progresser. C'est le genre de travail qui fait la différence sur le long terme.",
+        "link": "/pages/features/mains.html",
+        "cta": "Découvrir →"
       }
     ],
     "cta_overline": "Le niveau supérieur vous attend",
@@ -207,22 +217,223 @@
       {
         "overline": "Jeux",
         "title": "Mettez vos connaissances sous pression",
-        "desc": "Des mini-jeux et quiz interactifs conçus pour ancrer les concepts que vous venez d'apprendre. Ranges à compléter, mains à résoudre, situations à trancher en temps réel — chaque exercice est une répétition déguisée en défi. Et parce que la compétition est le meilleur moteur de progression, des classements vous permettront de vous mesurer à la communauté et de grimper dans les rangs. C'est comme ça qu'on passe de 'je comprends' à 'je joue bien'."
+        "desc": "Des mini-jeux et quiz interactifs conçus pour ancrer les concepts que vous venez d'apprendre. Ranges à compléter, mains à résoudre, situations à trancher en temps réel — chaque exercice est une répétition déguisée en défi. Et parce que la compétition est le meilleur moteur de progression, des classements vous permettront de vous mesurer à la communauté et de grimper dans les rangs. C'est comme ça qu'on passe de 'je comprends' à 'je joue bien'.",
+        "link": "/pages/lasuite/detail.html"
       },
       {
         "overline": "Analyse",
         "title": "Vos mains sont votre meilleur manuel",
-        "desc": "Les joueurs qui progressent le plus vite ne sont pas ceux qui jouent le plus — ce sont ceux qui analysent le mieux. Importez vos mains, identifiez les spots où vous perdez de la valeur et repérez vos patterns d'erreurs. Et bientôt, une analyse propulsée par l'IA vous donnera des retours précis, personnalisés et instantanés sur chaque décision — comme avoir un coach dans la poche."
+        "desc": "Les joueurs qui progressent le plus vite ne sont pas ceux qui jouent le plus — ce sont ceux qui analysent le mieux. Importez vos mains, identifiez les spots où vous perdez de la valeur et repérez vos patterns d'erreurs. Et bientôt, une analyse propulsée par l'IA vous donnera des retours précis, personnalisés et instantanés sur chaque décision — comme avoir un coach dans la poche.",
+        "link": "/pages/lasuite/detail.html"
       },
       {
         "overline": "Communauté",
         "title": "Progressez entouré de joueurs qui vous ressemblent",
-        "desc": "Rejoignez une communauté de joueurs qui partagent le même objectif : progresser vraiment. Soumettez vos mains au débat, confrontez vos lectures à celles des autres, posez vos questions sans jugement. Les meilleures prises de conscience viennent souvent d'un angle que vous n'aviez pas considéré — et c'est exactement ce que la communauté vous apporte."
+        "desc": "Rejoignez une communauté de joueurs qui partagent le même objectif : progresser vraiment. Soumettez vos mains au débat, confrontez vos lectures à celles des autres, posez vos questions sans jugement. Les meilleures prises de conscience viennent souvent d'un angle que vous n'aviez pas considéré — et c'est exactement ce que la communauté vous apporte.",
+        "link": "/pages/lasuite/detail.html"
       }
     ],
     "cta_overline": "Le niveau supérieur vous attend",
     "cta_title": "Commencez gratuitement",
     "cta_desc": "Des centaines de leçons structurées, la visualisation des ranges, le calendrier des tournois, les dernières news du monde du poker et la notation rapide de vos mains — tout ça dans une seule application, disponible gratuitement sur Android dès aujourd'hui."
+  },
+  "feature_lecons": {
+    "meta_title": "Leçons — Evolve Poker",
+    "meta_desc": "Découvrez en détail la fonctionnalité Leçons d'Evolve Poker : contenu structuré, progression par niveaux et apprentissage mobile.",
+    "hero_title": "Leçons",
+    "hero_gradient": "Apprendre autrement",
+    "hero_desc": "[Placeholder — accroche principale de la page Leçons]",
+    "back_link": "/pages/features/features.html",
+    "back_label": "← Retour aux fonctionnalités",
+    "sections": [
+      {
+        "overline": "Le concept",
+        "title": "[Placeholder — titre section 1]",
+        "desc": "[Placeholder — description détaillée du concept des leçons : structure, format, durée, progression...]"
+      },
+      {
+        "overline": "Comment ça marche",
+        "title": "[Placeholder — titre section 2]",
+        "desc": "[Placeholder — explication du fonctionnement : modules, niveaux, suivi de progression, reprise où on s'est arrêté...]"
+      },
+      {
+        "overline": "Pourquoi c'est efficace",
+        "title": "[Placeholder — titre section 3]",
+        "desc": "[Placeholder — argumentaire pédagogique : leçons courtes, dense, directement applicable à la table...]"
+      },
+      {
+        "overline": "Ce que vous allez apprendre",
+        "title": "[Placeholder — titre section 4]",
+        "desc": "[Placeholder — liste des thématiques couvertes : bases, stratégie, maths, psychologie, légendes...]"
+      }
+    ],
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "[Placeholder — phrase d'accroche finale invitant au téléchargement]"
+  },
+  "feature_ranges": {
+    "meta_title": "Ranges — Evolve Poker",
+    "meta_desc": "Maîtrisez les ranges préflop et postflop avec l'outil de visualisation Evolve Poker.",
+    "hero_title": "Ranges",
+    "hero_gradient": "Maîtriser chaque position",
+    "hero_desc": "[Placeholder — accroche principale de la page Ranges]",
+    "back_link": "/pages/features/features.html",
+    "back_label": "← Retour aux fonctionnalités",
+    "sections": [
+      {
+        "overline": "Le concept",
+        "title": "[Placeholder — titre section 1]",
+        "desc": "[Placeholder — qu'est-ce qu'un range, pourquoi c'est fondamental au poker moderne...]"
+      },
+      {
+        "overline": "L'outil de visualisation",
+        "title": "[Placeholder — titre section 2]",
+        "desc": "[Placeholder — comment fonctionne la grille de ranges, positions, couleurs, lecture...]"
+      },
+      {
+        "overline": "Créez vos propres ranges",
+        "title": "[Placeholder — titre section 3]",
+        "desc": "[Placeholder — fonctionnalité de création et sauvegarde de ranges personnalisés...]"
+      },
+      {
+        "overline": "Progressez dans la maîtrise",
+        "title": "[Placeholder — titre section 4]",
+        "desc": "[Placeholder — suivi de progression dans la mémorisation des ranges, exercices associés...]"
+      }
+    ],
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "[Placeholder — phrase d'accroche finale invitant au téléchargement]"
+  },
+  "feature_calendrier": {
+    "meta_title": "Calendrier — Evolve Poker",
+    "meta_desc": "Retrouvez tous les tournois live et online dans le calendrier centralisé d'Evolve Poker.",
+    "hero_title": "Calendrier",
+    "hero_gradient": "Tous les tournois, au même endroit",
+    "hero_desc": "[Placeholder — accroche principale de la page Calendrier]",
+    "back_link": "/pages/features/features.html",
+    "back_label": "← Retour aux fonctionnalités",
+    "sections": [
+      {
+        "overline": "Le concept",
+        "title": "[Placeholder — titre section 1]",
+        "desc": "[Placeholder — pourquoi un calendrier centralisé, le problème qu'il résout...]"
+      },
+      {
+        "overline": "Tournois live",
+        "title": "[Placeholder — titre section 2]",
+        "desc": "[Placeholder — WSOP, EPT, WPT et autres grands circuits live couverts...]"
+      },
+      {
+        "overline": "Tournois online",
+        "title": "[Placeholder — titre section 3]",
+        "desc": "[Placeholder — WCOOP, SCOOP, grandes Series online, plateformes couvertes...]"
+      },
+      {
+        "overline": "Planifiez votre année",
+        "title": "[Placeholder — titre section 4]",
+        "desc": "[Placeholder — filtres, dates, formats, buy-ins, comment utiliser le calendrier...]"
+      }
+    ],
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "[Placeholder — phrase d'accroche finale invitant au téléchargement]"
+  },
+  "feature_news": {
+    "meta_title": "News — Evolve Poker",
+    "meta_desc": "Restez informé de l'actualité poker avec la sélection de news d'Evolve Poker.",
+    "hero_title": "News",
+    "hero_gradient": "L'actu poker, filtrée pour vous",
+    "hero_desc": "[Placeholder — accroche principale de la page News]",
+    "back_link": "/pages/features/features.html",
+    "back_label": "← Retour aux fonctionnalités",
+    "sections": [
+      {
+        "overline": "Le concept",
+        "title": "[Placeholder — titre section 1]",
+        "desc": "[Placeholder — pourquoi une sélection d'actu dans l'app, la valeur ajoutée...]"
+      },
+      {
+        "overline": "Les thématiques couvertes",
+        "title": "[Placeholder — titre section 2]",
+        "desc": "[Placeholder — tournois, résultats, stratégie, réglementation, tendances...]"
+      },
+      {
+        "overline": "La sélection éditoriale",
+        "title": "[Placeholder — titre section 3]",
+        "desc": "[Placeholder — comment les news sont sélectionnées, qualité vs quantité...]"
+      }
+    ],
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "[Placeholder — phrase d'accroche finale invitant au téléchargement]"
+  },
+  "feature_mains": {
+    "meta_title": "Mains — Evolve Poker",
+    "meta_desc": "Notez et analysez vos mains de poker pour progresser grâce à l'outil de notation d'Evolve Poker.",
+    "hero_title": "Mains",
+    "hero_gradient": "Chaque main compte",
+    "hero_desc": "[Placeholder — accroche principale de la page Mains]",
+    "back_link": "/pages/features/features.html",
+    "back_label": "← Retour aux fonctionnalités",
+    "sections": [
+      {
+        "overline": "Le concept",
+        "title": "[Placeholder — titre section 1]",
+        "desc": "[Placeholder — pourquoi noter ses mains est essentiel à la progression...]"
+      },
+      {
+        "overline": "Notez en quelques secondes",
+        "title": "[Placeholder — titre section 2]",
+        "desc": "[Placeholder — UX de la notation rapide, pendant ou juste après la session...]"
+      },
+      {
+        "overline": "Analysez à tête reposée",
+        "title": "[Placeholder — titre section 3]",
+        "desc": "[Placeholder — retrouver, rejouer, annoter ses mains sauvegardées...]"
+      },
+      {
+        "overline": "Identifiez vos patterns",
+        "title": "[Placeholder — titre section 4]",
+        "desc": "[Placeholder — repérer les erreurs récurrentes, mesurer sa progression dans le temps...]"
+      }
+    ],
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "[Placeholder — phrase d'accroche finale invitant au téléchargement]"
+  },
+  "lasuite_detail": {
+    "meta_title": "Jeux, Analyse & Communauté — Evolve Poker",
+    "meta_desc": "Découvrez en détail les fonctionnalités complémentaires d'Evolve Poker : jeux interactifs, analyse de mains et communauté de joueurs.",
+    "hero_title": "La suite",
+    "hero_gradient": "en détail",
+    "hero_desc": "[Placeholder — accroche principale de la page de détail La Suite]",
+    "back_link": "/pages/next/lasuite.html",
+    "back_label": "← Retour à La suite",
+    "sections": [
+      {
+        "overline": "Jeux",
+        "title": "[Placeholder — titre section Jeux]",
+        "desc": "[Placeholder — description détaillée des jeux interactifs : quiz, ranges à compléter, mains à résoudre, classements...]"
+      },
+      {
+        "overline": "Classements",
+        "title": "[Placeholder — titre section Classements]",
+        "desc": "[Placeholder — système de classement, comment se mesurer à la communauté, montée en rang...]"
+      },
+      {
+        "overline": "Analyse de mains",
+        "title": "[Placeholder — titre section Analyse]",
+        "desc": "[Placeholder — import de mains, identification des spots perdants, patterns d'erreurs...]"
+      },
+      {
+        "overline": "IA & coaching",
+        "title": "[Placeholder — titre section IA]",
+        "desc": "[Placeholder — analyse propulsée par l'IA, retours personnalisés, coach dans la poche — fonctionnalité à venir...]"
+      },
+      {
+        "overline": "Communauté",
+        "title": "[Placeholder — titre section Communauté]",
+        "desc": "[Placeholder — soumettre des mains, débattre, poser des questions, progresser ensemble...]"
+      }
+    ],
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "[Placeholder — phrase d'accroche finale invitant au téléchargement]"
   },
   "contact": {
     "meta_title": "Contact — Evolve Poker Academy",
