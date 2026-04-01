@@ -1,0 +1,247 @@
+{
+  "site": {
+    "name": "Evolve Poker",
+    "copyright": "© 2025 Evolve Poker. Tous droits réservés."
+  },
+  "home": {
+    "meta_title": "Evolve Poker — Devenez un meilleur joueur de poker",
+    "meta_desc": "Evolve Poker est votre assistant personnel dédié au poker. Leçons structurées, ranges, analyse de mains, calendrier des tournois — tout ce qu'il faut pour progresser, gratuitement sur Android.",
+    "hero_title": "Devenez un joueur",
+    "hero_gradient": "redoutable",
+    "hero_subtitle": "Et si vous aviez un assistant personnel entièrement dédié à votre progression au poker ? Evolve Poker vous accompagne des toutes premières mains jusqu'aux concepts avancés — structuré, mobile, gratuit, et pensé pour durer.",
+    "stats": [
+      {
+        "value": "400+",
+        "label": "Leçons disponibles"
+      },
+      {
+        "value": "5+",
+        "label": "Fonctionnalités"
+      },
+      {
+        "value": "Gratuit",
+        "label": "Pour toujours"
+      },
+      {
+        "value": "Android",
+        "label": "Disponible sur"
+      }
+    ],
+    "features_overline": "Pourquoi Evolve",
+    "features_title": "Tout pour passer au niveau supérieur",
+    "features_subtitle": "Du débutant qui découvre au joueur confirmé qui affine — tout ce qu'il faut est là, dans votre poche.",
+    "feature_cards": [
+      {
+        "title": "Academy",
+        "desc": "400+ leçons progressives, du niveau débutant à l'expert. Un parcours structuré pour construire un vrai jeu, étape par étape.",
+        "cta": "Découvrir",
+        "link": "/pages/academy/academy.html"
+      },
+      {
+        "title": "Ranges",
+        "desc": "Visualisez, créez et maîtrisez vos ranges préflop et postflop pour chaque position. Fini de jouer au feeling.",
+        "cta": "En savoir plus",
+        "link": "/pages/features/features.html"
+      },
+      {
+        "title": "Mains",
+        "desc": "Notez vos mains en quelques secondes, rejouez-les à tête reposée et transformez chaque erreur en leçon concrète.",
+        "cta": "En savoir plus",
+        "link": "/pages/features/features.html"
+      },
+      {
+        "title": "Calendrier",
+        "desc": "Tournois live et online centralisés dans un seul calendrier — WSOP, EPT, WCOOP et bien plus. Ne planifiez plus à l'aveugle.",
+        "cta": "En savoir plus",
+        "link": "/pages/features/features.html"
+      },
+      {
+        "title": "Classement",
+        "desc": "Des classements pour se challenger, suivre son évolution et rester motivé sur le long terme.",
+        "cta": "En savoir plus",
+        "link": "/pages/features/features.html"
+      }
+    ],
+    "academy_overline": "Academy",
+    "academy_title_line1": "Un parcours complet",
+    "academy_title_line2": "du débutant à l'expert",
+    "academy_desc1": "9 modules, 400+ leçons, une progression claire. Chaque module s'appuie sur le précédent pour construire vos connaissances sur des bases solides — sans jamais brûler les étapes.",
+    "academy_desc2": "Explorez le catalogue sur le site — plongez dans les leçons complètes depuis l'application.",
+    "academy_cta_primary": "Voir les modules",
+    "academy_cta_secondary": "Télécharger l'app",
+    "lasuite_overline": "Encore plus",
+    "lasuite_title": "Votre arsenal complet",
+    "lasuite_subtitle": "Jeux interactifs, analyse de mains, communauté active — l'application qui va bien au-delà des leçons.",
+    "lasuite_cards": [
+      {
+        "icon": "🎮",
+        "title": "Jeux",
+        "desc": "Des mini-jeux pour ancrer les concepts, des défis pour se challenger et des classements pour rester motivé.",
+        "cta": "En savoir plus →"
+      },
+      {
+        "icon": "📊",
+        "title": "Analyse",
+        "desc": "Décortiquez vos sessions, identifiez vos erreurs récurrentes et affinez votre jeu. Bientôt enrichi par une analyse assistée par IA.",
+        "cta": "En savoir plus →"
+      },
+      {
+        "icon": "👥",
+        "title": "Communauté",
+        "desc": "Échangez avec des milliers de joueurs, partagez vos mains et progressez entouré de gens qui ont les mêmes objectifs que vous.",
+        "cta": "En savoir plus →"
+      }
+    ],
+    "cta_overline": "Votre progression commence ici",
+    "cta_title": "Jouez mieux, dès aujourd'hui",
+    "cta_desc": "Rejoignez Evolve Poker gratuitement et accédez à tout ce qu'il faut pour construire le jeu que vous voulez avoir.",
+    "contact_band_title_line1": "Une question, une idée,",
+    "contact_band_title_line2": "une envie de contribuer ?",
+    "contact_band_desc": "Des retours, des questions, l'envie de contribuer au projet — notre équipe est à l'écoute.",
+    "contact_band_cta": "Nous écrire →"
+  },
+  "academy": {
+    "meta_title": "400+ leçons pour maîtriser le poker — Evolve Poker",
+    "meta_desc": "9 modules, plus de 400 leçons, du niveau débutant au niveau expert — l'Academy Evolve Poker couvre l'intégralité du jeu : stratégie, statistiques, psychologie, histoire et les légendes qui ont façonné le poker moderne.",
+    "hero_title": "La meilleure façon",
+    "hero_gradient": "d'apprendre le poker",
+    "hero_desc": "L'Academy Evolve Poker, c'est un curriculum complet dans votre poche — disponible partout, à tout moment, sans débourser un centime. Des centaines de leçons pensées pour aller droit au but et vous faire progresser vraiment, session après session.",
+    "hero_cta": "Explorer les modules →",
+    "stats": [
+      {
+        "value": "9",
+        "label": "Modules"
+      },
+      {
+        "value": "+400",
+        "label": "Leçons"
+      },
+      {
+        "value": "Débutant à pro",
+        "label": "Niveau"
+      },
+      {
+        "value": "15 min max",
+        "label": "Par leçon"
+      },
+      {
+        "value": "100%",
+        "label": "Mobile"
+      }
+    ],
+    "feature_rows": [
+      {
+        "overline": "Conçu pour progresser vraiment",
+        "title": "Apprenez n'importe où, avancez à chaque leçon",
+        "desc": "L'Academy ne vous demande pas de réorganiser votre emploi du temps. Elle s'y glisse. Des leçons de 15 minutes maximum, un suivi de progression qui reprend exactement là où vous vous êtes arrêté, et un contenu structuré pour que chaque session — même courte — vous fasse avancer concrètement. C'est ça, apprendre efficacement sur mobile."
+      },
+      {
+        "overline": "La progression que vous ressentez",
+        "title": "Chaque leçon vous rend meilleur à la table",
+        "desc": "Le vrai test d'un apprentissage, c'est ce qui se passe quand les cartes sont distribuées. L'Evolve Academy est construite pour que les concepts appris se traduisent en décisions concrètes — pas en théorie abstraite. Après quelques semaines, vous ne jouez plus pareil. Vous comprenez ce que vous faites, pourquoi vous le faites, et comment vous améliorer encore."
+      },
+      {
+        "overline": "Ce qui vous attend",
+        "title": "Un curriculum complet, structuré et libre à la fois",
+        "desc": "400+ leçons réparties en 9 modules : un parcours en 4 niveaux progressifs du débutant à l'expert, et 5 modules spécialisés sur la stratégie, les maths du poker, la gestion mentale, l'histoire du jeu et les grandes légendes. Suivez le parcours guidé ou explorez librement — l'Academy s'adapte à la façon dont vous aimez apprendre."
+      }
+    ],
+    "cta_title": "100% gratuit, pour toujours",
+    "cta_desc": "Pas d'abonnement, pas de contenu caché, pas de prérequis. Juste 400+ leçons structurées, disponibles dès le premier lancement, sur Android. Le seul investissement qu'on vous demande, c'est le temps que vous choisissez d'y consacrer.",
+    "cta_label": "Explorer les modules →"
+  },
+  "academies": {
+    "meta_title": "400+ leçons pour maîtriser le poker — Evolve Poker",
+    "meta_desc": "Découvrez les 9 modules de l'Academy Evolve Poker : un parcours structuré du débutant à l'expert, complété par des modules dédiés à la stratégie, aux stats, à la mentalité et aux grandes figures du poker.",
+    "hero_title": "400+ leçons pour",
+    "hero_gradient": "tout maîtriser",
+    "hero_desc": "Du premier coup de cartes jusqu'aux concepts qui font les joueurs redoutables — l'Academy Evolve Poker couvre tout. 9 modules, plus de 400 leçons de 15 minutes maximum, organisées pour que chaque session compte. Gratuit, mobile, et conçu pour durer.",
+    "cta_overline": "Le niveau supérieur vous attend",
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "Toutes ces fonctionnalités, dans votre poche, sans débourser un centime. Téléchargez Evolve Poker sur Android et commencez à construire le jeu que vous voulez avoir — une leçon à la fois."
+  },
+  "features": {
+    "meta_title": "Fonctionnalités — Evolve Poker Academy",
+    "meta_desc": "Découvrez toutes les fonctionnalités de l'application Evolve Poker Academy : leçons interactives, progression, statistiques et bien plus.",
+    "hero_title": "Une application",
+    "hero_gradient": "taillée pour progresser",
+    "hero_desc": "Chaque fonctionnalité d'Evolve Poker a été pensée pour répondre à une vraie question de joueur : comment structurer mon apprentissage, maintenir ma régularité, mesurer mes progrès et rester motivé sur le long terme ? Les réponses sont là, dans votre poche.",
+    "feature_rows": [
+      {
+        "overline": "Leçons",
+        "title": "Apprenez le poker comme il devrait être enseigné",
+        "desc": "Pas de vidéos interminables, pas de contenu dilué. Evolve Poker vous propose des leçons structurées, pensées pour aller droit au but et construire vos connaissances sur des bases solides. Des règles fondamentales aux spots les plus complexes — chaque module avance étape par étape, sans jamais brûler les étapes."
+      },
+      {
+        "overline": "Ranges",
+        "title": "Maîtrisez les ranges, maîtrisez le jeu",
+        "desc": "Comprendre pourquoi certaines mains se jouent et d'autres non, c'est ce qui sépare un joueur instinctif d'un joueur solide. Evolve Poker vous donne les outils pour ça : visualisez les ranges pour chaque position, créez et sauvegardez vos propres grilles, et suivez votre progression dans leur maîtrise. De la consultation à la création — tout ce qu'il faut pour intégrer les ranges pour de bon."
+      },
+      {
+        "overline": "Calendrier",
+        "title": "Ne manquez plus jamais un tournoi",
+        "desc": "Live ou online, en France ou à l'international — Evolve Poker centralise tous les tournois qui comptent dans un calendrier clair et toujours à jour. WSOP, EPT, WPT côté live ; WCOOP, SCOOP et les grandes Series online côté virtuel. Dates, formats, buy-ins : tout ce qu'il faut pour planifier votre année poker sans passer des heures à chercher l'information sur dix sites différents."
+      },
+      {
+        "overline": "News",
+        "title": "Restez dans la boucle, sans effort",
+        "desc": "Le monde du poker bouge vite — nouveaux tournois, résultats marquants, évolutions réglementaires, tendances stratégiques. Evolve Poker vous donne accès à une sélection d'actualités pertinentes, directement dans l'application. Restez informé sans avoir à jongler entre dix sources différentes."
+      },
+      {
+        "overline": "Mains",
+        "title": "Notez vos mains, rejouez-les, progressez",
+        "desc": "Un spot difficile, une décision douteuse, une main que vous n'êtes pas sûr d'avoir bien jouée — notez-la en quelques secondes dans Evolve Poker pendant que c'est frais. Retrouvez-la plus tard, analysez-la à tête reposée et identifiez exactement où votre jeu peut progresser. C'est le genre de travail qui fait la différence sur le long terme."
+      }
+    ],
+    "cta_overline": "Le niveau supérieur vous attend",
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "Toutes ces fonctionnalités, dans votre poche, sans débourser un centime. Téléchargez Evolve Poker sur Android et commencez à construire le jeu que vous voulez avoir — une leçon à la fois."
+  },
+  "lasuite": {
+    "meta_title": "La suite — Evolve Poker Academy",
+    "meta_desc": "Jeux, analyse de mains et communauté — les fonctionnalités complémentaires d'Evolve Poker Academy pour jouer, progresser et partager.",
+    "hero_title": "La suite",
+    "hero_gradient": "d'Evolve",
+    "hero_desc": "Les leçons posent les bases — la suite les transforme en réflexes. Jeux interactifs, analyse de vos mains, communauté de joueurs : tout ce qu'il faut pour que la théorie devienne du jeu concret.",
+    "feature_rows": [
+      {
+        "overline": "Jeux",
+        "title": "Mettez vos connaissances sous pression",
+        "desc": "Des mini-jeux et quiz interactifs conçus pour ancrer les concepts que vous venez d'apprendre. Ranges à compléter, mains à résoudre, situations à trancher en temps réel — chaque exercice est une répétition déguisée en défi. Et parce que la compétition est le meilleur moteur de progression, des classements vous permettront de vous mesurer à la communauté et de grimper dans les rangs. C'est comme ça qu'on passe de 'je comprends' à 'je joue bien'."
+      },
+      {
+        "overline": "Analyse",
+        "title": "Vos mains sont votre meilleur manuel",
+        "desc": "Les joueurs qui progressent le plus vite ne sont pas ceux qui jouent le plus — ce sont ceux qui analysent le mieux. Importez vos mains, identifiez les spots où vous perdez de la valeur et repérez vos patterns d'erreurs. Et bientôt, une analyse propulsée par l'IA vous donnera des retours précis, personnalisés et instantanés sur chaque décision — comme avoir un coach dans la poche."
+      },
+      {
+        "overline": "Communauté",
+        "title": "Progressez entouré de joueurs qui vous ressemblent",
+        "desc": "Rejoignez une communauté de joueurs qui partagent le même objectif : progresser vraiment. Soumettez vos mains au débat, confrontez vos lectures à celles des autres, posez vos questions sans jugement. Les meilleures prises de conscience viennent souvent d'un angle que vous n'aviez pas considéré — et c'est exactement ce que la communauté vous apporte."
+      }
+    ],
+    "cta_overline": "Le niveau supérieur vous attend",
+    "cta_title": "Commencez gratuitement",
+    "cta_desc": "Des centaines de leçons structurées, la visualisation des ranges, le calendrier des tournois, les dernières news du monde du poker et la notation rapide de vos mains — tout ça dans une seule application, disponible gratuitement sur Android dès aujourd'hui."
+  },
+  "contact": {
+    "meta_title": "Contact — Evolve Poker Academy",
+    "meta_desc": "Contactez l'équipe Evolve Poker Academy pour toute question, suggestion ou demande de partenariat.",
+    "hero_title": "On est là",
+    "hero_gradient": "pour vous écouter",
+    "hero_desc": "Derrière Evolve, il y a une équipe qui lit chaque message et qui prend chaque retour au sérieux. Que vous ayez une question, une suggestion ou l'envie de contribuer — vous êtes au bon endroit.",
+    "tab_contact": "✉️ Nous contacter",
+    "tab_help": "🤝 Nous aider",
+    "contact_panel_title": "On vous répond",
+    "contact_panel_desc": "Pas de formulaire qui disparaît dans le vide. On lit tout et on répond sous 48h ouvrées. Pour une question urgente liée à l'application, mentionnez-le dans votre message et on accélère.",
+    "email_contact": "contact@evolvepoker.app",
+    "email_support": "support@evolvepoker.app",
+    "email_partners": "partners@evolvepoker.app",
+    "email_team": "team@evolvepoker.app",
+    "help_panel_title": "Rejoignez l'aventure",
+    "help_panel_desc": "On construit quelque chose d'ambitieux, et on ne le fait pas seuls. Si vous êtes développeur, designer, joueur passionné ou marketeur — et que vous voulez mettre votre énergie dans un projet qui compte vraiment — la porte est ouverte.",
+    "download_band_title": "Votre progression commence maintenant",
+    "download_band_sub": "Des centaines de leçons structurées, des outils d'analyse, les ranges, la communauté — tout ça gratuitement, dès aujourd'hui.",
+    "download_band_cta": "Télécharger gratuitement"
+  }
+}

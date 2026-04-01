@@ -1,64 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fonctionnalités — Evolve Poker Academy</title>
-  <meta name="description" content="Découvrez toutes les fonctionnalités de l'application Evolve Poker Academy : leçons interactives, progression, statistiques et bien plus.">
-  <meta name="robots" content="index, follow">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="../../assets/css/style.css">
-</head>
-<body>
-
-  <header class="nav">
-    <div class="container">
-      <nav class="nav__inner">
-        <a href="../../index.html" class="nav__logo">
-          <img src="../../assets/images/logo.png" alt="Evolve Poker" class="nav__logo-img">
-        </a>
-        <ul class="nav__links">
-          <li class="nav__item">
-            <button class="nav__link">Apps <span class="nav__link-arrow">▾</span></button>
-            <div class="nav__dropdown">
-              <a href="#" class="nav__dropdown-store">
-                <div class="nav__dropdown-store__icon">&#xF8FF;</div>
-                <div class="nav__dropdown-store__text">
-                  <span class="nav__dropdown-store__sub">Télécharger sur l'</span>
-                  <span class="nav__dropdown-store__name">App Store</span>
-                </div>
-              </a>
-              <div class="nav__dropdown-divider"></div>
-              <a href="#" class="nav__dropdown-store">
-                <div class="nav__dropdown-store__icon">▶</div>
-                <div class="nav__dropdown-store__text">
-                  <span class="nav__dropdown-store__sub">Disponible sur</span>
-                  <span class="nav__dropdown-store__name">Google Play</span>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="nav__item"><a href="../academy/academy.html" class="nav__link">Academy</a></li>
-          <li class="nav__item"><a href="../features/features.html" class="nav__link nav__link--active">Fonctionnalités</a></li>
-          <li class="nav__item"><a href="../next/lasuite.html" class="nav__link">La suite</a></li>
-          <li class="nav__item"><a href="../contact/contact.html" class="nav__link">Contact</a></li>
-        </ul>
-        <div class="nav__actions">
-          <div class="nav__item">
-            <button class="nav__globe-btn" aria-label="Changer de langue"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
-            <div class="nav__dropdown nav__dropdown--right">
-              <button class="nav__dropdown-lang nav__dropdown-lang--active"><span class="nav__dropdown-lang__flag">🇫🇷</span> Français</button>
-              <button class="nav__dropdown-lang"><span class="nav__dropdown-lang__flag">🇬🇧</span> English</button>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
+---
+layout: layout.njk
+permalink: /pages/features/features.html
+page_key: features
+activeNav: features
+---
 
   <main>
 
@@ -66,100 +11,45 @@
     <section class="page-header glow-bg">
       <div class="container">
         <div class="page-header__inner">
-          <h1 class="page-header__title">Tout ce qu'Evolve<br><span class="text-gradient">vous offre</span></h1>
-          <p class="page-header__desc">Une application conçue pour progresser efficacement, à votre rythme, sur mobile.</p>
+          <h1 class="page-header__title">{{ texts.features.hero_title }}<br><span class="text-gradient">{{ texts.features.hero_gradient }}</span></h1>
+          <p class="page-header__desc">{{ texts.features.hero_desc }}</p>
+          <div class="hero__actions mt-8">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURES — alternating rows -->
+    <!-- FEATURE ROWS -->
     <section class="section">
       <div class="container container--lg">
-
-        <!-- 1 — Contenu : texte gauche, image droite -->
-        <div class="feature-row">
-          <div class="feature-row__content">
-            <span class="label-overline">Contenu</span>
-            <h2 class="feature-row__title">100+ leçons structurées</h2>
-            <p class="feature-row__desc">Des leçons progressives organisées en modules et catégories, du niveau débutant au niveau avancé. Chaque leçon est conçue pour être courte, dense et actionnable.</p>
-          </div>
-          <div class="feature-row__visual">
-            <div class="feature-row__placeholder">
-              <span>Illustration</span>
+        {% for row in texts.features.feature_rows %}
+          <div class="feature-row{% if loop.index0 is odd %} feature-row--reverse{% endif %}">
+            <div class="feature-row__content">
+              <span class="label-overline">{{ row.overline }}</span>
+              <h2 class="feature-row__title">{{ row.title }}</h2>
+              <p class="feature-row__desc">{{ row.desc }}</p>
+            </div>
+            <div class="feature-row__visual">
+              <div class="feature-row__placeholder">
+                <span>Illustration</span>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- 2 — Progression : image gauche, texte droite -->
-        <div class="feature-row feature-row--reverse">
-          <div class="feature-row__content">
-            <span class="label-overline">Progression</span>
-            <h2 class="feature-row__title">Suivi de votre avancée</h2>
-            <p class="feature-row__desc">Visualisez votre progression module par module. Reprenez exactement là où vous vous êtes arrêté, sans jamais perdre le fil.</p>
-          </div>
-          <div class="feature-row__visual">
-            <div class="feature-row__placeholder">
-              <span>Illustration</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3 — Apprentissage : texte gauche, image droite -->
-        <div class="feature-row">
-          <div class="feature-row__content">
-            <span class="label-overline">Apprentissage</span>
-            <h2 class="feature-row__title">Exercices interactifs</h2>
-            <p class="feature-row__desc">Mettez en pratique chaque concept avec des exercices et quiz intégrés directement dans les leçons. Apprenez en faisant, pas seulement en lisant.</p>
-          </div>
-          <div class="feature-row__visual">
-            <div class="feature-row__placeholder">
-              <span>Illustration</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4 — Mobile first : image gauche, texte droite -->
-        <div class="feature-row feature-row--reverse">
-          <div class="feature-row__content">
-            <span class="label-overline">Mobile first</span>
-            <h2 class="feature-row__title">iOS & Android</h2>
-            <p class="feature-row__desc">Disponible sur iPhone et Android. Apprenez dans le métro, entre deux sessions, où que vous soyez. L'application est pensée pour le mobile avant tout.</p>
-          </div>
-          <div class="feature-row__visual">
-            <div class="feature-row__placeholder">
-              <span>Illustration</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5 — Régularité : texte gauche, image droite -->
-        <div class="feature-row">
-          <div class="feature-row__content">
-            <span class="label-overline">Régularité</span>
-            <h2 class="feature-row__title">Rappels intelligents</h2>
-            <p class="feature-row__desc">Des notifications configurables pour maintenir votre rythme d'apprentissage jour après jour. La régularité fait la différence sur le long terme.</p>
-          </div>
-          <div class="feature-row__visual">
-            <div class="feature-row__placeholder">
-              <span>Illustration</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 — Motivation : image gauche, texte droite -->
-        <div class="feature-row feature-row--reverse">
-          <div class="feature-row__content">
-            <span class="label-overline">Motivation</span>
-            <h2 class="feature-row__title">Badges & récompenses</h2>
-            <p class="feature-row__desc">Débloquez des badges à chaque module complété. La progression devient un jeu en elle-même — chaque étape franchie renforce votre motivation.</p>
-          </div>
-          <div class="feature-row__visual">
-            <div class="feature-row__placeholder">
-              <span>Illustration</span>
-            </div>
-          </div>
-        </div>
-
+        {% endfor %}
       </div>
     </section>
 
@@ -168,9 +58,9 @@
       <div class="container">
         <div class="cta-section__inner">
           <div class="cta-section__content">
-            <span class="label-overline">Prêt ?</span>
-            <h2 class="heading-section mt-4">Commencez gratuitement</h2>
-            <p class="mt-4">Téléchargez Evolve et accédez immédiatement aux premières leçons.</p>
+            <span class="label-overline">{{ texts.features.cta_overline }}</span>
+            <h2 class="heading-section mt-4">{{ texts.features.cta_title }}</h2>
+            <p class="mt-4">{{ texts.features.cta_desc }}</p>
           </div>
           <div class="cta-section__stores">
             <a href="#" class="btn-store">
@@ -193,45 +83,3 @@
     </section>
 
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__bar">
-        <a href="../../index.html">
-          <img src="../../assets/images/logo.png" alt="Evolve Poker" class="footer__logo-img">
-        </a>
-        <ul class="footer__links">
-          <li><a href="../academy/academy.html" class="footer__link">Academy</a></li>
-          <li><a href="../features/features.html" class="footer__link">Fonctionnalités</a></li>
-          <li><a href="../next/lasuite.html" class="footer__link">La suite</a></li>
-          <li><a href="../contact/contact.html" class="footer__link">Contact</a></li>
-        </ul>
-        <div class="footer__social">
-          <a href="#" class="footer__social-link" aria-label="Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="#" class="footer__social-link" aria-label="X (Twitter)">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="#" class="footer__social-link" aria-label="TikTok">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.17 8.17 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.02-.08z"/></svg>
-          </a>
-          <a href="#" class="footer__social-link" aria-label="YouTube">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <p class="footer__copy">© 2025 Evolve Poker. Tous droits réservés.</p>
-        <div class="footer__legal">
-          <a href="#" class="footer__legal-link">Politique de confidentialité</a>
-          <a href="#" class="footer__legal-link">Conditions d'utilisation</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="../../assets/js/main.js"></script>
-</body>
-</html>

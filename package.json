@@ -1,0 +1,12 @@
+{
+  "name": "evolve-web",
+  "version": "1.0.0",
+  "description": "Evolve Poker — site vitrine",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

@@ -1,5 +1,13 @@
 // Evolve Poker Academy — main.js
 
+// Disable right-click
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+// Disable image drag
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('dragstart', e => e.preventDefault());
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', e => {
