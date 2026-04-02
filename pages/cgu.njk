@@ -1,0 +1,112 @@
+---
+layout: layout.njk
+permalink: /cgu/
+page_key: cgu
+title: Conditions & Confidentialité — Evolve Poker
+meta_desc: Conditions générales d'utilisation, politique de confidentialité et FAQ de l'application Evolve Poker.
+---
+
+<main>
+
+  <!-- HERO -->
+  <section class="cgu-hero glow-bg">
+    <div class="container">
+      <div class="cgu-hero__inner">
+        <h1 class="cgu-hero__title">Conditions &amp; Confidentialité</h1>
+        <p class="cgu-hero__desc">Tout ce que vous devez savoir sur l'utilisation de l'application Evolve Poker et la gestion de vos données personnelles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTOR -->
+  <section class="cgu-selector">
+    <div class="container">
+      <div class="cgu-select-wrap">
+        <label class="cgu-select-label" for="cgu-select">Choisir une section</label>
+        <div class="cgu-select-box">
+          <select id="cgu-select" class="cgu-select" onchange="cguShow(this.value)">
+            <option value="terms">Conditions Générales d'Utilisation</option>
+            <option value="privacy">Politique de Confidentialité</option>
+            <option value="faq">FAQ</option>
+          </select>
+          <svg class="cgu-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="cgu-content">
+    <div class="container container--md">
+
+      <!-- PANEL : Conditions Générales -->
+      <div id="panel-terms" class="cgu-panel">
+        <p class="cgu-panel__updated">Dernière mise à jour : janvier 2025</p>
+        {% for section in texts.terms.sections %}
+          <div class="cgu-card">
+            <div class="cgu-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div class="cgu-card__body">
+              <span class="cgu-card__overline">{{ section.overline }}</span>
+              <h3 class="cgu-card__title">{{ section.title }}</h3>
+              <p class="cgu-card__desc">{{ section.desc }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- PANEL : Politique de Confidentialité -->
+      <div id="panel-privacy" class="cgu-panel cgu-panel--hidden">
+        <p class="cgu-panel__updated">Dernière mise à jour : janvier 2025</p>
+        {% for section in texts.privacy.sections %}
+          <div class="cgu-card">
+            <div class="cgu-card__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="cgu-card__body">
+              <span class="cgu-card__overline">{{ section.overline }}</span>
+              <h3 class="cgu-card__title">{{ section.title }}</h3>
+              <p class="cgu-card__desc">{{ section.desc }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- PANEL : FAQ -->
+      <div id="panel-faq" class="cgu-panel cgu-panel--hidden">
+        <p class="cgu-panel__updated">Section à venir</p>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">À venir</span>
+            <h3 class="cgu-card__title">Foire Aux Questions</h3>
+            <p class="cgu-card__desc">Les réponses aux questions fréquentes seront disponibles prochainement.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<script>
+  function cguShow(val) {
+    document.querySelectorAll('.cgu-panel').forEach(function(p) {
+      p.classList.add('cgu-panel--hidden');
+    });
+    document.getElementById('panel-' + val).classList.remove('cgu-panel--hidden');
+    document.getElementById('cgu-select').value = val;
+    history.replaceState(null, '', '#' + val);
+  }
+
+  (function() {
+    var hash = window.location.hash.replace('#', '');
+    if (hash && ['terms', 'privacy', 'faq'].indexOf(hash) !== -1) {
+      cguShow(hash);
+    }
+  })();
+</script>

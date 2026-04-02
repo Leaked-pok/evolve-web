@@ -38,23 +38,32 @@ activeNav: academy
       <div class="container container--xl">
 
         <!-- Tabs -->
-        <div class="academy-tabs" role="tablist">
-          {% for category in academy %}
-            <button
-              class="academy-tab{% if loop.first %} academy-tab--active{% endif %}"
-              data-target="{{ category.id }}"
-              role="tab"
-              aria-selected="{{ 'true' if loop.first else 'false' }}"
-            >
-              {{ category.name }}
-            </button>
-          {% endfor %}
+        <div class="academy-tabs-wrapper">
+          <button class="academy-tabs-arrow academy-tabs-arrow--left" id="tabs-arrow-left" aria-label="Défiler à gauche">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="academy-tabs" role="tablist" id="academy-tabs-scroll">
+            <button class="academy-tab academy-tab--active" data-target="__all" role="tab" aria-selected="true">Tout</button>
+            {% for category in academy %}
+              <button
+                class="academy-tab"
+                data-target="{{ category.id }}"
+                role="tab"
+                aria-selected="false"
+              >
+                {{ category.name }}
+              </button>
+            {% endfor %}
+          </div>
+          <button class="academy-tabs-arrow academy-tabs-arrow--right" id="tabs-arrow-right" aria-label="Défiler à droite">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
 
         <!-- Panels -->
         {% for category in academy %}
           <div
-            class="academy-panel{% if not loop.first %} hidden{% endif %}"
+            class="academy-panel"
             id="{{ category.id }}"
             role="tabpanel"
           >
