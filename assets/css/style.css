@@ -496,6 +496,23 @@ p {
   margin: var(--space-2) var(--space-2);
 }
 
+/* Dropdown — nav links */
+.nav__dropdown-link {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-text-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.nav__dropdown-link:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
 /* Dropdown langue (droite aligné) */
 .nav__dropdown--right {
   left: auto;

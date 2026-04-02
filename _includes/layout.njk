@@ -56,6 +56,18 @@
             <a href="/pages/next/lasuite.html" class="nav__link{% if activeNav == 'lasuite' %} nav__link--active{% endif %}">La suite</a>
           </li>
           <li class="nav__item">
+            <button class="nav__link{% if activeNav == 'evolve' %} nav__link--active{% endif %}">Evolve ? <span class="nav__link-arrow">▾</span></button>
+            <div class="nav__dropdown">
+              <a href="/cgu/#evolve" class="nav__dropdown-link">Evolve ?</a>
+              <a href="/cgu/#risques" class="nav__dropdown-link">Risques poker</a>
+              <a href="/cgu/#aide" class="nav__dropdown-link">Aide inscription</a>
+              <div class="nav__dropdown-divider"></div>
+              <a href="/cgu/#terms" class="nav__dropdown-link">Conditions d'utilisation</a>
+              <a href="/cgu/#privacy" class="nav__dropdown-link">Confidentialité</a>
+              <a href="/cgu/#faq" class="nav__dropdown-link">FAQ</a>
+            </div>
+          </li>
+          <li class="nav__item">
             <a href="/pages/contact/contact.html" class="nav__link{% if activeNav == 'contact' %} nav__link--active{% endif %}">Contact</a>
           </li>
         </ul>
@@ -93,6 +105,7 @@
       <li><a href="/pages/academy/academy.html" class="nav-drawer__link">Academy</a></li>
       <li><a href="/pages/features/features.html" class="nav-drawer__link">Fonctionnalités</a></li>
       <li><a href="/pages/next/lasuite.html" class="nav-drawer__link">La suite</a></li>
+      <li><a href="/cgu/" class="nav-drawer__link">Evolve ?</a></li>
       <li><a href="/pages/contact/contact.html" class="nav-drawer__link">Contact</a></li>
     </ul>
     <div class="nav-drawer__stores">

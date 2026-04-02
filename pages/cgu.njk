@@ -2,8 +2,7 @@
 layout: layout.njk
 permalink: /cgu/
 page_key: cgu
-title: Conditions & Confidentialité — Evolve Poker
-meta_desc: Conditions générales d'utilisation, politique de confidentialité et FAQ de l'application Evolve Poker.
+activeNav: evolve
 ---
 
 <main>
@@ -12,8 +11,8 @@ meta_desc: Conditions générales d'utilisation, politique de confidentialité e
   <section class="cgu-hero glow-bg">
     <div class="container">
       <div class="cgu-hero__inner">
-        <h1 class="cgu-hero__title">Conditions &amp; Confidentialité</h1>
-        <p class="cgu-hero__desc">Tout ce que vous devez savoir sur l'utilisation de l'application Evolve Poker et la gestion de vos données personnelles.</p>
+        <h1 class="cgu-hero__title">Evolve <span class="text-gradient">?</span></h1>
+        <p class="cgu-hero__desc">Tout savoir sur l'application, jouer responsable et vos données personnelles.</p>
       </div>
     </div>
   </section>
@@ -25,7 +24,10 @@ meta_desc: Conditions générales d'utilisation, politique de confidentialité e
         <label class="cgu-select-label" for="cgu-select">Choisir une section</label>
         <div class="cgu-select-box">
           <select id="cgu-select" class="cgu-select" onchange="cguShow(this.value)">
-            <option value="terms">Conditions Générales d'Utilisation</option>
+            <option value="evolve">Evolve ?</option>
+            <option value="risques">Risques poker</option>
+            <option value="aide">Aide inscription</option>
+            <option value="terms">Conditions d'utilisation</option>
             <option value="privacy">Politique de Confidentialité</option>
             <option value="faq">FAQ</option>
           </select>
@@ -39,8 +41,113 @@ meta_desc: Conditions générales d'utilisation, politique de confidentialité e
   <section class="cgu-content">
     <div class="container container--md">
 
+      <!-- PANEL : Evolve ? -->
+      <div id="panel-evolve" class="cgu-panel">
+        <p class="cgu-panel__updated">Votre assistant poker, partout avec vous.</p>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">L'application</span>
+            <h3 class="cgu-card__title">Qu'est-ce qu'Evolve Poker ?</h3>
+            <p class="cgu-card__desc">[Placeholder] Evolve Poker est votre assistant personnel dédié à la progression au poker. Leçons structurées, ranges, analyse de mains et calendrier des tournois.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Notre mission</span>
+            <h3 class="cgu-card__title">Progresser, simplement</h3>
+            <p class="cgu-card__desc">[Placeholder] Notre mission est de rendre l'apprentissage du poker accessible à tous, des débutants aux joueurs avancés, avec un outil mobile pensé pour progresser au quotidien.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Comment ça marche ?</span>
+            <h3 class="cgu-card__title">Academy, Ranges & Plus</h3>
+            <p class="cgu-card__desc">[Placeholder] Parcourez l'Academy pour apprendre à votre rythme, utilisez le range trainer pour mémoriser les bonnes décisions, et analysez vos mains pour identifier vos axes de progression.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL : Risques poker -->
+      <div id="panel-risques" class="cgu-panel cgu-panel--hidden">
+        <p class="cgu-panel__updated">Jouez de façon responsable.</p>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Compétences & variance</span>
+            <h3 class="cgu-card__title">Le poker, un jeu de compétences</h3>
+            <p class="cgu-card__desc">[Placeholder] Le poker est un jeu de compétences à long terme, mais la variance à court terme peut créer des pertes. Evolve vous aide à comprendre ces concepts pour jouer de façon éclairée.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Jeu responsable</span>
+            <h3 class="cgu-card__title">Fixer des limites</h3>
+            <p class="cgu-card__desc">[Placeholder] Jouez toujours dans vos limites financières et temporelles. Si le jeu cesse d'être un loisir, des ressources d'aide sont disponibles.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Ressources d'aide</span>
+            <h3 class="cgu-card__title">Besoin d'aide ?</h3>
+            <p class="cgu-card__desc">[Placeholder] Si vous pensez avoir un problème de jeu, des organismes spécialisés peuvent vous accompagner. En France : Joueurs Info Service au 09 74 75 13 13.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL : Aide inscription -->
+      <div id="panel-aide" class="cgu-panel cgu-panel--hidden">
+        <p class="cgu-panel__updated">On vous accompagne pas à pas.</p>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Créer un compte</span>
+            <h3 class="cgu-card__title">S'inscrire sur Evolve</h3>
+            <p class="cgu-card__desc">[Placeholder] Téléchargez l'application sur l'App Store ou Google Play, puis créez votre compte avec votre email. L'inscription est gratuite et prend moins d'une minute.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Mot de passe oublié</span>
+            <h3 class="cgu-card__title">Réinitialiser votre accès</h3>
+            <p class="cgu-card__desc">[Placeholder] Sur l'écran de connexion, appuyez sur "Mot de passe oublié" et entrez votre email. Vous recevrez un lien de réinitialisation dans les minutes qui suivent.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Contacter le support</span>
+            <h3 class="cgu-card__title">Nous écrire</h3>
+            <p class="cgu-card__desc">[Placeholder] Pour toute question ou problème technique, contactez-nous via la page <a href="/pages/contact/contact.html" style="color:var(--color-gold)">Contact</a> ou directement à support@evolvepoker.com.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- PANEL : Conditions Générales -->
-      <div id="panel-terms" class="cgu-panel">
+      <div id="panel-terms" class="cgu-panel cgu-panel--hidden">
         <p class="cgu-panel__updated">Dernière mise à jour : janvier 2025</p>
         {% for section in texts.terms.sections %}
           <div class="cgu-card">
@@ -105,7 +212,7 @@ meta_desc: Conditions générales d'utilisation, politique de confidentialité e
 
   (function() {
     var hash = window.location.hash.replace('#', '');
-    if (hash && ['terms', 'privacy', 'faq'].indexOf(hash) !== -1) {
+    if (hash && ['evolve', 'risques', 'aide', 'terms', 'privacy', 'faq'].indexOf(hash) !== -1) {
       cguShow(hash);
     }
   })();
