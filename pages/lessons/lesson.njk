@@ -1,0 +1,55 @@
+---
+pagination:
+  data: allLessons
+  size: 1
+  alias: lesson
+permalink: "/lessons/{{ lesson.slug }}/"
+layout: lesson-layout.njk
+---
+
+<main class="lesson-main">
+  <div class="lesson-container">
+
+    <!-- EN-TÊTE DE LA LEÇON -->
+    <div class="lesson-hero">
+      {% if lesson.image_url %}
+        <img src="{{ lesson.image_url }}" alt="{{ lesson.title }}" class="lesson-hero__img" loading="lazy">
+      {% endif %}
+      <h1 class="lesson-hero__title">{{ lesson.title }}</h1>
+      {% if lesson.introduction %}
+        <p class="lesson-hero__intro">{{ lesson.introduction }}</p>
+      {% endif %}
+    </div>
+
+    <!-- ENCART PUB HAUT -->
+    <div class="ad-slot ad-slot--top">
+      <!-- Google AdSense — à configurer -->
+    </div>
+
+    <!-- CONTENU DE LA LEÇON -->
+    <article class="lesson-content">
+      {{ lesson.content | safe }}
+    </article>
+
+    <!-- ENCART PUB MILIEU -->
+    <div class="ad-slot ad-slot--mid">
+      <!-- Google AdSense — à configurer -->
+    </div>
+
+    <!-- BOUTON QUIZ -->
+    <div class="lesson-quiz-cta">
+      <p class="lesson-quiz-cta__text">Tu as lu la leçon ? Teste tes connaissances.</p>
+      <a href="evolvepoker://quiz?lesson_slug={{ lesson.slug }}" class="btn btn--primary btn--lg lesson-quiz-cta__btn">
+        Répondre au quiz
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <p class="lesson-quiz-cta__hint">Retourne dans l'application pour continuer et utilise une vie</p>
+    </div>
+
+    <!-- ENCART PUB BAS -->
+    <div class="ad-slot ad-slot--bottom">
+      <!-- Google AdSense — à configurer -->
+    </div>
+
+  </div>
+</main>

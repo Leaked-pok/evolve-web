@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ lesson.title }} — Evolve Poker Academy</title>
+  <meta name="description" content="{{ lesson.introduction | truncate(160) }}">
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="lesson-page">
+
+  <header class="lesson-header">
+    <div class="lesson-header__inner">
+      <button class="lesson-header__back" onclick="history.back()" aria-label="Retour">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <a href="#" class="lesson-header__logo">
+        <img src="/assets/images/logo.png" alt="Evolve Poker" class="nav__logo-img">
+      </a>
+      <div class="lesson-header__spacer"></div>
+    </div>
+  </header>
+
+  {{ content | safe }}
+
+  <footer class="lesson-footer">
+    <div class="container">
+      © 2026 Evolve Poker · Tous droits réservés ·
+      <a href="/cgu/">Conditions générales</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
