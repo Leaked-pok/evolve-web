@@ -3,6 +3,74 @@
     "name": "Evolve Poker",
     "copyright": "© 2025 Evolve Poker. Tous droits réservés."
   },
+  "privacy": {
+    "meta_title": "Politique de confidentialité — Evolve Poker",
+    "meta_desc": "Découvrez comment Evolve Poker collecte, utilise et protège vos données personnelles.",
+    "hero_title": "Politique de",
+    "hero_gradient": "confidentialité",
+    "hero_desc": "Dernière mise à jour : janvier 2025",
+    "sections": [
+      {
+        "overline": "Collecte des données",
+        "title": "Quelles données collectons-nous ?",
+        "desc": "[Placeholder] Description des données collectées lors de l'utilisation de l'application et du site web Evolve Poker."
+      },
+      {
+        "overline": "Utilisation",
+        "title": "Comment utilisons-nous vos données ?",
+        "desc": "[Placeholder] Explication de l'usage des données collectées : amélioration du service, personnalisation, communications."
+      },
+      {
+        "overline": "Partage",
+        "title": "Partageons-nous vos données ?",
+        "desc": "[Placeholder] Informations sur les tiers avec lesquels les données peuvent être partagées et dans quelles circonstances."
+      },
+      {
+        "overline": "Vos droits",
+        "title": "Vos droits sur vos données",
+        "desc": "[Placeholder] Droits d'accès, de rectification, d'effacement et de portabilité conformément au RGPD."
+      },
+      {
+        "overline": "Contact",
+        "title": "Nous contacter",
+        "desc": "[Placeholder] Pour toute question relative à vos données personnelles, contactez-nous à privacy@evolvepoker.com."
+      }
+    ]
+  },
+  "terms": {
+    "meta_title": "Conditions d'utilisation — Evolve Poker",
+    "meta_desc": "Lisez les conditions générales d'utilisation de l'application et du site Evolve Poker.",
+    "hero_title": "Conditions",
+    "hero_gradient": "d'utilisation",
+    "hero_desc": "Dernière mise à jour : janvier 2025",
+    "sections": [
+      {
+        "overline": "Acceptation",
+        "title": "Acceptation des conditions",
+        "desc": "[Placeholder] En utilisant l'application ou le site Evolve Poker, vous acceptez les présentes conditions d'utilisation."
+      },
+      {
+        "overline": "Utilisation du service",
+        "title": "Règles d'utilisation",
+        "desc": "[Placeholder] Description des usages autorisés et interdits de la plateforme Evolve Poker."
+      },
+      {
+        "overline": "Propriété intellectuelle",
+        "title": "Droits et contenus",
+        "desc": "[Placeholder] Tous les contenus de l'application et du site sont la propriété exclusive d'Evolve Poker."
+      },
+      {
+        "overline": "Responsabilité",
+        "title": "Limitation de responsabilité",
+        "desc": "[Placeholder] Evolve Poker ne saurait être tenu responsable des pertes financières liées à l'utilisation du service."
+      },
+      {
+        "overline": "Résiliation",
+        "title": "Suspension et résiliation",
+        "desc": "[Placeholder] Conditions dans lesquelles un compte peut être suspendu ou résilié."
+      }
+    ]
+  },
   "home": {
     "meta_title": "Evolve Poker — Devenez un meilleur joueur de poker",
     "meta_desc": "Evolve Poker est votre assistant personnel dédié au poker. Leçons structurées, ranges, analyse de mains, calendrier des tournois — tout ce qu'il faut pour progresser, gratuitement sur Android.",

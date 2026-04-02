@@ -1,0 +1,39 @@
+---
+layout: layout.njk
+permalink: /pages/legal/terms.html
+page_key: terms
+---
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-header glow-bg">
+      <div class="container">
+        <div class="page-header__inner page-header__inner--whitepaper">
+          <h1 class="page-header__title">{{ texts.terms.hero_title }}<br><span class="text-gradient">{{ texts.terms.hero_gradient }}</span></h1>
+          <p class="page-header__desc">{{ texts.terms.hero_desc }}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTIONS -->
+    <section class="section">
+      <div class="container container--lg">
+        {% for section in texts.terms.sections %}
+          <div class="whitepaper-section{% if loop.index0 is odd %} whitepaper-section--alt{% endif %}">
+            <div class="whitepaper-section__inner">
+              <div class="whitepaper-section__content">
+                <span class="label-overline">{{ section.overline }}</span>
+                <h2 class="whitepaper-section__title">{{ section.title }}</h2>
+                <p class="whitepaper-section__desc">{{ section.desc }}</p>
+              </div>
+              <div class="whitepaper-section__visual">
+                <div class="feature-row__placeholder"><span>Illustration</span></div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>

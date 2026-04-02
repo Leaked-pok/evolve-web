@@ -13,329 +13,81 @@ activeNav: academy
         <div class="page-header__inner">
           <h1 class="page-header__title">{{ texts.academies.hero_title }}<br><span class="text-gradient">{{ texts.academies.hero_gradient }}</span></h1>
           <p class="page-header__desc">{{ texts.academies.hero_desc }}</p>
+          <div class="hero-stores">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ACCORDIONS -->
-    <section class="section section--sm">
-      <div class="container container--md">
+    <!-- CATEGORY TABS + MODULE GRID -->
+    <section class="section">
+      <div class="container container--xl">
 
-        <!-- Module 1 -->
-        <details class="module-accordion">
-          <summary>
-            <div class="module-accordion__header-left">
-              <span class="module-accordion__number">Module 1 · Débutant</span>
-              <span class="module-accordion__title">Les bases du poker</span>
-              <span class="module-accordion__meta">4 leçons</span>
-            </div>
-            <svg class="module-accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <ul class="module-accordion__lessons">
-            <li class="module-lesson">
-              <span class="module-lesson__num">01</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Les règles du Texas Hold'em</p>
-                <p class="module-lesson__sub">Déroulement d'une main, blindes, streets</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">02</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Les combinaisons de mains</p>
-                <p class="module-lesson__sub">Du high card à la quinte flush royale</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">03</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Les positions à la table</p>
-                <p class="module-lesson__sub">BTN, CO, MP, UTG, blindes — et leur importance</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">04</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Anatomie d'une main</p>
-                <p class="module-lesson__sub">Préflop, flop, turn, river — les décisions clés</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-          </ul>
-        </details>
+        <!-- Tabs -->
+        <div class="academy-tabs" role="tablist">
+          {% for category in academy %}
+            <button
+              class="academy-tab{% if loop.first %} academy-tab--active{% endif %}"
+              data-target="{{ category.id }}"
+              role="tab"
+              aria-selected="{{ 'true' if loop.first else 'false' }}"
+            >
+              {{ category.name }}
+            </button>
+          {% endfor %}
+        </div>
 
-        <!-- Module 2 -->
-        <details class="module-accordion">
-          <summary>
-            <div class="module-accordion__header-left">
-              <span class="module-accordion__number">Module 2 · Débutant</span>
-              <span class="module-accordion__title">Stratégie préflop</span>
-              <span class="module-accordion__meta">5 leçons</span>
-            </div>
-            <svg class="module-accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <ul class="module-accordion__lessons">
-            <li class="module-lesson">
-              <span class="module-lesson__num">05</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Sélection de mains par position</p>
-                <p class="module-lesson__sub">Quelles mains jouer selon votre place à la table</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">06</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">L'open raise : sizing et fréquences</p>
-                <p class="module-lesson__sub">Combien miser et à quelle fréquence ouvrir</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">07</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Défendre depuis les blindes</p>
-                <p class="module-lesson__sub">BB défense, SB squeeze, stratégies de défense</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">08</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Les 3-bets et 4-bets</p>
-                <p class="module-lesson__sub">Quand et comment re-relancer avant le flop</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">09</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Jouer en position vs hors position</p>
-                <p class="module-lesson__sub">L'avantage d'agir en dernier et comment l'exploiter</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-          </ul>
-        </details>
+        <!-- Panels -->
+        {% for category in academy %}
+          <div
+            class="academy-panel{% if not loop.first %} hidden{% endif %}"
+            id="{{ category.id }}"
+            role="tabpanel"
+          >
+            <div class="module-grid">
+              {% for module in category.modules %}
+                <div class="module-card">
 
-        <!-- Module 3 -->
-        <details class="module-accordion">
-          <summary>
-            <div class="module-accordion__header-left">
-              <span class="module-accordion__number">Module 3 · Intermédiaire</span>
-              <span class="module-accordion__title">Mathématiques du poker</span>
-              <span class="module-accordion__meta">5 leçons</span>
-            </div>
-            <svg class="module-accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <ul class="module-accordion__lessons">
-            <li class="module-lesson">
-              <span class="module-lesson__num">10</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Introduction aux probabilités</p>
-                <p class="module-lesson__sub">Les bases du raisonnement probabiliste au poker</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">11</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Pot odds et équité</p>
-                <p class="module-lesson__sub">Ratio mise/pot et calcul de vos chances de gagner</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">12</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Expected Value (EV)</p>
-                <p class="module-lesson__sub">Décisions à valeur espérée positive sur le long terme</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">13</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Bet sizing</p>
-                <p class="module-lesson__sub">Choisir la bonne taille de mise selon le contexte</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">14</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Fréquences d'équilibre et GTO</p>
-                <p class="module-lesson__sub">Équilibre de Nash appliqué aux décisions de poker</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-          </ul>
-        </details>
+                  <img
+                    src="{{ module.image }}"
+                    alt="{{ module.title }}"
+                    class="module-card__img"
+                    loading="lazy"
+                  >
 
-        <!-- Module 4 -->
-        <details class="module-accordion">
-          <summary>
-            <div class="module-accordion__header-left">
-              <span class="module-accordion__number">Module 4 · Intermédiaire</span>
-              <span class="module-accordion__title">Bluff et semi-bluff</span>
-              <span class="module-accordion__meta">5 leçons</span>
-            </div>
-            <svg class="module-accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <ul class="module-accordion__lessons">
-            <li class="module-lesson">
-              <span class="module-lesson__num">15</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Quand bluffer ?</p>
-                <p class="module-lesson__sub">Les conditions idéales pour un bluff rentable</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">16</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Le bluff de continuation (c-bet)</p>
-                <p class="module-lesson__sub">Maintenir la pression après avoir relancé préflop</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">17</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Le semi-bluff</p>
-                <p class="module-lesson__sub">Bluffer avec des tirages pour maximiser l'EV</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">18</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Le triple barrel</p>
-                <p class="module-lesson__sub">Miser sur les trois rues avec cohérence narrative</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">19</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Défendre contre les bluffs</p>
-                <p class="module-lesson__sub">Fréquence de défense minimale et hero calls</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-          </ul>
-        </details>
+                  <div class="module-card__body">
+                    <div class="module-card__meta">
+                      <span class="level-badge" data-level="{{ module.level }}">{{ module.level }}</span>
+                      <span class="module-card__lessons-count">{{ module.lessons_count }} leçons</span>
+                    </div>
+                    <h3 class="module-card__title">{{ module.title }}</h3>
+                    <p class="module-card__desc">{{ module.description }}</p>
+                  </div>
 
-        <!-- Module 5 -->
-        <details class="module-accordion">
-          <summary>
-            <div class="module-accordion__header-left">
-              <span class="module-accordion__number">Module 5 · Avancé</span>
-              <span class="module-accordion__title">Lecture des adversaires</span>
-              <span class="module-accordion__meta">5 leçons</span>
-            </div>
-            <svg class="module-accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <ul class="module-accordion__lessons">
-            <li class="module-lesson">
-              <span class="module-lesson__num">20</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Identifier les profils de joueurs</p>
-                <p class="module-lesson__sub">Fish, réguliers, nits, LAGs — reconnaître et adapter</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">21</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Value betting thin</p>
-                <p class="module-lesson__sub">Extraire de la valeur avec des mains marginales</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">22</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Exploiter les over-folders</p>
-                <p class="module-lesson__sub">Bluffer plus contre les joueurs trop passifs</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">23</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">S'adapter aux calling stations</p>
-                <p class="module-lesson__sub">Stratégies face aux joueurs qui suivent trop</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">24</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Les tells statistiques</p>
-                <p class="module-lesson__sub">Lire les patterns via HUD et stats online</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-          </ul>
-        </details>
+                  <a href="/pages/academy/modules/{{ module.module_id }}/" class="module-card__link">
+                    Voir les {{ module.lessons_count }} leçons
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                  </a>
 
-        <!-- Module 6 -->
-        <details class="module-accordion">
-          <summary>
-            <div class="module-accordion__header-left">
-              <span class="module-accordion__number">Module 6 · Avancé</span>
-              <span class="module-accordion__title">Stratégie tournoi</span>
-              <span class="module-accordion__meta">5 leçons</span>
+                </div>
+              {% endfor %}
             </div>
-            <svg class="module-accordion__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <ul class="module-accordion__lessons">
-            <li class="module-lesson">
-              <span class="module-lesson__num">25</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Cash game vs tournoi</p>
-                <p class="module-lesson__sub">Les différences fondamentales de stratégie</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">26</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">L'ICM et la prise de décision</p>
-                <p class="module-lesson__sub">Independent Chip Model — quand l'argent change les calculs</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">27</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Stratégie bulle et ITM</p>
-                <p class="module-lesson__sub">Gérer la pression aux moments cruciaux du tournoi</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">28</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Short stack play</p>
-                <p class="module-lesson__sub">Push/fold et stratégie avec moins de 20 bb</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-            <li class="module-lesson">
-              <span class="module-lesson__num">29</span>
-              <div class="module-lesson__body">
-                <p class="module-lesson__title">Heads-up et fin de tournoi</p>
-                <p class="module-lesson__sub">Stratégie en tête à tête pour remporter le titre</p>
-              </div>
-              <span class="module-lesson__lock">🔒</span>
-            </li>
-          </ul>
-        </details>
+          </div>
+        {% endfor %}
 
       </div>
     </section>

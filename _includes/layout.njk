@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ texts[page_key].meta_title }}</title>
-  <meta name="description" content="{{ texts[page_key].meta_desc }}">
+  <title>{% if module %}{{ module.title }} — Evolve Poker Academy{% else %}{{ texts[page_key].meta_title }}{% endif %}</title>
+  <meta name="description" content="{% if module %}{{ module.description | truncate(160) }}{% else %}{{ texts[page_key].meta_desc }}{% endif %}">
   <meta name="robots" content="index, follow">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,8 +105,8 @@
       <div class="footer__bottom">
         <p class="footer__copy">{{ texts.site.copyright }}</p>
         <div class="footer__legal">
-          <a href="#" class="footer__legal-link">Politique de confidentialité</a>
-          <a href="#" class="footer__legal-link">Conditions d'utilisation</a>
+          <a href="/pages/legal/privacy.html" class="footer__legal-link">Politique de confidentialité</a>
+          <a href="/pages/legal/terms.html" class="footer__legal-link">Conditions d'utilisation</a>
         </div>
       </div>
     </div>

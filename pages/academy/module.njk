@@ -1,0 +1,90 @@
+---
+pagination:
+  data: allModules
+  size: 1
+  alias: module
+permalink: "/pages/academy/modules/{{ module.module_id }}/"
+layout: layout.njk
+activeNav: academy
+---
+
+  <main>
+
+    <!-- MODULE HEADER -->
+    <section class="module-hero glow-bg">
+      <div class="container">
+        <a href="/pages/academy/academies.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Retour aux modules
+        </a>
+        <div class="module-hero__inner">
+          <div class="module-hero__visual">
+            <img src="{{ module.image }}" alt="{{ module.title }}" class="module-hero__img" loading="lazy">
+          </div>
+          <div class="module-hero__content">
+            <div class="module-hero__badges">
+              <span class="level-badge" data-level="{{ module.level }}">{{ module.level }}</span>
+              <span class="module-hero__cat">{{ module.category }}</span>
+            </div>
+            <h1 class="module-hero__title">{{ module.title }}</h1>
+            <p class="module-hero__desc">{{ module.description }}</p>
+            <p class="module-hero__count">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              {{ module.lessons_count }} leçons
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LESSONS LIST -->
+    <section class="section">
+      <div class="container container--md">
+        <ul class="module-full-lessons">
+          {% for lesson in module.lessons %}
+            <li class="module-lesson">
+              <span class="module-lesson__num">{{ '0' + lesson.num if lesson.num < 10 else lesson.num }}</span>
+              {% if lesson.image %}
+                <img src="{{ lesson.image }}" alt="{{ lesson.title }}" class="module-lesson__img" loading="lazy">
+              {% endif %}
+              <div class="module-lesson__body">
+                <p class="module-lesson__title">{{ lesson.title }}</p>
+                <p class="module-lesson__sub">{{ lesson.subtitle }}</p>
+              </div>
+              <span class="module-lesson__lock">🔒</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section glow-bg">
+      <div class="container">
+        <div class="cta-section__inner">
+          <div class="cta-section__content">
+            <span class="label-overline">Commencez à apprendre</span>
+            <h2 class="heading-section mt-4">Débloquez toutes les leçons</h2>
+            <p class="mt-4">Téléchargez l'application Evolve Poker gratuitement et accédez à l'intégralité de l'Academy.</p>
+          </div>
+          <div class="cta-section__stores">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>

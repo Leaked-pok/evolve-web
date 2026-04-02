@@ -670,11 +670,11 @@ p {
 }
 
 .btn-store:hover {
-  background: var(--color-text);
-  color: var(--color-text-invert);
-  border-color: transparent;
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 1px var(--color-gold), 0 0 12px rgba(212, 53, 106, 0.35);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
 }
 
 .btn-store__icon {
@@ -2773,7 +2773,316 @@ p {
 }
 
 /* ────────────────────────────────────────────────────────────
-   18. UTILITIES
+   18. ACADEMY PAGE
+   ──────────────────────────────────────────────────────────── */
+
+/* Category tabs */
+.academy-tabs {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-10);
+  scrollbar-width: none;
+  justify-content: center;
+}
+.academy-tabs::-webkit-scrollbar { display: none; }
+
+.academy-tab {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-text-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+.academy-tab:hover {
+  border-color: var(--color-border-light);
+  color: var(--color-text);
+}
+.academy-tab--active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #fff;
+}
+.academy-tab__count {
+  font-size: var(--text-xs);
+  opacity: 0.75;
+}
+
+/* Module grid */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+@media (max-width: 1024px) {
+  .module-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .module-grid { grid-template-columns: 1fr; }
+}
+
+/* Module card */
+.module-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--transition-fast);
+}
+.module-card:hover {
+  border-color: var(--color-border-light);
+}
+
+.module-card__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.module-card__body {
+  padding: var(--space-5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.module-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+/* Level badge */
+.level-badge {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  padding: 3px var(--space-3);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+[data-level="Débutant"]      { background: rgba(76,175,125,0.15); color: var(--color-success); }
+[data-level="Intermédiaire"] { background: rgba(77,143,224,0.15); color: #4d8fe0; }
+[data-level="Avancé"]        { background: rgba(228,164,53,0.15); color: var(--color-warning); }
+[data-level="Expert"]        { background: var(--color-gold-dim); color: var(--color-gold-light); }
+
+.module-card__lessons-count {
+  font-size: var(--text-xs);
+  color: var(--color-text-3);
+}
+
+.module-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-2);
+}
+
+.module-card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  line-height: var(--leading-relaxed);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Expand toggle (details/summary inside card) */
+.module-expand {
+  border-top: 1px solid var(--color-border);
+}
+.module-expand__toggle {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  font-family: var(--font-sans);
+  transition: color var(--transition-fast);
+}
+.module-expand__toggle::-webkit-details-marker { display: none; }
+.module-expand__toggle::marker { content: none; }
+.module-expand__toggle:hover { color: var(--color-text); }
+
+.module-expand__chevron {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+.module-expand[open] .module-expand__chevron {
+  transform: rotate(180deg);
+}
+
+/* Lesson list inside cards */
+.module-lesson-list {
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-light) transparent;
+}
+.module-lesson-list .module-lesson {
+  padding: var(--space-3) var(--space-4);
+  gap: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+.module-lesson-list .module-lesson:last-child {
+  border-bottom: none;
+}
+
+/* Hero store buttons */
+.hero-stores {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-16);
+}
+
+/* Module card link (replaces details/expand) */
+.module-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-2);
+  text-decoration: none;
+  transition: color var(--transition-fast), background var(--transition-fast);
+  gap: var(--space-2);
+}
+.module-card__link:hover {
+  color: var(--color-gold-light);
+  background: var(--color-gold-glow);
+}
+.module-card__link svg {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+.module-card__link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Module detail page — hero */
+.module-hero {
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-16) var(--space-20);
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-3);
+  text-decoration: none;
+  margin-bottom: var(--space-10);
+  transition: color var(--transition-fast);
+}
+.back-link:hover { color: var(--color-text-2); }
+
+.module-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .module-hero__inner { grid-template-columns: 1fr; gap: var(--space-8); }
+}
+
+.module-hero__img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+.module-hero__badges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+.module-hero__cat {
+  font-size: var(--text-xs);
+  color: var(--color-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--weight-semibold);
+}
+.module-hero__title {
+  font-size: clamp(var(--text-2xl), 3.5vw, var(--text-4xl));
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-5);
+}
+.module-hero__desc {
+  font-size: var(--text-lg);
+  color: var(--color-text-2);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+.module-hero__count {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-3);
+  font-weight: var(--weight-medium);
+}
+
+/* Lesson image (module detail page) */
+.module-lesson__img {
+  width: 72px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  display: block;
+}
+
+/* Full lesson list on module page */
+.module-full-lessons {
+  list-style: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.module-full-lessons .module-lesson {
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+.module-full-lessons .module-lesson:last-child {
+  border-bottom: none;
+}
+
+/* ────────────────────────────────────────────────────────────
+   19. UTILITIES
    ──────────────────────────────────────────────────────────── */
 .sr-only {
   position: absolute;
