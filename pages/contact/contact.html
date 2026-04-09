@@ -169,14 +169,21 @@ activeNav: contact
     const tabs = document.querySelectorAll('.contact-tab');
     const panels = document.querySelectorAll('.contact-panel');
 
+    function showPanel(targetId) {
+      tabs.forEach(t => t.classList.remove('contact-tab--active'));
+      panels.forEach(p => p.classList.remove('contact-panel--active'));
+      const targetTab = document.querySelector('[data-target="' + targetId + '"]');
+      if (targetTab) targetTab.classList.add('contact-tab--active');
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) targetPanel.classList.add('contact-panel--active');
+    }
+
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('contact-tab--active'));
-        panels.forEach(p => p.classList.remove('contact-panel--active'));
-        tab.classList.add('contact-tab--active');
-        document.getElementById(tab.dataset.target).classList.add('contact-panel--active');
-      });
+      tab.addEventListener('click', () => showPanel(tab.dataset.target));
     });
+
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'panel-help' || hash === 'panel-contact') showPanel(hash);
 
     document.getElementById('form-contact').addEventListener('submit', function(e) {
       e.preventDefault();

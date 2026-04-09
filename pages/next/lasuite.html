@@ -11,8 +11,17 @@ activeNav: lasuite
     <section class="page-header glow-bg">
       <div class="container">
         <div class="page-header__inner">
-          <h1 class="page-header__title">{{ texts.lasuite.hero_title }}<br><span class="text-gradient">{{ texts.lasuite.hero_gradient }}</span></h1>
+          <h1 class="page-header__title">{{ texts.lasuite.hero_title }} <span class="text-gradient">{{ texts.lasuite.hero_gradient }}</span></h1>
           <p class="page-header__desc">{{ texts.lasuite.hero_desc }}</p>
+          <div class="hero__actions mt-8">
+            <a href="/pages/contact/contact.html#panel-help" class="btn-store">
+              <span class="btn-store__icon">✉</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Participer au projet</span>
+                <span class="btn-store__name">Nous aider</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -21,7 +30,7 @@ activeNav: lasuite
     <section class="section">
       <div class="container container--lg">
         {% for row in texts.lasuite.feature_rows %}
-          <div class="feature-row{% if loop.index0 is odd %} feature-row--reverse{% endif %}">
+          <div id="{{ row.id }}" class="feature-row{% if loop.index0 is odd %} feature-row--reverse{% endif %}">
             <div class="feature-row__content">
               <span class="label-overline">{{ row.overline }}</span>
               <h2 class="feature-row__title">{{ row.title }}</h2>

@@ -25,8 +25,8 @@ activeNav: evolve
         <div class="cgu-select-box">
           <select id="cgu-select" class="cgu-select" onchange="cguShow(this.value)">
             <option value="evolve">Evolve ?</option>
-            <option value="risques">Risques poker</option>
-            <option value="aide">Aide inscription</option>
+            <option value="risques">Risques du Poker</option>
+            <option value="aide">Aide aux inscriptions</option>
             <option value="terms">Conditions d'utilisation</option>
             <option value="privacy">Politique de Confidentialité</option>
             <option value="faq">FAQ</option>
@@ -76,74 +76,272 @@ activeNav: evolve
         </div>
       </div>
 
-      <!-- PANEL : Risques poker -->
+      <!-- PANEL : Risques du Poker -->
       <div id="panel-risques" class="cgu-panel cgu-panel--hidden">
         <p class="cgu-panel__updated">Jouez de façon responsable.</p>
-        <div class="cgu-card">
-          <div class="cgu-card__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+
+        <details class="accordion accordion--blue">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--blue">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <span class="accordion__title">Jouer de façon responsable</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <h4 class="accordion__subtitle">Le poker est un jeu de compétences — pas un jeu de hasard pur</h4>
+            <p>C'est ce qui le distingue fondamentalement de la roulette ou des machines à sous. Sur le long terme, le niveau, le travail et les décisions font la différence. Les meilleurs joueurs du monde ont des résultats positifs sur des millions de mains — ce n'est pas le fruit du hasard.</p>
+            <p>Mais cette réalité ne supprime pas un autre fait, tout aussi important : à court terme, la variance est réelle et peut être brutale. Un joueur peut tout faire correctement, prendre les meilleures décisions possibles dans chaque situation, et perdre sur une session, une semaine, voire plusieurs mois. C'est la nature mathématique du jeu. Comprendre et accepter la variance, c'est la première condition pour vivre avec le poker de manière saine.</p>
+            <p>Evolve Poker est conçu pour t'aider à progresser — et cette progression passe aussi par une relation lucide et équilibrée avec le jeu.</p>
           </div>
-          <div class="cgu-card__body">
-            <span class="cgu-card__overline">Compétences & variance</span>
-            <h3 class="cgu-card__title">Le poker, un jeu de compétences</h3>
-            <p class="cgu-card__desc">[Placeholder] Le poker est un jeu de compétences à long terme, mais la variance à court terme peut créer des pertes. Evolve vous aide à comprendre ces concepts pour jouer de façon éclairée.</p>
+        </details>
+
+        <details class="accordion accordion--gold">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--gold">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </span>
+              <span class="accordion__title">Fixer des limites, c'est jouer intelligemment</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Les meilleurs joueurs ne sont pas ceux qui jouent le plus. Ce sont ceux qui jouent dans les conditions où ils performent le mieux, avec une bankroll adaptée, dans un état mental propice à la prise de décision.</p>
+            <p>Quelques principes fondamentaux pour une pratique responsable :</p>
+            <p><strong>Limite financière.</strong> Ne joue jamais avec de l'argent que tu ne peux pas te permettre de perdre. La bankroll management n'est pas une contrainte — c'est ce qui te permet de rester dans le jeu sur le long terme. Une règle simple : si une perte te causerait un stress financier réel dans ta vie quotidienne, les enjeux sont trop élevés.</p>
+            <p><strong>Limite temporelle.</strong> Le temps passé à jouer doit rester choisi, pas subi. Si tu remarques que les sessions s'allongent sans que tu l'aies décidé, ou que tu reviens jouer pour "récupérer" des pertes, ce sont des signaux à prendre au sérieux.</p>
+            <p><strong>État mental.</strong> Le poker exige de la concentration et de la lucidité. Jouer sous stress, sous l'emprise de l'alcool, ou dans un état émotionnel dégradé n'est pas seulement moins performant — c'est une condition qui favorise les comportements problématiques.</p>
           </div>
-        </div>
-        <div class="cgu-card">
-          <div class="cgu-card__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </details>
+
+        <details class="accordion accordion--red">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--red">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </span>
+              <span class="accordion__title">Reconnaître les signaux d'alerte</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Le passage d'une pratique récréative à une pratique problématique est souvent progressif et difficile à percevoir de l'intérieur. Voici les signaux qui doivent alerter :</p>
+            <ul class="accordion__list">
+              <li>Jouer avec des sommes plus importantes que prévu pour ressentir les mêmes sensations.</li>
+              <li>Avoir du mal à s'arrêter lorsqu'on a décidé de s'arrêter.</li>
+              <li>Revenir jouer rapidement après une perte pour tenter de la récupérer.</li>
+              <li>Penser au jeu de manière obsessionnelle en dehors des sessions.</li>
+              <li>Mentir à son entourage sur le temps ou l'argent consacré au jeu.</li>
+              <li>Continuer à jouer malgré des conséquences négatives concrètes sur sa vie financière, professionnelle ou relationnelle.</li>
+            </ul>
+            <p>Si tu reconnais plusieurs de ces signaux dans ta pratique, parler à un professionnel est la bonne décision — et la plus courageuse.</p>
           </div>
-          <div class="cgu-card__body">
-            <span class="cgu-card__overline">Jeu responsable</span>
-            <h3 class="cgu-card__title">Fixer des limites</h3>
-            <p class="cgu-card__desc">[Placeholder] Jouez toujours dans vos limites financières et temporelles. Si le jeu cesse d'être un loisir, des ressources d'aide sont disponibles.</p>
+        </details>
+
+        <details class="accordion accordion--green">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--green">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16l.19.92z"/></svg>
+              </span>
+              <span class="accordion__title">Les ressources d'aide en France</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Tu n'es pas seul. Des organismes spécialisés existent en France pour accompagner les joueurs en difficulté et leurs proches, gratuitement, de manière anonyme et sans jugement.</p>
+            <div class="accordion__resource">
+              <h4 class="accordion__resource-name">Joueurs Info Service</h4>
+              <p>La ligne nationale de référence pour toute question liée au jeu problématique.</p>
+              <p>📞 09 74 75 13 13 — 7j/7, de 8h à 2h — Appel anonyme et non surtaxé<br>💬 Chat disponible sur le site<br>🔗 <a href="https://www.joueurs-info-service.fr" target="_blank" rel="noopener" class="accordion__link">www.joueurs-info-service.fr</a></p>
+            </div>
+            <div class="accordion__resource">
+              <h4 class="accordion__resource-name">SOS Joueurs — ARPEJ</h4>
+              <p>Accompagnement gratuit, confidentiel et bienveillant par des professionnels spécialisés. Programme de thérapie en ligne disponible (SELF), forums d'entraide, suivi social.</p>
+              <p>📞 09 69 39 55 12<br>💬 Messagerie en ligne du lundi au vendredi, 13h–20h<br>🔗 <a href="https://www.sosjoueurs.org" target="_blank" rel="noopener" class="accordion__link">www.sosjoueurs.org</a></p>
+            </div>
+            <div class="accordion__resource">
+              <h4 class="accordion__resource-name">Addict Aide — Aide Info Jeu</h4>
+              <p>Site d'information et d'échange animé par des psychologues et médecins spécialisés. Anonymat et secret professionnel garantis.</p>
+              <p>🔗 <a href="https://www.addictaide.fr" target="_blank" rel="noopener" class="accordion__link">www.addictaide.fr</a></p>
+            </div>
+            <div class="accordion__resource">
+              <h4 class="accordion__resource-name">Evalujeu</h4>
+              <p>Outil en ligne pour s'autoévaluer et prendre conscience de sa pratique de jeu, développé par l'Autorité Nationale des Jeux.</p>
+              <p>🔗 <a href="https://www.evalujeu.fr" target="_blank" rel="noopener" class="accordion__link">www.evalujeu.fr</a></p>
+            </div>
+            <div class="accordion__resource">
+              <h4 class="accordion__resource-name">CSAPA — Centres de Soins, d'Accompagnement et de Prévention en Addictologie</h4>
+              <p>Des centres de soins spécialisés dans l'addiction existent partout en France. Ils proposent une prise en charge médicale, psychologique et sociale, souvent en lien direct avec Joueurs Info Service.</p>
+              <p>🔗 Trouver un CSAPA près de chez toi : <a href="https://www.joueurs-info-service.fr" target="_blank" rel="noopener" class="accordion__link">annuaire via joueurs-info-service.fr</a></p>
+            </div>
           </div>
-        </div>
-        <div class="cgu-card">
-          <div class="cgu-card__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </details>
+
+        <details class="accordion accordion--purple">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--purple">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </span>
+              <span class="accordion__title">Une dernière chose</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Chercher de l'aide n'est pas un aveu d'échec. C'est une décision rationnelle — exactement le type de décision que le poker t'apprend à prendre.</p>
           </div>
-          <div class="cgu-card__body">
-            <span class="cgu-card__overline">Ressources d'aide</span>
-            <h3 class="cgu-card__title">Besoin d'aide ?</h3>
-            <p class="cgu-card__desc">[Placeholder] Si vous pensez avoir un problème de jeu, des organismes spécialisés peuvent vous accompagner. En France : Joueurs Info Service au 09 74 75 13 13.</p>
-          </div>
-        </div>
+        </details>
+
       </div>
 
       <!-- PANEL : Aide inscription -->
       <div id="panel-aide" class="cgu-panel cgu-panel--hidden">
-        <p class="cgu-panel__updated">On vous accompagne pas à pas.</p>
-        <div class="cgu-card">
-          <div class="cgu-card__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <p class="cgu-panel__updated">Sites légaux, agréés ANJ — informations vérifiées.</p>
+
+        <!-- Winamax -->
+        <details class="accordion accordion--gold">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--gold">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </span>
+              <span class="accordion__title">Winamax — Le leader français</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Seul opérateur poker <strong>100% français</strong> parmi les majeurs, fondé à Paris en 2010. Premier site de poker en France en nombre de joueurs actifs et en volume de cash game.</p>
+            <div class="accordion__stats">
+              <div class="accordion__stat"><span class="accordion__stat-value">~15–20</span><span class="accordion__stat-label">freerolls / semaine</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">€1.5M+</span><span class="accordion__stat-label">garantis / Winamax Series</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">€500</span><span class="accordion__stat-label">bonus bienvenue max</span></div>
+            </div>
+            <p><strong>Points forts uniques :</strong> Expresso (jackpots jusqu'à ×1 000 000 la mise), SISMIX (le plus grand festival poker live en France, ~1 500 joueurs/édition), interface mobile référence du marché, service client 100% français.</p>
+            <p><strong>Idéal pour :</strong> tous niveaux. Meilleure liquidité en France, tournois Sit & Go les plus rapides du marché.</p>
+            <p><strong>Inscription :</strong> winamax.fr → créer un compte → vérification d'identité (CNI ou passeport) → premier dépôt pour activer le bonus.</p>
+            <div class="accordion__referral">
+              <span class="accordion__referral-label">Code parrainage</span>
+              <span class="accordion__referral-code">[TON_CODE_WINAMAX]</span>
+              <span class="accordion__referral-note">Remplace ce code par le tien depuis Winamax → Mon compte → Parrainage</span>
+            </div>
           </div>
-          <div class="cgu-card__body">
-            <span class="cgu-card__overline">Créer un compte</span>
-            <h3 class="cgu-card__title">S'inscrire sur Evolve</h3>
-            <p class="cgu-card__desc">[Placeholder] Téléchargez l'application sur l'App Store ou Google Play, puis créez votre compte avec votre email. L'inscription est gratuite et prend moins d'une minute.</p>
+        </details>
+
+        <!-- PokerStars -->
+        <details class="accordion accordion--blue">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--blue">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <span class="accordion__title">PokerStars — Les plus gros tournois</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Réseau mondial avec <strong>pool français séparé</strong> (obligation réglementaire ANJ). Malgré cette séparation, PokerStars reste le site avec les plus gros tournois disponibles en France.</p>
+            <div class="accordion__stats">
+              <div class="accordion__stat"><span class="accordion__stat-value">~10</span><span class="accordion__stat-label">freerolls / jour</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">€100k+</span><span class="accordion__stat-label">Sunday Million FR garanti</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">€600</span><span class="accordion__stat-label">bonus bienvenue max</span></div>
+            </div>
+            <p><strong>Points forts uniques :</strong> SCOOP FR et WCOOP FR (plusieurs millions d'euros garantis sur 2–3 semaines), Zoom Poker (cash game ultra-rapide, table suivante en 1 clic), Stars Rewards (système de coffres progressifs), le plus grand choix de formats de tournois du marché français.</p>
+            <p><strong>Idéal pour :</strong> joueurs MTT cherchant les plus grandes garanties et la variété de formats.</p>
+            <p><strong>Inscription :</strong> pokerstars.fr → créer un compte → entrer le code bonus à l'inscription → vérification d'identité → premier dépôt.</p>
+            <div class="accordion__referral">
+              <span class="accordion__referral-label">Code bonus</span>
+              <span class="accordion__referral-code">[TON_CODE_POKERSTARS]</span>
+              <span class="accordion__referral-note">À entrer au moment de l'inscription dans le champ "Code bonus"</span>
+            </div>
           </div>
-        </div>
-        <div class="cgu-card">
-          <div class="cgu-card__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </details>
+
+        <!-- PMU Poker -->
+        <details class="accordion accordion--green">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--green">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </span>
+              <span class="accordion__title">PMU Poker — L'opérateur d'État</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>PMU est un opérateur <strong>public français</strong> (Pari Mutuel Urbain). Son site poker attire une base de joueurs majoritairement récréatifs — ce qui en fait l'environnement le moins agressif du marché français pour les débutants.</p>
+            <div class="accordion__stats">
+              <div class="accordion__stat"><span class="accordion__stat-value">~5–8</span><span class="accordion__stat-label">freerolls / semaine</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">1 / an</span><span class="accordion__stat-label">Grand Prix de Paris (live)</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">€200</span><span class="accordion__stat-label">bonus bienvenue max</span></div>
+            </div>
+            <p><strong>Points forts uniques :</strong> table de jeu les plus "soft" du marché français (joueurs sports betting reconvertis, moins de réguliers), interface intégrée à l'app PMU (paris sportifs + poker dans le même compte), Grand Prix de Paris annuel avec packages satellites en ligne.</p>
+            <p><strong>Idéal pour :</strong> débutants et joueurs récréatifs cherchant des tables moins compétitives.</p>
+            <p><strong>Inscription :</strong> pmu.fr → Poker → créer un compte → vérification d'identité → bonus activé sur le premier dépôt.</p>
+            <div class="accordion__referral">
+              <span class="accordion__referral-label">Code parrainage</span>
+              <span class="accordion__referral-code">[TON_CODE_PMU]</span>
+              <span class="accordion__referral-note">À entrer à l'inscription depuis ton espace PMU → Parrainage</span>
+            </div>
           </div>
-          <div class="cgu-card__body">
-            <span class="cgu-card__overline">Mot de passe oublié</span>
-            <h3 class="cgu-card__title">Réinitialiser votre accès</h3>
-            <p class="cgu-card__desc">[Placeholder] Sur l'écran de connexion, appuyez sur "Mot de passe oublié" et entrez votre email. Vous recevrez un lien de réinitialisation dans les minutes qui suivent.</p>
+        </details>
+
+        <!-- Unibet -->
+        <details class="accordion accordion--purple">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--purple">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </span>
+              <span class="accordion__title">Unibet — La référence débutant</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Unibet a fait le choix rare et radical d'<strong>interdire les logiciels de tracking HUD</strong> sur ses tables débutant — une décision unique sur le marché qui rééquilibre complètement l'environnement en faveur des joueurs récréatifs.</p>
+            <div class="accordion__stats">
+              <div class="accordion__stat"><span class="accordion__stat-value">4–5</span><span class="accordion__stat-label">stops Unibet Open / an</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">€200</span><span class="accordion__stat-label">bonus bienvenue max</span></div>
+              <div class="accordion__stat"><span class="accordion__stat-value">€20</span><span class="accordion__stat-label">cash offert sans dépôt</span></div>
+            </div>
+            <p><strong>Points forts uniques :</strong> Tables "Beginners" (HUD interdits, joueurs pros bloqués), Unibet Open circuit live européen (Paris, Barcelone, Dublin…), challenges quotidiens avec récompenses directes en cash, €20 offerts sans dépôt à l'inscription.</p>
+            <p><strong>Idéal pour :</strong> débutants qui ne veulent pas affronter des réguliers équipés de logiciels d'analyse.</p>
+            <p><strong>Inscription :</strong> unibet.fr → Poker → créer un compte → récupérer les €20 sans dépôt → vérification d'identité pour retirer.</p>
+            <div class="accordion__referral">
+              <span class="accordion__referral-label">Code promo</span>
+              <span class="accordion__referral-code">[TON_CODE_UNIBET]</span>
+              <span class="accordion__referral-note">À entrer lors de l'inscription pour activer le bonus de bienvenue</span>
+            </div>
           </div>
-        </div>
-        <div class="cgu-card">
-          <div class="cgu-card__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </details>
+
+        <!-- Comment s'inscrire -->
+        <details class="accordion accordion--red">
+          <summary class="accordion__header">
+            <span class="accordion__title-wrap">
+              <span class="accordion__icon accordion__icon--red">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+              <span class="accordion__title">Les étapes communes à tous les sites</span>
+            </span>
+            <svg class="accordion__arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="accordion__body">
+            <p>Tous les opérateurs légaux français (agréés ANJ) suivent les mêmes étapes réglementaires :</p>
+            <ul class="accordion__list">
+              <li><strong>Création du compte</strong> — email, mot de passe, date de naissance. Prend moins de 2 minutes.</li>
+              <li><strong>Vérification d'identité (KYC)</strong> — obligatoire en France. Pièce d'identité en cours de validité (CNI recto-verso ou passeport) + justificatif de domicile de moins de 3 mois. Délai : quelques heures à 48h selon les sites.</li>
+              <li><strong>Premier dépôt</strong> — minimum généralement entre €10 et €20 selon les sites. CB, virement, PayPal, Skrill, Paysafecard selon les opérateurs.</li>
+              <li><strong>Activation du bonus</strong> — entrer le code parrainage avant ou pendant le dépôt selon les sites.</li>
+              <li><strong>Dégagement du bonus</strong> — les bonus poker se dégagent en jouant (en points ou en rake généré), pas instantanément. Lisez bien les conditions de rollover.</li>
+            </ul>
+            <p><strong>À savoir :</strong> un seul compte par personne est autorisé par opérateur en France. Tout compte multiple est sanctionné par la fermeture immédiate et la perte des fonds.</p>
           </div>
-          <div class="cgu-card__body">
-            <span class="cgu-card__overline">Contacter le support</span>
-            <h3 class="cgu-card__title">Nous écrire</h3>
-            <p class="cgu-card__desc">[Placeholder] Pour toute question ou problème technique, contactez-nous via la page <a href="/pages/contact/contact.html" style="color:var(--color-gold)">Contact</a> ou directement à support@evolvepoker.com.</p>
-          </div>
-        </div>
+        </details>
+
       </div>
 
       <!-- PANEL : Conditions Générales -->
@@ -182,15 +380,35 @@ activeNav: evolve
 
       <!-- PANEL : FAQ -->
       <div id="panel-faq" class="cgu-panel cgu-panel--hidden">
-        <p class="cgu-panel__updated">Section à venir</p>
+        <p class="cgu-panel__updated">Questions fréquentes sur Evolve Poker.</p>
         <div class="cgu-card">
           <div class="cgu-card__icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
           <div class="cgu-card__body">
-            <span class="cgu-card__overline">À venir</span>
-            <h3 class="cgu-card__title">Foire Aux Questions</h3>
-            <p class="cgu-card__desc">Les réponses aux questions fréquentes seront disponibles prochainement.</p>
+            <span class="cgu-card__overline">Créer un compte</span>
+            <h3 class="cgu-card__title">S'inscrire sur Evolve</h3>
+            <p class="cgu-card__desc">Téléchargez l'application sur l'App Store ou Google Play, puis créez votre compte avec votre email. L'inscription est gratuite et prend moins d'une minute.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Mot de passe oublié</span>
+            <h3 class="cgu-card__title">Réinitialiser votre accès</h3>
+            <p class="cgu-card__desc">Sur l'écran de connexion, appuyez sur "Mot de passe oublié" et entrez votre email. Vous recevrez un lien de réinitialisation dans les minutes qui suivent.</p>
+          </div>
+        </div>
+        <div class="cgu-card">
+          <div class="cgu-card__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="cgu-card__body">
+            <span class="cgu-card__overline">Contacter le support</span>
+            <h3 class="cgu-card__title">Nous écrire</h3>
+            <p class="cgu-card__desc">Pour toute question ou problème technique, contactez-nous via la page <a href="/pages/contact/contact.html" style="color:var(--color-gold)">Contact</a> ou directement à support@evolvepoker.com.</p>
           </div>
         </div>
       </div>
@@ -201,6 +419,15 @@ activeNav: evolve
 </main>
 
 <script>
+  var heroTitles = {
+    evolve:  'Evolve <span class="text-gradient">?</span>',
+    risques: 'Les <span class="text-gradient">risques</span>',
+    aide:    'Aide aux <span class="text-gradient">inscriptions</span>',
+    terms:   'Evolve <span class="text-gradient">?</span>',
+    privacy: 'Evolve <span class="text-gradient">?</span>',
+    faq:     'Evolve <span class="text-gradient">?</span>'
+  };
+
   function cguShow(val) {
     document.querySelectorAll('.cgu-panel').forEach(function(p) {
       p.classList.add('cgu-panel--hidden');
@@ -208,6 +435,8 @@ activeNav: evolve
     document.getElementById('panel-' + val).classList.remove('cgu-panel--hidden');
     document.getElementById('cgu-select').value = val;
     history.replaceState(null, '', '#' + val);
+    var heroTitle = document.querySelector('.cgu-hero__title');
+    if (heroTitle && heroTitles[val]) heroTitle.innerHTML = heroTitles[val];
   }
 
   (function() {

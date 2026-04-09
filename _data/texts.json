@@ -4,8 +4,8 @@
     "copyright": "© 2026 Evolve Poker. Tous droits réservés."
   },
   "cgu": {
-    "meta_title": "Evolve ? — Application, Risques & Légal",
-    "meta_desc": "Tout savoir sur l'application Evolve Poker : présentation, jeu responsable, aide à l'inscription, conditions d'utilisation et politique de confidentialité."
+    "meta_title": "Inscription poker en ligne France — Winamax, PokerStars, PMU, Unibet | Evolve Poker",
+    "meta_desc": "Guide complet pour s'inscrire sur les meilleurs sites de poker légaux en France (agréés ANJ) : Winamax, PokerStars, PMU Poker, Unibet. Bonus exclusifs, codes parrainage, nombre de freerolls, tournois garantis et conseils d'inscription étape par étape."
   },
   "privacy": {
     "meta_title": "Politique de confidentialité — Evolve Poker",
@@ -289,25 +289,28 @@
     "meta_desc": "Jeux, analyse de mains et communauté — les fonctionnalités complémentaires d'Evolve Poker Academy pour jouer, progresser et partager.",
     "hero_title": "La suite",
     "hero_gradient": "d'Evolve",
-    "hero_desc": "Les leçons posent les bases — la suite les transforme en réflexes. Jeux interactifs, analyse de vos mains, communauté de joueurs : tout ce qu'il faut pour que la théorie devienne du jeu concret.",
+    "hero_desc": "Les leçons posent les bases — la suite les transforme en réflexes. Jeux interactifs, analyse de vos mains, communauté de joueurs : tout ce qu'il faut pour que la théorie devienne du jeu concret. Ces fonctionnalités sont en cours de développement — votre retour contribue directement à les façonner.",
     "feature_rows": [
       {
+        "id": "jeux",
         "overline": "Jeux",
         "title": "Mettez vos connaissances sous pression",
         "desc": "Des mini-jeux et quiz interactifs conçus pour ancrer les concepts que vous venez d'apprendre. Ranges à compléter, mains à résoudre, situations à trancher en temps réel — chaque exercice est une répétition déguisée en défi. Et parce que la compétition est le meilleur moteur de progression, des classements vous permettront de vous mesurer à la communauté et de grimper dans les rangs. C'est comme ça qu'on passe de 'je comprends' à 'je joue bien'.",
-        "link": "/pages/lasuite/detail.html"
+        "link": "/pages/lasuite/jeux.html"
       },
       {
+        "id": "analyse",
         "overline": "Analyse",
         "title": "Vos mains sont votre meilleur manuel",
         "desc": "Les joueurs qui progressent le plus vite ne sont pas ceux qui jouent le plus — ce sont ceux qui analysent le mieux. Importez vos mains, identifiez les spots où vous perdez de la valeur et repérez vos patterns d'erreurs. Et bientôt, une analyse propulsée par l'IA vous donnera des retours précis, personnalisés et instantanés sur chaque décision — comme avoir un coach dans la poche.",
-        "link": "/pages/lasuite/detail.html"
+        "link": "/pages/lasuite/analyse.html"
       },
       {
+        "id": "communaute",
         "overline": "Communauté",
         "title": "Progressez entouré de joueurs qui vous ressemblent",
         "desc": "Rejoignez une communauté de joueurs qui partagent le même objectif : progresser vraiment. Soumettez vos mains au débat, confrontez vos lectures à celles des autres, posez vos questions sans jugement. Les meilleures prises de conscience viennent souvent d'un angle que vous n'aviez pas considéré — et c'est exactement ce que la communauté vous apporte.",
-        "link": "/pages/lasuite/detail.html"
+        "link": "/pages/lasuite/communaute.html"
       }
     ],
     "cta_overline": "Le niveau supérieur vous attend",
