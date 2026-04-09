@@ -1,0 +1,29 @@
+{
+  "name": "Evolve Poker",
+  "short_name": "Evolve",
+  "description": "Devenez un meilleur joueur de poker — leçons, ranges, analyse de mains.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0d0d1a",
+  "theme_color": "#0d0d1a",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

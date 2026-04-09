@@ -3,15 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ lesson.title }} — Evolve Poker Academy</title>
-  <meta name="description" content="{{ lesson.introduction | truncate(160) }}">
-  <meta name="robots" content="noindex, nofollow">
+
+  {% set _title %}{{ lesson.title }} — Evolve Poker Academy{% endset %}
+  {% set _desc %}{{ lesson.introduction | truncate(160) }}{% endset %}
+  {% set _image %}{% if lesson.image_url %}{{ lesson.image_url }}{% else %}{{ texts.site.url }}/assets/images/og-default.png{% endif %}{% endset %}
+
+  <title>{{ _title }}</title>
+  <meta name="description" content="{{ _desc }}">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ texts.site.url }}/lessons/{{ lesson.slug }}/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:locale"      content="fr_FR">
+  <meta property="og:site_name"   content="{{ texts.site.name }}">
+  <meta property="og:title"       content="{{ _title }}">
+  <meta property="og:description" content="{{ _desc }}">
+  <meta property="og:url"         content="{{ texts.site.url }}/lessons/{{ lesson.slug }}/">
+  <meta property="og:image"       content="{{ _image }}">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="{{ _title }}">
+  <meta name="twitter:description" content="{{ _desc }}">
+  <meta name="twitter:image"       content="{{ _image }}">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": {{ lesson.title | dump | safe }},
+    "description": {{ (lesson.introduction or "") | truncate(160) | dump | safe }},
+    "url": "{{ texts.site.url }}/lessons/{{ lesson.slug }}/",
+    "inLanguage": "fr",
+    "educationalLevel": {{ (lesson.level or "Tous niveaux") | dump | safe }},
+    "provider": {
+      "@type": "Organization",
+      "name": "Evolve Poker",
+      "url": "{{ texts.site.url }}"
+    }{% if lesson.image_url %},
+    "image": "{{ lesson.image_url }}"{% endif %}
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/favicon-96x96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body class="lesson-page">
@@ -22,7 +70,7 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
       <a href="#" class="lesson-header__logo">
-        <img src="/assets/images/logo.png" alt="Evolve Poker" class="nav__logo-img">
+        <img src="/assets/images/logo_short.png" alt="Evolve Poker" class="nav__logo-img">
       </a>
       <div class="lesson-header__spacer"></div>
     </div>

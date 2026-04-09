@@ -3332,6 +3332,26 @@ p {
 .ad-slot--top    { margin-bottom: var(--space-10); }
 .ad-slot--mid    { margin: var(--space-10) 0; }
 .ad-slot--bottom { margin-top: var(--space-10); }
+.ad-slot--top::before,
+.ad-slot--mid::before,
+.ad-slot--bottom::before,
+.ad-slot--inline::before {
+  content: "Cliquer sur les pubs est le meilleur moyen de nous soutenir";
+  display: block;
+  position: absolute;
+  top: calc(-1 * var(--space-5));
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--color-text-3);
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 0.55;
+}
+.ad-slot--top, .ad-slot--mid, .ad-slot--bottom, .ad-slot--inline {
+  position: relative;
+}
 .ad-slot--inline {
   width: 300px;
   min-height: 250px;
