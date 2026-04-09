@@ -36,6 +36,29 @@ layout: lesson-layout.njk
       <!-- Google AdSense — à configurer -->
     </div>
 
+    <!-- FEEDBACK LEÇON -->
+    <div class="lesson-feedback" id="lesson-feedback"
+         data-slug="{{ lesson.slug }}"
+         data-title="{{ lesson.title | escape }}">
+      <p class="lesson-feedback__label">Cette leçon t'a été utile ?</p>
+      <div class="lesson-feedback__row">
+        <button class="lesson-feedback__btn" id="btn-like" aria-label="J'aime cette leçon">
+          <svg class="lesson-feedback__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z"/>
+            <path d="M7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>
+          </svg>
+          <span class="lesson-feedback__count" id="count-like">—</span>
+        </button>
+        <button class="lesson-feedback__btn" id="btn-dislike" aria-label="Je n'aime pas cette leçon">
+          <svg class="lesson-feedback__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3H10z"/>
+            <path d="M17 2h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/>
+          </svg>
+        </button>
+        <a href="/pages/contact/contact.html" id="lesson-comment-link" class="lesson-feedback__comment">Laisser un commentaire</a>
+      </div>
+    </div>
+
     <!-- BOUTON QUIZ -->
     <div class="lesson-quiz-cta">
       <p class="lesson-quiz-cta__text">Tu as lu la leçon ? Teste tes connaissances.</p>
@@ -53,3 +76,86 @@ layout: lesson-layout.njk
 
   </div>
 </main>
+
+<script>
+(function() {
+  var el    = document.getElementById('lesson-feedback');
+  var slug  = el.dataset.slug;
+  var title = el.dataset.title;
+  var VOTE_KEY = 'vote_' + slug;
+
+  var btnLike      = document.getElementById('btn-like');
+  var btnDislike   = document.getElementById('btn-dislike');
+  var countLike    = document.getElementById('count-like');
+  var commentLink  = document.getElementById('lesson-comment-link');
+
+  // Lien commentaire avec le nom de la leçon en sujet
+  commentLink.href = '/pages/contact/contact.html?lesson=' + encodeURIComponent(title);
+
+  // Charger les compteurs depuis l'API
+  function loadCounts() {
+    fetch('/api/lesson-vote?lesson=' + encodeURIComponent(slug))
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        countLike.textContent = d.likes || 0;
+      })
+      .catch(function() {
+        countLike.textContent = '—';
+      });
+  }
+
+  // Envoyer un vote à l'API
+  function sendVote(action) {
+    fetch('/api/lesson-vote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ lesson: slug, vote: action })
+    })
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        countLike.textContent = d.likes || 0;
+      });
+  }
+
+  // Restaurer l'état depuis localStorage
+  var saved = localStorage.getItem(VOTE_KEY);
+  if (saved === 'like')    btnLike.classList.add('lesson-feedback__btn--active');
+  if (saved === 'dislike') btnDislike.classList.add('lesson-feedback__btn--active');
+
+  loadCounts();
+
+  btnLike.addEventListener('click', function() {
+    var current = localStorage.getItem(VOTE_KEY);
+    if (current === 'like') {
+      localStorage.removeItem(VOTE_KEY);
+      btnLike.classList.remove('lesson-feedback__btn--active');
+      sendVote('unlike');
+    } else {
+      if (current === 'dislike') {
+        btnDislike.classList.remove('lesson-feedback__btn--active');
+        sendVote('undislike');
+      }
+      localStorage.setItem(VOTE_KEY, 'like');
+      btnLike.classList.add('lesson-feedback__btn--active');
+      sendVote('like');
+    }
+  });
+
+  btnDislike.addEventListener('click', function() {
+    var current = localStorage.getItem(VOTE_KEY);
+    if (current === 'dislike') {
+      localStorage.removeItem(VOTE_KEY);
+      btnDislike.classList.remove('lesson-feedback__btn--active');
+      sendVote('undislike');
+    } else {
+      if (current === 'like') {
+        btnLike.classList.remove('lesson-feedback__btn--active');
+        sendVote('unlike');
+      }
+      localStorage.setItem(VOTE_KEY, 'dislike');
+      btnDislike.classList.add('lesson-feedback__btn--active');
+      sendVote('dislike');
+    }
+  });
+})();
+</script>

@@ -60,6 +60,7 @@ activeNav: contact
                   <option value="Partenariat">Partenariat</option>
                   <option value="Presse / médias">Presse / médias</option>
                   <option value="Suggestion de contenu">Suggestion de contenu</option>
+                  <option value="Commentaire sur une leçon">Commentaire sur une leçon</option>
                   <option value="Autre">Autre</option>
                 </select>
               </div>
@@ -185,14 +186,28 @@ activeNav: contact
     const hash = window.location.hash.replace('#', '');
     if (hash === 'panel-help' || hash === 'panel-contact') showPanel(hash);
 
+    // Pré-remplir depuis un lien de leçon (?lesson=...)
+    const params = new URLSearchParams(window.location.search);
+    const lessonName = params.get('lesson');
+    if (lessonName) {
+      const topicSelect = document.getElementById('c-topic');
+      topicSelect.value = 'Commentaire sur une leçon';
+      const msgField = document.getElementById('c-message');
+      msgField.placeholder = 'Ton commentaire sur cette leçon…';
+      msgField.value = 'Leçon : ' + lessonName + '\n\n';
+    }
+
     document.getElementById('form-contact').addEventListener('submit', function(e) {
       e.preventDefault();
       const name    = this.name.value.trim();
       const email   = this.email.value.trim();
       const topic   = this.topic.value || 'Contact';
       const message = this.message.value.trim();
+      const subject = lessonName && topic === 'Commentaire sur une leçon'
+        ? `Commentaire — ${lessonName}`
+        : topic;
       const body    = `Nom : ${name}\nEmail : ${email}\n\n${message}`;
-      window.location.href = `mailto:{{ texts.contact.email_contact }}?subject=${encodeURIComponent(topic)}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:{{ texts.contact.email_contact }}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     });
 
     document.getElementById('form-help').addEventListener('submit', function(e) {

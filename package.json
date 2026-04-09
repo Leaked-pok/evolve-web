@@ -6,6 +6,9 @@
     "start": "eleventy --serve",
     "build": "eleventy"
   },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
   }
