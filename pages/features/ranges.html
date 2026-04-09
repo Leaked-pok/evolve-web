@@ -5,65 +5,84 @@ page_key: feature_ranges
 activeNav: features
 ---
 
-  <main>
+<main>
 
-    <!-- HERO -->
-    <section class="page-header glow-bg">
-      <div class="container">
-        <div class="page-header__inner page-header__inner--whitepaper">
-          <a href="{{ texts.feature_ranges.back_link }}" class="whitepaper-back">{{ texts.feature_ranges.back_label }}</a>
-          <h1 class="page-header__title">{{ texts.feature_ranges.hero_title }}<br><span class="text-gradient">{{ texts.feature_ranges.hero_gradient }}</span></h1>
-          <p class="page-header__desc">{{ texts.feature_ranges.hero_desc }}</p>
+  <!-- RETOUR STICKY -->
+  <div class="feature-back-sticky">
+    <div class="container">
+      <a href="/pages/features/features.html#ranges" class="feature-back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Retour aux fonctionnalités
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="page-header page-header--no-border page-header--compact glow-bg">
+    <div class="container">
+      <div class="page-header__inner page-header__inner--whitepaper">
+        <h1 class="page-header__title">Ranges<br><span class="text-gradient">Le problème que personne ne veut admettre</span></h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container container--sm">
+      <div class="feature-article">
+
+        <p>Travailler ses ranges fait partie des fondamentaux incontournables du poker. Tout joueur sérieux le sait. Pourtant, dans la pratique, ce travail reste souvent superficiel, difficile à maintenir dans le temps. Pas par manque de volonté — par manque d'un outil vraiment adapté.</p>
+        <p>Les solutions qui existent aujourd'hui ont été conçues pour des sessions d'étude longues, sur ordinateur, dans un environnement dédié. Dans la réalité du joueur moderne — entre deux sessions, dans les transports, dans les quelques minutes avant de s'asseoir à une table — ces outils deviennent des obstacles plutôt que des alliés.</p>
+        <p>Evolve Poker part d'un constat différent : le travail sur les ranges doit s'intégrer dans ta vie réelle, pas l'inverse.</p>
+
+        <h2 class="feature-article__heading">Une consultation <span class="text-gradient">sans friction</span></h2>
+        <br>
+        <p>Dès que tu ouvres le feature, tes ranges préétablies sont là. Pas de chargement, pas de menus à plusieurs niveaux. Tu consultes un spot en quelques secondes, tu confirmes une intuition, tu corriges une hésitation — et tu passes à autre chose.</p>
+        <p>Cette accessibilité n'est pas un détail de confort. C'est une condition de fond pour que le travail sur les ranges devienne une habitude réelle plutôt qu'une bonne intention régulièrement reportée.</p>
+
+        <h2 class="feature-article__heading">Des ranges qui <span class="text-gradient">évoluent avec toi</span></h2>
+        <br>
+        <p>Ta compréhension du jeu progresse. Les ranges que tu jouais il y a six mois ne sont peut-être plus exactement celles que tu veux jouer aujourd'hui. Le feature intègre nativement la modification de tes ranges existantes, directement depuis l'app, sans outil externe. Tu identifies un ajustement, tu le fais immédiatement. Tes ranges restent vivantes plutôt que de devenir des documents figés qu'on finit par ne plus consulter.</p>
+
+        <h2 class="feature-article__heading">Construire ou dupliquer — <span class="text-gradient">à toi de choisir</span></h2>
+        <br>
+        <p>Pour les situations nouvelles, tu crées une range depuis zéro : tu définis le contexte, tu construis chaque décision de manière consciente. Pour les ajustements stratégiques, tu dupliques une range existante et tu la personnalises. Dans les deux cas, la logique est la même — supprimer toute friction entre l'idée et l'exécution.</p>
+
+        <h2 class="feature-article__heading">Ce que ça change, <span class="text-gradient">concrètement</span></h2>
+        <br>
+        <p>Un outil de ranges efficace, c'est moins d'erreurs mécaniques en jeu, plus de bande passante mentale pour les décisions qui comptent vraiment, et un travail de préparation qui s'intègre naturellement dans le quotidien.</p>
+        <p>Le feature Ranges d'Evolve Poker ne te rend pas meilleur par magie. Il supprime les frictions qui t'empêchaient de faire le travail qui t'aurait rendu meilleur.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section glow-bg">
+    <div class="container">
+      <div class="cta-section__inner cta-section__inner--center">
+        <div class="cta-section__content text-center">
+          <h2 class="heading-section">{{ texts.feature_ranges.cta_title }}</h2>
+          <p class="mt-4">{{ texts.feature_ranges.cta_desc }}</p>
+          <div class="hero__actions mt-8">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTENT SECTIONS -->
-    <section class="section">
-      <div class="container container--lg">
-        {% for section in texts.feature_ranges.sections %}
-          <div class="whitepaper-section{% if loop.index0 is odd %} whitepaper-section--alt{% endif %}">
-            <div class="whitepaper-section__inner">
-              <div class="whitepaper-section__content">
-                <span class="label-overline">{{ section.overline }}</span>
-                <h2 class="whitepaper-section__title">{{ section.title }}</h2>
-                <p class="whitepaper-section__desc">{{ section.desc }}</p>
-              </div>
-              <div class="whitepaper-section__visual">
-                <div class="feature-row__placeholder"><span>Illustration</span></div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta-section glow-bg">
-      <div class="container">
-        <div class="cta-section__inner cta-section__inner--center">
-          <div class="cta-section__content text-center">
-            <h2 class="heading-section">{{ texts.feature_ranges.cta_title }}</h2>
-            <p class="mt-4">{{ texts.feature_ranges.cta_desc }}</p>
-            <div class="hero__actions mt-8">
-              <a href="#" class="btn-store">
-                <span class="btn-store__icon">&#xF8FF;</span>
-                <span class="btn-store__text">
-                  <span class="btn-store__sub">Télécharger sur l'</span>
-                  <span class="btn-store__name">App Store</span>
-                </span>
-              </a>
-              <a href="#" class="btn-store">
-                <span class="btn-store__icon">▶</span>
-                <span class="btn-store__text">
-                  <span class="btn-store__sub">Disponible sur</span>
-                  <span class="btn-store__name">Google Play</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
+</main>

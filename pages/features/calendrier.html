@@ -5,65 +5,86 @@ page_key: feature_calendrier
 activeNav: features
 ---
 
-  <main>
+<main>
 
-    <!-- HERO -->
-    <section class="page-header glow-bg">
-      <div class="container">
-        <div class="page-header__inner page-header__inner--whitepaper">
-          <a href="{{ texts.feature_calendrier.back_link }}" class="whitepaper-back">{{ texts.feature_calendrier.back_label }}</a>
-          <h1 class="page-header__title">{{ texts.feature_calendrier.hero_title }}<br><span class="text-gradient">{{ texts.feature_calendrier.hero_gradient }}</span></h1>
-          <p class="page-header__desc">{{ texts.feature_calendrier.hero_desc }}</p>
+  <!-- RETOUR STICKY -->
+  <div class="feature-back-sticky">
+    <div class="container">
+      <a href="/pages/features/features.html#calendrier" class="feature-back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Retour aux fonctionnalités
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="page-header page-header--no-border page-header--compact glow-bg">
+    <div class="container">
+      <div class="page-header__inner page-header__inner--whitepaper">
+        <h1 class="page-header__title">{{ texts.feature_calendrier.hero_title }}<br><span class="text-gradient">{{ texts.feature_calendrier.hero_gradient }}</span></h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container container--sm">
+      <div class="feature-article">
+
+        <p>Le calendrier des grandes séries de tournois est fragmenté entre des dizaines de sources : sites de rooms online, pages officielles de circuits live, forums, réseaux sociaux, newsletters. Pour savoir ce qui se joue dans les prochaines semaines — que ce soit au WSOP, à l'EPT, sur PokerStars ou GGPoker — tu dois jongler entre plusieurs onglets, recouper des informations dispersées, et espérer ne rien manquer d'important.</p>
+        <p>C'est une perte de temps que peu de joueurs mesurent vraiment, parce qu'elle est devenue normale. Evolve Poker décide de la supprimer.</p>
+
+        <h2 class="feature-article__heading">Une vue d'ensemble, <span class="text-gradient">enfin centralisée</span></h2>
+        <br>
+        <p>Le feature Calendrier regroupe en un seul endroit toutes les grandes séries de tournois, live et online. Les circuits internationaux majeurs, les séries online à gros garantis, les événements récurrents qui structurent le calendrier du joueur sérieux — tout est là, organisé, lisible d'un coup d'œil.</p>
+        <p>La vue calendrier te donne une vision temporelle immédiate : ce qui se joue cette semaine, ce qui arrive le mois prochain, ce qu'il faut anticiper dans trois mois pour organiser ta bankroll ou ton agenda. Les filtres te permettent d'affiner en quelques secondes selon tes critères — format, buy-in, live ou online — pour ne voir que ce qui te concerne vraiment.</p>
+
+        <h2 class="feature-article__heading">Toute l'information dont tu as besoin, <span class="text-gradient">directement accessible</span></h2>
+        <br>
+        <p>Trouver un tournoi, c'est bien. Avoir immédiatement toutes les informations pour décider si tu le joues, c'est mieux. Chaque événement du calendrier donne accès directement depuis l'app à sa description complète, son buy-in, sa structure, ses niveaux, et le lien vers la page officielle pour l'inscription ou les détails complémentaires.</p>
+        <p>Plus besoin de quitter l'app pour chercher si le Main Event d'une série commence à 18h ou 20h, si le re-entry est autorisé, ou quel est le late registration. L'information est là, propre, complète, au même endroit que tout le reste.</p>
+
+        <h2 class="feature-article__heading">Ne laisse plus le calendrier <span class="text-gradient">décider à ta place</span></h2>
+        <br>
+        <p>Les meilleurs tournois se remplissent vite. Les séries live demandent une organisation en amont — voyage, hébergement, bankroll. Même online, certains events à gros garantis méritent d'être anticipés plutôt que découverts la veille au soir.</p>
+        <p>Le feature Calendrier te permet de configurer des alertes et des rappels sur les tournois qui t'intéressent. Tu définis à l'avance les événements que tu veux jouer, et l'app se charge de te prévenir au bon moment. Plus d'event raté par oubli, plus de série découverte trop tard pour s'organiser correctement.</p>
+        <p>Et pour les joueurs qui gèrent leur planning sérieusement, chaque tournoi peut être ajouté directement à ton calendrier personnel. Live ou online, ton agenda de joueur et ta vie quotidienne partagent enfin le même espace.</p>
+
+        <h2 class="feature-article__heading">Un outil pour jouer plus, <span class="text-gradient">et mieux choisir</span></h2>
+        <br>
+        <p>Avoir une vision claire du calendrier ne sert pas seulement à ne pas rater des tournois. Ça sert à mieux les choisir. À identifier les séries où ton profil de jeu et ta bankroll sont les mieux alignés. À construire une vraie stratégie de jeu sur plusieurs mois plutôt que de réagir au dernier moment.</p>
+        <p>Le feature Calendrier d'Evolve Poker transforme une recherche dispersée et chronophage en une décision rapide et informée. Parce que le temps que tu passes à chercher l'information, c'est du temps que tu ne passes pas à préparer ton jeu.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section glow-bg">
+    <div class="container">
+      <div class="cta-section__inner cta-section__inner--center">
+        <div class="cta-section__content text-center">
+          <h2 class="heading-section">{{ texts.feature_calendrier.cta_title }}</h2>
+          <p class="mt-4">{{ texts.feature_calendrier.cta_desc }}</p>
+          <div class="hero__actions mt-8">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTENT SECTIONS -->
-    <section class="section">
-      <div class="container container--lg">
-        {% for section in texts.feature_calendrier.sections %}
-          <div class="whitepaper-section{% if loop.index0 is odd %} whitepaper-section--alt{% endif %}">
-            <div class="whitepaper-section__inner">
-              <div class="whitepaper-section__content">
-                <span class="label-overline">{{ section.overline }}</span>
-                <h2 class="whitepaper-section__title">{{ section.title }}</h2>
-                <p class="whitepaper-section__desc">{{ section.desc }}</p>
-              </div>
-              <div class="whitepaper-section__visual">
-                <div class="feature-row__placeholder"><span>Illustration</span></div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta-section glow-bg">
-      <div class="container">
-        <div class="cta-section__inner cta-section__inner--center">
-          <div class="cta-section__content text-center">
-            <h2 class="heading-section">{{ texts.feature_calendrier.cta_title }}</h2>
-            <p class="mt-4">{{ texts.feature_calendrier.cta_desc }}</p>
-            <div class="hero__actions mt-8">
-              <a href="#" class="btn-store">
-                <span class="btn-store__icon">&#xF8FF;</span>
-                <span class="btn-store__text">
-                  <span class="btn-store__sub">Télécharger sur l'</span>
-                  <span class="btn-store__name">App Store</span>
-                </span>
-              </a>
-              <a href="#" class="btn-store">
-                <span class="btn-store__icon">▶</span>
-                <span class="btn-store__text">
-                  <span class="btn-store__sub">Disponible sur</span>
-                  <span class="btn-store__name">Google Play</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
+</main>

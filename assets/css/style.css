@@ -3650,3 +3650,67 @@ p {
 @media (min-width: 769px) {
   .academy-tabs-arrow { display: none; }
 }
+
+/* ────────────────────────────────────────────────────────────
+   Feature article (page Ranges et futures pages editoriales)
+   ──────────────────────────────────────────────────────────── */
+
+/* Lien retour fixe sous la nav */
+.feature-back-sticky {
+  position: fixed;
+  top: 88px; /* nav (68px) + 20px */
+  left: 0;
+  right: 0;
+  z-index: calc(var(--z-nav) - 1);
+  pointer-events: none;
+  padding: 0;
+}
+.feature-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+  color: var(--color-text-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  pointer-events: auto;
+  transition: color 0.15s, border-color 0.15s;
+  backdrop-filter: blur(8px);
+}
+.feature-back-btn:hover {
+  color: var(--color-text);
+  border-color: var(--color-gold);
+}
+
+/* Corps de l'article */
+.page-header--no-border { border-bottom: none; }
+
+/* Ancres features : décalage pour ne pas passer sous la nav sticky */
+.feature-row { scroll-margin-top: 100px; }
+.page-header--compact { min-height: unset; padding-block: var(--space-16) var(--space-12); }
+
+.feature-article {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.feature-article p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--color-text-2);
+  margin-bottom: var(--space-6);
+}
+.feature-article__heading {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
+  font-weight: var(--weight-bold);
+  line-height: 1.25;
+  margin: var(--space-14) 0 var(--space-8);
+  color: var(--color-text);
+}
+.feature-article__heading:first-of-type {
+  margin-top: var(--space-10);
+}

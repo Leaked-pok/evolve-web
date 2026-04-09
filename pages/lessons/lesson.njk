@@ -28,7 +28,7 @@ layout: lesson-layout.njk
 
     <!-- CONTENU DE LA LEÇON -->
     <article class="lesson-content">
-      {{ lesson.content | safe }}
+      {{ lesson.content | replace("[AD]", '<div class="ad-slot ad-slot--inline"></div>') | safe }}
     </article>
 
     <!-- ENCART PUB MILIEU -->

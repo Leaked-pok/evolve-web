@@ -37,7 +37,7 @@ activeNav: features
     <section class="section">
       <div class="container container--lg">
         {% for row in texts.features.feature_rows %}
-          <div class="feature-row{% if loop.index0 is odd %} feature-row--reverse{% endif %}">
+          <div id="{{ row.id }}" class="feature-row{% if loop.index0 is odd %} feature-row--reverse{% endif %}">
             <div class="feature-row__content">
               <span class="label-overline">{{ row.overline }}</span>
               <h2 class="feature-row__title">{{ row.title }}</h2>

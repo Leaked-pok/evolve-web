@@ -5,65 +5,82 @@ page_key: feature_mains
 activeNav: features
 ---
 
-  <main>
+<main>
 
-    <!-- HERO -->
-    <section class="page-header glow-bg">
-      <div class="container">
-        <div class="page-header__inner page-header__inner--whitepaper">
-          <a href="{{ texts.feature_mains.back_link }}" class="whitepaper-back">{{ texts.feature_mains.back_label }}</a>
-          <h1 class="page-header__title">{{ texts.feature_mains.hero_title }}<br><span class="text-gradient">{{ texts.feature_mains.hero_gradient }}</span></h1>
-          <p class="page-header__desc">{{ texts.feature_mains.hero_desc }}</p>
+  <!-- RETOUR FIXE -->
+  <div class="feature-back-sticky">
+    <div class="container">
+      <a href="/pages/features/features.html#mains" class="feature-back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Retour aux fonctionnalités
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="page-header page-header--no-border page-header--compact glow-bg">
+    <div class="container">
+      <div class="page-header__inner page-header__inner--whitepaper">
+        <h1 class="page-header__title">{{ texts.feature_mains.hero_title }}<br><span class="text-gradient">Ce qui ne se note pas se perd</span></h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container container--sm">
+      <div class="feature-article">
+
+        <p>En tournoi, les spots complexes s'enchaînent. Une décision difficile au bubble, un 3-bet spot inhabituel en fin de level, une main où tu n'es pas sûr d'avoir fait le bon choix — sur le moment, tu te dis que tu t'en souviendras. Deux heures et cent mains plus tard, il ne reste plus grand chose. Les détails se brouillent, le contexte disparaît, et la main qui méritait une vraie analyse n'en aura jamais.</p>
+        <p>Ce n'est pas un problème de mémoire. C'est un problème d'outil.</p>
+
+        <h2 class="feature-article__heading">Noter en quelques secondes, <span class="text-gradient">sans quitter la table</span></h2>
+        <br>
+        <p>Le feature Mains est conçu autour d'une contrainte réelle : en tournoi, tu n'as pas le temps. Entre deux mains, entre deux levels, pendant un break de cinq minutes — les fenêtres sont courtes et l'attention est ailleurs.</p>
+        <p>L'app permet de noter une main en quelques secondes. Le flux est pensé pour être le plus rapide possible : tu captures l'essentiel pendant que le contexte est encore frais, sans friction, sans étapes inutiles. Pas besoin de tout décrire dans le détail sur le moment — il suffit d'ancrer les éléments clés pour pouvoir reconstruire la main correctement plus tard.</p>
+        <p>C'est cette rapidité qui fait la différence. Un outil qu'on ne sort pas parce qu'il est trop lent à utiliser à table ne sert à rien. Evolve Poker résout ce problème à la racine.</p>
+
+        <h2 class="feature-article__heading">Retrouver et étudier, <span class="text-gradient">quand le temps le permet</span></h2>
+        <br>
+        <p>La saisie rapide n'a de valeur que si elle débouche sur une vraie session d'étude. C'est là qu'interviennent les filtres intelligents du feature.</p>
+        <p>Après une session, tu retrouves tes mains notées classées et filtrables selon les critères qui t'importent. Tu peux isoler les spots en fin de tournoi, les situations de grosse pression, les mains où tu as hésité, les décisions que tu veux confronter à ta range ou aux concepts vus en formation. L'étude devient ciblée plutôt que vague — tu travailles sur des situations réelles que tu as vécues, pas sur des exemples abstraits.</p>
+
+        <h2 class="feature-article__heading">Le chaînon manquant entre <span class="text-gradient">le jeu et la progression</span></h2>
+        <br>
+        <p>La plupart des joueurs font deux choses séparément : ils jouent, et parfois ils étudient. Mais le lien entre les deux — la capacité à transformer une expérience vécue à table en matière d'apprentissage concret — reste souvent flou, informel, dépendant de la mémoire.</p>
+        <p>Le feature Mains crée ce lien de manière systématique. Chaque main notée devient une brique de ton travail d'analyse. Accumulées sur plusieurs sessions, plusieurs semaines, elles constituent une base personnelle de spots réels sur laquelle construire une progression structurée.</p>
+        <p>Ce n'est pas juste un carnet de notes numérique. C'est l'outil qui transforme chaque tournoi joué en matière première pour devenir meilleur.</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section glow-bg">
+    <div class="container">
+      <div class="cta-section__inner cta-section__inner--center">
+        <div class="cta-section__content text-center">
+          <h2 class="heading-section">{{ texts.feature_mains.cta_title }}</h2>
+          <p class="mt-4">{{ texts.feature_mains.cta_desc }}</p>
+          <div class="hero__actions mt-8">
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">&#xF8FF;</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Télécharger sur l'</span>
+                <span class="btn-store__name">App Store</span>
+              </span>
+            </a>
+            <a href="#" class="btn-store">
+              <span class="btn-store__icon">▶</span>
+              <span class="btn-store__text">
+                <span class="btn-store__sub">Disponible sur</span>
+                <span class="btn-store__name">Google Play</span>
+              </span>
+            </a>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CONTENT SECTIONS -->
-    <section class="section">
-      <div class="container container--lg">
-        {% for section in texts.feature_mains.sections %}
-          <div class="whitepaper-section{% if loop.index0 is odd %} whitepaper-section--alt{% endif %}">
-            <div class="whitepaper-section__inner">
-              <div class="whitepaper-section__content">
-                <span class="label-overline">{{ section.overline }}</span>
-                <h2 class="whitepaper-section__title">{{ section.title }}</h2>
-                <p class="whitepaper-section__desc">{{ section.desc }}</p>
-              </div>
-              <div class="whitepaper-section__visual">
-                <div class="feature-row__placeholder"><span>Illustration</span></div>
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section cta-section glow-bg">
-      <div class="container">
-        <div class="cta-section__inner cta-section__inner--center">
-          <div class="cta-section__content text-center">
-            <h2 class="heading-section">{{ texts.feature_mains.cta_title }}</h2>
-            <p class="mt-4">{{ texts.feature_mains.cta_desc }}</p>
-            <div class="hero__actions mt-8">
-              <a href="#" class="btn-store">
-                <span class="btn-store__icon">&#xF8FF;</span>
-                <span class="btn-store__text">
-                  <span class="btn-store__sub">Télécharger sur l'</span>
-                  <span class="btn-store__name">App Store</span>
-                </span>
-              </a>
-              <a href="#" class="btn-store">
-                <span class="btn-store__icon">▶</span>
-                <span class="btn-store__text">
-                  <span class="btn-store__sub">Disponible sur</span>
-                  <span class="btn-store__name">Google Play</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
+</main>

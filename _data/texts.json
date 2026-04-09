@@ -240,6 +240,7 @@
     "hero_desc": "Chaque fonctionnalité d'Evolve Poker a été pensée pour répondre à une vraie question de joueur : comment structurer mon apprentissage, maintenir ma régularité, mesurer mes progrès et rester motivé sur le long terme ? Les réponses sont là, dans votre poche.",
     "feature_rows": [
       {
+        "id": "lecons",
         "overline": "Leçons",
         "title": "Apprenez le poker comme il devrait être enseigné",
         "desc": "Pas de vidéos interminables, pas de contenu dilué. Evolve Poker vous propose des leçons structurées, pensées pour aller droit au but et construire vos connaissances sur des bases solides. Des règles fondamentales aux spots les plus complexes — chaque module avance étape par étape, sans jamais brûler les étapes.",
@@ -247,6 +248,7 @@
         "cta": "Découvrir les modules →"
       },
       {
+        "id": "ranges",
         "overline": "Ranges",
         "title": "Maîtrisez les ranges, maîtrisez le jeu",
         "desc": "Comprendre pourquoi certaines mains se jouent et d'autres non, c'est ce qui sépare un joueur instinctif d'un joueur solide. Evolve Poker vous donne les outils pour ça : visualisez les ranges pour chaque position, créez et sauvegardez vos propres grilles, et suivez votre progression dans leur maîtrise. De la consultation à la création — tout ce qu'il faut pour intégrer les ranges pour de bon.",
@@ -254,6 +256,7 @@
         "cta": "Découvrir →"
       },
       {
+        "id": "calendrier",
         "overline": "Calendrier",
         "title": "Ne manquez plus jamais un tournoi",
         "desc": "Live ou online, en France ou à l'international — Evolve Poker centralise tous les tournois qui comptent dans un calendrier clair et toujours à jour. WSOP, EPT, WPT côté live ; WCOOP, SCOOP et les grandes Series online côté virtuel. Dates, formats, buy-ins : tout ce qu'il faut pour planifier votre année poker sans passer des heures à chercher l'information sur dix sites différents.",
@@ -261,17 +264,19 @@
         "cta": "Découvrir →"
       },
       {
-        "overline": "News",
-        "title": "Restez dans la boucle, sans effort",
-        "desc": "Le monde du poker bouge vite — nouveaux tournois, résultats marquants, évolutions réglementaires, tendances stratégiques. Evolve Poker vous donne accès à une sélection d'actualités pertinentes, directement dans l'application. Restez informé sans avoir à jongler entre dix sources différentes.",
-        "link": "/pages/features/news.html",
-        "cta": "Découvrir →"
-      },
-      {
+        "id": "mains",
         "overline": "Mains",
         "title": "Notez vos mains, rejouez-les, progressez",
         "desc": "Un spot difficile, une décision douteuse, une main que vous n'êtes pas sûr d'avoir bien jouée — notez-la en quelques secondes dans Evolve Poker pendant que c'est frais. Retrouvez-la plus tard, analysez-la à tête reposée et identifiez exactement où votre jeu peut progresser. C'est le genre de travail qui fait la différence sur le long terme.",
         "link": "/pages/features/mains.html",
+        "cta": "Découvrir →"
+      },
+      {
+        "id": "news",
+        "overline": "News",
+        "title": "Restez dans la boucle, sans effort",
+        "desc": "Le monde du poker bouge vite — nouveaux tournois, résultats marquants, évolutions réglementaires, tendances stratégiques. Evolve Poker vous donne accès à une sélection d'actualités pertinentes, directement dans l'application. Restez informé sans avoir à jongler entre dix sources différentes.",
+        "link": "/pages/features/news.html",
         "cta": "Découvrir →"
       }
     ],
