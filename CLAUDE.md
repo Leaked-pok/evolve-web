@@ -125,8 +125,10 @@ if (hash === 'panel-help' || hash === 'panel-contact') showPanel(hash);
 - Body indenté : `padding-left: calc(var(--space-6) + 40px + var(--space-5))`
 
 ### La suite — feature rows avec anchors
-Chaque feature row a `id="{{ row.id }}"` dans `_data/texts.json` (`jeux`, `analyse`, `communaute`).
+Chaque feature row a `id="{{ row.id }}"` dans `_data/texts.json` (`jeux`, `analyse`, `communaute`, `potodds`).
 Back buttons des sous-pages → `/pages/next/lasuite.html#jeux` etc.
+
+Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutral` "Bientôt disponible" à la place du bouton "Découvrir →" (voir `pages/next/lasuite.html`).
 
 ---
 
@@ -136,33 +138,41 @@ Back buttons des sous-pages → `/pages/next/lasuite.html#jeux` etc.
 - Homepage complète (hero, features, CTA stores)
 - Academy : listing, modules, pages leçons (CSV)
 - Fonctionnalités : page listing + 5 sous-pages détail (calendrier, mains, ranges, news + 1)
-- La suite : page avec 3 features (Jeux, Analyse, Communauté) + 3 sous-pages éditoriales
+- La suite : page avec 4 features (Jeux, Analyse, Communauté, Pot odds "coming soon") + 3 sous-pages éditoriales
 - Contact : formulaire 2 panels (Contact / Nous aider), hash deep-link
 - CGU / Le projet : 6 panels accordéons (Le projet, Risques poker, Aide inscriptions, CGU, Privacy, FAQ)
 - Nav responsive (drawer mobile), footer beta
 - SEO base : robots.njk, 404.njk, meta title/desc par page
+- Open Graph complet (og:title, og:description, og:url, og:image 1200×630) — `layout.njk`
+- Canonical URL — `layout.njk`
+- Favicon complet — favicon.ico, favicon-96x96.png, favicon.svg, apple-touch-icon.png, site.webmanifest, web-app-manifest-192×192/512×512, og-default.png
+- Schema.org JSON-LD (LearningResource) — `lesson-layout.njk`
+- netlify.toml (base build + redirects API)
 - Design system cohérent, CSS unique, 0 dépendance UI
 
 ### Reste à faire ✗
 
 | Priorité | Tâche |
 |----------|-------|
-| 🔴 | **Codes parrainage** — remplacer les 4 placeholders `[TON_CODE_*]` |
-| 🔴 | **Contenu CGU/Privacy/Terms** — remplacer tous les `[Placeholder]` dans `texts.json` |
-| 🔴 | **Hébergement Netlify** — déployer + mettre le vrai domaine dans `robots.njk` |
-| 🟡 | **Formulaire contact backend** — activer Netlify Forms + tester les emails |
-| 🟡 | **Google AdSense + Axeptio** (cookies) **+ Analytics** (GA ou Plausible) |
-| 🟡 | **Security headers** — `netlify.toml` (CSP, X-Frame, etc.) |
-| 🟡 | **Open Graph meta tags** — og:image, og:title sur chaque page |
-| 🟡 | **Canonical URLs** |
-| 🟡 | **Structured data Schema.org** |
+| 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) |
+| 🔴 | **Codes parrainage** — remplacer les 4 `[TON_CODE_*]` dans `pages/cgu.njk` |
+| 🔴 | **Contenu Privacy** — 5 sections `[Placeholder]` dans `_data/texts.json` |
+| 🔴 | **Contenu CGU/Terms** — 5 sections `[Placeholder]` dans `_data/texts.json` |
+| 🔴 | **Déploiement Netlify** — jamais fait |
+| 🟡 | **Vulnérabilités npm** — 3 détectées par GitHub (1 high, 2 moderate) — `npm audit fix` |
+| 🟡 | **Security headers** — `netlify.toml` sans `[[headers]]` (CSP, X-Frame, HSTS…) |
+| 🟡 | **Formulaire contact backend** — activer Netlify Forms |
+| 🟡 | **Google AdSense** — slots `.ad-slot--inline` présents, à configurer |
+| 🟡 | **Axeptio** (cookies) — obligatoire RGPD dès qu'AdSense est actif |
+| 🟡 | **Analytics** (GA ou Plausible) |
+| 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains, lasuite_detail |
+| 🟠 | **Photos / visuels** — blocs `feature-row__placeholder` partout |
+| 🟠 | **Logo "E"** pour l'en-tête des pages leçons |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) |
-| 🟠 | **Webhook rebuild** Netlify auto sur push |
-| 🟠 | **Favicon complet** (apple-touch-icon, manifest) |
+| 🟠 | **Webhook rebuild** Netlify auto sur push/syncAll |
+| 🟠 | **Sous-page Pot odds** — bloc "coming soon" présent, page à créer |
 | 🟠 | **i18n** (langues) — non démarré |
 | 🟠 | **SEO/SEA strategy** |
-| 🟠 | **Photos site + catégories** |
-| 🟠 | **Logo "E" pour les leçons** |
 
 ---
 
