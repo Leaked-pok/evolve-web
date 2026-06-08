@@ -1356,6 +1356,13 @@ p {
   letter-spacing: 0.12em;
 }
 
+.feature-card__illus-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Card body */
 .feature-card__body {
   display: flex;
@@ -1520,19 +1527,15 @@ p {
   width: 100%;
   height: 100%;
   min-height: 340px;
-  background: var(--color-surface);
-  border: 1px dashed var(--color-border-light);
   border-radius: var(--radius-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
-.academy-teaser__illus-label {
-  font-size: var(--text-xs);
-  color: var(--color-text-3);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+.academy-teaser__illus-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Footer logo */
@@ -2300,6 +2303,14 @@ p {
     margin-inline: 0;
     padding-inline: var(--space-6);
   }
+}
+
+.feature-row__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-2xl);
 }
 
 .feature-row__placeholder span {
@@ -4080,4 +4091,158 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
 }
 .feature-article__heading:first-of-type {
   margin-top: var(--space-10);
+}
+
+/* ════════════════════════════════════════════════════════════
+   VISUAL BOOST — Animations & Enhanced Effects
+   ════════════════════════════════════════════════════════════ */
+
+/* ── Hero entrance (CSS-driven, no JS) ─────────────────────── */
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__title    { animation: hero-enter 0.8s ease both 0.1s; }
+.hero__subtitle { animation: hero-enter 0.8s ease both 0.3s; }
+.hero__actions  { animation: hero-enter 0.8s ease both 0.55s; }
+
+/* ── Hero background orbs ───────────────────────────────────── */
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0); }
+  33%       { transform: translate(22px, -28px); }
+  66%       { transform: translate(-14px, 14px); }
+}
+
+.hero__bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  will-change: transform;
+  animation: orb-float var(--orb-dur, 10s) ease-in-out infinite var(--orb-delay, 0s);
+}
+.hero__bg-orb--1 {
+  width: 520px; height: 520px;
+  background: rgba(212, 53, 106, 0.10);
+  top: -15%; left: -8%;
+  --orb-dur: 13s;
+}
+.hero__bg-orb--2 {
+  width: 360px; height: 360px;
+  background: rgba(212, 53, 106, 0.07);
+  top: 10%; right: 2%;
+  --orb-dur: 17s; --orb-delay: -6s;
+}
+.hero__bg-orb--3 {
+  width: 260px; height: 260px;
+  background: rgba(240, 84, 126, 0.06);
+  bottom: 15%; left: 30%;
+  --orb-dur: 14s; --orb-delay: -9s;
+}
+
+/* ── Hero scroll hint ───────────────────────────────────────── */
+.hero__scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-16);
+  animation: hero-enter 0.8s ease both 0.85s;
+}
+.hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(to bottom, rgba(212, 53, 106, 0.7), transparent);
+  animation: scroll-pulse 2.2s ease-in-out infinite;
+  transform-origin: top;
+}
+@keyframes scroll-pulse {
+  0%, 100% { transform: scaleY(1); opacity: 0.5; }
+  50%       { transform: scaleY(0.4); opacity: 1; }
+}
+
+/* ── Stronger glow-bg gradients ─────────────────────────────── */
+.glow-bg::before {
+  background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212, 53, 106, 0.15) 0%, transparent 70%);
+}
+.page-header.glow-bg::before {
+  background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(212, 53, 106, 0.16) 0%, transparent 70%);
+}
+.cta-section.glow-bg::before {
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(212, 53, 106, 0.11) 0%, transparent 70%);
+}
+
+/* ── Stats gold values ──────────────────────────────────────── */
+.stat-item__value { color: var(--color-gold-light); }
+
+/* ── Feature card academy subtle gradient ───────────────────── */
+.feature-card--academy {
+  background: linear-gradient(160deg, var(--color-surface) 60%, rgba(212, 53, 106, 0.06) 100%);
+  border-color: rgba(212, 53, 106, 0.12);
+}
+
+/* ── Feature row placeholder polish ────────────────────────── */
+.feature-row__placeholder {
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-2) 100%);
+  border: 1px solid var(--color-border-light);
+  position: relative;
+  overflow: hidden;
+}
+.feature-row__placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 110%, rgba(212, 53, 106, 0.07) 0%, transparent 70%);
+}
+.feature-row:hover .feature-row__placeholder {
+  border-color: rgba(212, 53, 106, 0.2);
+  box-shadow: 0 0 0 1px rgba(212, 53, 106, 0.08), inset 0 0 40px rgba(212, 53, 106, 0.04);
+}
+
+/* ── La suite card hover glow ───────────────────────────────── */
+.la-suite-card:hover {
+  border-color: rgba(212, 53, 106, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 53, 106, 0.12), 0 0 28px rgba(212, 53, 106, 0.08);
+  transform: translateY(-5px);
+}
+
+/* ── Scroll-reveal ──────────────────────────────────────────── */
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition-delay: var(--delay, 0s);
+}
+[data-animate="fade-up"]    { transform: translateY(28px); }
+[data-animate="fade-left"]  { transform: translateX(-36px); }
+[data-animate="fade-right"] { transform: translateX(36px); }
+[data-animate="scale-in"]   { transform: scale(0.95); }
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Sub-page header entrance ───────────────────────────────── */
+.page-header__title  { animation: hero-enter 0.8s ease both 0.1s; }
+.page-header__desc   { animation: hero-enter 0.8s ease both 0.3s; }
+.cgu-hero__title     { animation: hero-enter 0.8s ease both 0.1s; }
+.cgu-hero__desc      { animation: hero-enter 0.8s ease both 0.3s; }
+.module-hero__visual  { animation: hero-enter 0.8s ease both 0.1s; }
+.module-hero__content { animation: hero-enter 0.8s ease both 0.3s; }
+
+/* ── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate],
+  .hero__title, .hero__subtitle, .hero__actions, .hero__scroll-hint,
+  .page-header__title, .page-header__desc,
+  .cgu-hero__title, .cgu-hero__desc,
+  .module-hero__visual, .module-hero__content {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero__bg-orb { animation: none !important; }
+  .hero__scroll-line { animation: none !important; }
 }

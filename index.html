@@ -11,6 +11,9 @@ activeNav: home
     <section class="hero glow-bg">
       <div class="hero__bg">
         <div class="hero__bg-gradient"></div>
+        <div class="hero__bg-orb hero__bg-orb--1"></div>
+        <div class="hero__bg-orb hero__bg-orb--2"></div>
+        <div class="hero__bg-orb hero__bg-orb--3"></div>
       </div>
       <div class="container">
         <div class="hero__content">
@@ -35,6 +38,7 @@ activeNav: home
               </span>
             </a>
           </div>
+          <div class="hero__scroll-hint"><span class="hero__scroll-line"></span></div>
         </div>
       </div>
     </section>
@@ -44,7 +48,7 @@ activeNav: home
       <div class="container">
         <div class="stats-band__inner">
           {% for stat in texts.home.stats %}
-            <div class="stat-item">
+            <div class="stat-item" data-animate="fade-up" style="--delay: {{ loop.index0 * 0.08 }}s">
               <span class="stat-item__value">{{ stat.value }}</span>
               <span class="stat-item__label">{{ stat.label }}</span>
             </div>
@@ -64,9 +68,13 @@ activeNav: home
         </div>
         <div class="features-grid">
           {% for card in texts.home.feature_cards %}
-            <div class="feature-card{% if loop.first %} feature-card--academy{% endif %}">
+            <div class="feature-card{% if loop.first %} feature-card--academy{% endif %}" data-animate="fade-up" style="--delay: {{ loop.index0 * 0.1 }}s">
               <div class="feature-card__illus">
-                <span class="feature-card__illus-label">Illustration</span>
+                {% if card.image %}
+                  <img src="{{ card.image }}" alt="{{ card.title }}" class="feature-card__illus-img">
+                {% else %}
+                  <span class="feature-card__illus-label">Illustration</span>
+                {% endif %}
               </div>
               <div class="feature-card__body">
                 <h3 class="feature-card__title">{{ card.title }}</h3>
@@ -87,7 +95,7 @@ activeNav: home
     <section class="section section--academy" id="academy">
       <div class="container">
         <div class="academy-teaser">
-          <div class="academy-teaser__text">
+          <div class="academy-teaser__text" data-animate="fade-right">
             <span class="label-overline">{{ texts.home.academy_overline }}</span>
             <h2 class="heading-section mt-4">
               {{ texts.home.academy_title_line1 }}<br>{{ texts.home.academy_title_line2 }}
@@ -99,9 +107,9 @@ activeNav: home
               <a href="#download" class="btn btn--secondary btn--lg">{{ texts.home.academy_cta_secondary }}</a>
             </div>
           </div>
-          <div class="academy-teaser__preview">
+          <div class="academy-teaser__preview" data-animate="fade-left" style="--delay: 0.15s">
             <div class="academy-teaser__illus">
-              <span class="academy-teaser__illus-label">Illustration</span>
+              <img src="/assets/images/academy2.png" alt="Aperçu de l'Academy Evolve Poker" class="academy-teaser__illus-img">
             </div>
           </div>
         </div>
@@ -118,7 +126,7 @@ activeNav: home
         </div>
         <div class="la-suite-grid">
           {% for card in texts.home.lasuite_cards %}
-            <a href="/pages/next/lasuite.html" class="la-suite-card">
+            <a href="/pages/next/lasuite.html" class="la-suite-card" data-animate="scale-in" style="--delay: {{ loop.index0 * 0.1 }}s">
               <span class="la-suite-card__icon">{{ card.icon }}</span>
               <p class="la-suite-card__title">{{ card.title }}</p>
               <p class="la-suite-card__desc">{{ card.desc }}</p>
@@ -132,7 +140,7 @@ activeNav: home
     <!-- DOWNLOAD CTA -->
     <section class="section cta-section glow-bg">
       <div class="container">
-        <div class="cta-section__inner">
+        <div class="cta-section__inner" data-animate="fade-up">
           <div class="cta-section__content">
             <span class="label-overline">{{ texts.home.cta_overline }}</span>
             <h2 class="heading-section mt-4">{{ texts.home.cta_title }}</h2>

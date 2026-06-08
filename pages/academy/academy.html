@@ -23,7 +23,7 @@ activeNav: academy
       <div class="container">
         <div class="stats-band__inner">
           {% for stat in texts.academy.stats %}
-            <div class="stat-item">
+            <div class="stat-item" data-animate="fade-up" style="--delay: {{ loop.index0 * 0.08 }}s">
               <span class="stat-item__value">{{ stat.value }}</span>
               <span class="stat-item__label">{{ stat.label }}</span>
             </div>
@@ -38,15 +38,19 @@ activeNav: academy
       <div class="container container--lg">
         {% for row in texts.academy.feature_rows %}
           <div class="feature-row{% if loop.index0 is odd %} feature-row--reverse{% endif %}">
-            <div class="feature-row__content">
+            <div class="feature-row__content" data-animate="{% if loop.index0 is odd %}fade-right{% else %}fade-left{% endif %}">
               <span class="label-overline">{{ row.overline }}</span>
               <h2 class="feature-row__title">{{ row.title }}</h2>
               <p class="feature-row__desc">{{ row.desc }}</p>
             </div>
-            <div class="feature-row__visual">
-              <div class="feature-row__placeholder">
-                <span>Illustration</span>
-              </div>
+            <div class="feature-row__visual" data-animate="{% if loop.index0 is odd %}fade-left{% else %}fade-right{% endif %}" style="--delay: 0.12s">
+              {% if row.image %}
+                <img src="{{ row.image }}" alt="{{ row.title }}" class="feature-row__img">
+              {% else %}
+                <div class="feature-row__placeholder">
+                  <span>Illustration</span>
+                </div>
+              {% endif %}
             </div>
           </div>
         {% endfor %}
@@ -56,7 +60,7 @@ activeNav: academy
     <!-- CTA -->
     <section class="section cta-section glow-bg">
       <div class="container">
-        <div class="cta-section__inner cta-section__inner--center">
+        <div class="cta-section__inner cta-section__inner--center" data-animate="fade-up">
           <div class="cta-section__content text-center">
             <h2 class="heading-section">{{ texts.academy.cta_title }}</h2>
             <p class="mt-4">{{ texts.academy.cta_desc }}</p>

@@ -24,12 +24,12 @@ activeNav: lasuite
         {% for section in texts.lasuite_detail.sections %}
           <div class="whitepaper-section{% if loop.index0 is odd %} whitepaper-section--alt{% endif %}">
             <div class="whitepaper-section__inner">
-              <div class="whitepaper-section__content">
+              <div class="whitepaper-section__content" data-animate="{% if loop.index0 is odd %}fade-right{% else %}fade-left{% endif %}">
                 <span class="label-overline">{{ section.overline }}</span>
                 <h2 class="whitepaper-section__title">{{ section.title }}</h2>
                 <p class="whitepaper-section__desc">{{ section.desc }}</p>
               </div>
-              <div class="whitepaper-section__visual">
+              <div class="whitepaper-section__visual" data-animate="{% if loop.index0 is odd %}fade-left{% else %}fade-right{% endif %}" style="--delay: 0.12s">
                 <div class="feature-row__placeholder"><span>Illustration</span></div>
               </div>
             </div>
@@ -41,7 +41,7 @@ activeNav: lasuite
     <!-- CTA -->
     <section class="section cta-section glow-bg">
       <div class="container">
-        <div class="cta-section__inner cta-section__inner--center">
+        <div class="cta-section__inner cta-section__inner--center" data-animate="fade-up">
           <div class="cta-section__content text-center">
             <h2 class="heading-section">{{ texts.lasuite_detail.cta_title }}</h2>
             <p class="mt-4">{{ texts.lasuite_detail.cta_desc }}</p>

@@ -108,31 +108,36 @@
         "title": "Academy",
         "desc": "400+ leçons progressives, du niveau débutant à l'expert. Un parcours structuré pour construire un vrai jeu, étape par étape.",
         "cta": "Découvrir",
-        "link": "/pages/academy/academy.html"
+        "link": "/pages/academy/academy.html",
+        "image": "/assets/images/academy2.png"
       },
       {
         "title": "Ranges",
         "desc": "Visualisez, créez et maîtrisez vos ranges préflop et postflop pour chaque position. Fini de jouer au feeling.",
         "cta": "En savoir plus",
-        "link": "/pages/features/features.html"
+        "link": "/pages/features/features.html",
+        "image": "/assets/images/ranges1.png"
       },
       {
         "title": "Mains",
         "desc": "Notez vos mains en quelques secondes, rejouez-les à tête reposée et transformez chaque erreur en leçon concrète.",
         "cta": "En savoir plus",
-        "link": "/pages/features/features.html"
+        "link": "/pages/features/features.html",
+        "image": "/assets/images/mains1.png"
       },
       {
         "title": "Calendrier",
         "desc": "Tournois live et online centralisés dans un seul calendrier — WSOP, EPT, WCOOP et bien plus. Ne planifiez plus à l'aveugle.",
         "cta": "En savoir plus",
-        "link": "/pages/features/features.html"
+        "link": "/pages/features/features.html",
+        "image": "/assets/images/calendrier1.png"
       },
       {
-        "title": "Classement",
-        "desc": "Des classements pour se challenger, suivre son évolution et rester motivé sur le long terme.",
+        "title": "News",
+        "desc": "L'actualité poker sélectionnée pour vous — tournois, résultats marquants et tendances du jeu, directement dans l'app.",
         "cta": "En savoir plus",
-        "link": "/pages/features/features.html"
+        "link": "/pages/features/news.html",
+        "image": "/assets/images/news1.png"
       }
     ],
     "academy_overline": "Academy",
@@ -206,7 +211,8 @@
       {
         "overline": "Conçu pour progresser vraiment",
         "title": "Apprenez n'importe où, avancez à chaque leçon",
-        "desc": "L'Academy ne vous demande pas de réorganiser votre emploi du temps. Elle s'y glisse. Des leçons de 15 minutes maximum, un suivi de progression qui reprend exactement là où vous vous êtes arrêté, et un contenu structuré pour que chaque session — même courte — vous fasse avancer concrètement. C'est ça, apprendre efficacement sur mobile."
+        "desc": "L'Academy ne vous demande pas de réorganiser votre emploi du temps. Elle s'y glisse. Des leçons de 15 minutes maximum, un suivi de progression qui reprend exactement là où vous vous êtes arrêté, et un contenu structuré pour que chaque session — même courte — vous fasse avancer concrètement. C'est ça, apprendre efficacement sur mobile.",
+        "image": "/assets/images/academy1.png"
       },
       {
         "overline": "La progression que vous ressentez",
@@ -254,7 +260,8 @@
         "title": "Maîtrisez les ranges, maîtrisez le jeu",
         "desc": "Comprendre pourquoi certaines mains se jouent et d'autres non, c'est ce qui sépare un joueur instinctif d'un joueur solide. Evolve Poker vous donne les outils pour ça : visualisez les ranges pour chaque position, créez et sauvegardez vos propres grilles, et suivez votre progression dans leur maîtrise. De la consultation à la création — tout ce qu'il faut pour intégrer les ranges pour de bon.",
         "link": "/pages/features/ranges.html",
-        "cta": "Découvrir →"
+        "cta": "Découvrir →",
+        "image": "/assets/images/ranges1.png"
       },
       {
         "id": "calendrier",
@@ -262,7 +269,8 @@
         "title": "Ne manquez plus jamais un tournoi",
         "desc": "Live ou online, en France ou à l'international — Evolve Poker centralise tous les tournois qui comptent dans un calendrier clair et toujours à jour. WSOP, EPT, WPT côté live ; WCOOP, SCOOP et les grandes Series online côté virtuel. Dates, formats, buy-ins : tout ce qu'il faut pour planifier votre année poker sans passer des heures à chercher l'information sur dix sites différents.",
         "link": "/pages/features/calendrier.html",
-        "cta": "Découvrir →"
+        "cta": "Découvrir →",
+        "image": "/assets/images/calendrier1.png"
       },
       {
         "id": "mains",
@@ -270,7 +278,8 @@
         "title": "Notez vos mains, rejouez-les, progressez",
         "desc": "Un spot difficile, une décision douteuse, une main que vous n'êtes pas sûr d'avoir bien jouée — notez-la en quelques secondes dans Evolve Poker pendant que c'est frais. Retrouvez-la plus tard, analysez-la à tête reposée et identifiez exactement où votre jeu peut progresser. C'est le genre de travail qui fait la différence sur le long terme.",
         "link": "/pages/features/mains.html",
-        "cta": "Découvrir →"
+        "cta": "Découvrir →",
+        "image": "/assets/images/mains1.png"
       },
       {
         "id": "news",
@@ -278,7 +287,8 @@
         "title": "Restez dans la boucle, sans effort",
         "desc": "Le monde du poker bouge vite — nouveaux tournois, résultats marquants, évolutions réglementaires, tendances stratégiques. Evolve Poker vous donne accès à une sélection d'actualités pertinentes, directement dans l'application. Restez informé sans avoir à jongler entre dix sources différentes.",
         "link": "/pages/features/news.html",
-        "cta": "Découvrir →"
+        "cta": "Découvrir →",
+        "image": "/assets/images/news1.png"
       }
     ],
     "cta_overline": "Le niveau supérieur vous attend",
@@ -297,28 +307,32 @@
         "overline": "Jeux",
         "title": "Mettez vos connaissances sous pression",
         "desc": "Des mini-jeux et quiz interactifs conçus pour ancrer les concepts que vous venez d'apprendre. Ranges à compléter, mains à résoudre, situations à trancher en temps réel — chaque exercice est une répétition déguisée en défi. Et parce que la compétition est le meilleur moteur de progression, des classements vous permettront de vous mesurer à la communauté et de grimper dans les rangs. C'est comme ça qu'on passe de 'je comprends' à 'je joue bien'.",
-        "link": "/pages/lasuite/jeux.html"
+        "link": "/pages/lasuite/jeux.html",
+        "image": "/assets/images/jeux1.png"
       },
       {
         "id": "analyse",
         "overline": "Analyse",
         "title": "Vos mains sont votre meilleur manuel",
         "desc": "Les joueurs qui progressent le plus vite ne sont pas ceux qui jouent le plus — ce sont ceux qui analysent le mieux. Importez vos mains, identifiez les spots où vous perdez de la valeur et repérez vos patterns d'erreurs. Et bientôt, une analyse propulsée par l'IA vous donnera des retours précis, personnalisés et instantanés sur chaque décision — comme avoir un coach dans la poche.",
-        "link": "/pages/lasuite/analyse.html"
+        "link": "/pages/lasuite/analyse.html",
+        "image": "/assets/images/analyse1.png"
       },
       {
         "id": "communaute",
         "overline": "Communauté",
         "title": "Progressez entouré de joueurs qui vous ressemblent",
         "desc": "Rejoignez une communauté de joueurs qui partagent le même objectif : progresser vraiment. Soumettez vos mains au débat, confrontez vos lectures à celles des autres, posez vos questions sans jugement. Les meilleures prises de conscience viennent souvent d'un angle que vous n'aviez pas considéré — et c'est exactement ce que la communauté vous apporte.",
-        "link": "/pages/lasuite/communaute.html"
+        "link": "/pages/lasuite/communaute.html",
+        "image": "/assets/images/communauté1.png"
       },
       {
         "id": "potodds",
         "overline": "Calculateur",
         "title": "Chaque décision a un prix — connaissez-le",
         "desc": "Le poker est un jeu de décisions sous incertitude, et les meilleures décisions sont celles qui tiennent compte des probabilités. Le calculateur de pot odds et d'équité vous permet de savoir en un coup d'œil si un call est mathématiquement profitable, quelle est votre équité face à une range adverse, et comment la taille du pot influence chaque choix. Des fondamentaux mathématiques rendus accessibles, directement depuis l'application — pour que chaque décision repose sur du concret, pas sur l'intuition seule.",
-        "coming_soon": true
+        "coming_soon": true,
+        "image": "/assets/images/odds1.png"
       }
     ],
     "cta_overline": "Le niveau supérieur vous attend",

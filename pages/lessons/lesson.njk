@@ -11,7 +11,7 @@ layout: lesson-layout.njk
   <div class="lesson-container">
 
     <!-- EN-TÊTE DE LA LEÇON -->
-    <div class="lesson-hero">
+    <div class="lesson-hero" data-animate="fade-up">
       {% if lesson.image_url %}
         <img src="{{ lesson.image_url }}" alt="{{ lesson.title }}" class="lesson-hero__img" loading="lazy">
       {% endif %}
@@ -27,7 +27,7 @@ layout: lesson-layout.njk
     </div>
 
     <!-- CONTENU DE LA LEÇON -->
-    <article class="lesson-content">
+    <article class="lesson-content" data-animate="fade-up" style="--delay: 0.15s">
       {{ lesson.content | replace("[AD]", '<div class="ad-slot ad-slot--inline"></div>') | safe }}
     </article>
 
@@ -37,7 +37,7 @@ layout: lesson-layout.njk
     </div>
 
     <!-- FEEDBACK LEÇON -->
-    <div class="lesson-feedback" id="lesson-feedback"
+    <div class="lesson-feedback" id="lesson-feedback" data-animate="fade-up" style="--delay: 0.1s"
          data-slug="{{ lesson.slug }}"
          data-title="{{ lesson.title | escape }}">
       <p class="lesson-feedback__label">Cette leçon t'a été utile ?</p>
@@ -60,7 +60,7 @@ layout: lesson-layout.njk
     </div>
 
     <!-- BOUTON QUIZ -->
-    <div class="lesson-quiz-cta">
+    <div class="lesson-quiz-cta" data-animate="fade-up" style="--delay: 0.15s">
       <p class="lesson-quiz-cta__text">Tu as lu la leçon ? Teste tes connaissances.</p>
       <a href="evolvepoker://quiz?lesson_slug={{ lesson.slug }}" class="btn btn--primary btn--lg lesson-quiz-cta__btn">
         Répondre au quiz

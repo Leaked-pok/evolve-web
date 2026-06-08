@@ -82,3 +82,18 @@ function closeDrawer() {
 if (navBurger)      navBurger.addEventListener('click', openDrawer);
 if (navDrawerClose) navDrawerClose.addEventListener('click', closeDrawer);
 if (navOverlay)     navOverlay.addEventListener('click', closeDrawer);
+
+// Scroll-reveal
+const animEls = document.querySelectorAll('[data-animate]');
+if (animEls.length) {
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  animEls.forEach(el => revealObs.observe(el));
+}

@@ -42,7 +42,7 @@ activeNav: academy
       <div class="container container--md">
         <ul class="module-full-lessons">
           {% for lesson in module.lessons %}
-            <li class="module-lesson">
+            <li class="module-lesson" data-animate="fade-up" style="--delay: {{ loop.index0 * 0.04 }}s">
               <span class="module-lesson__num">{{ '0' + lesson.num if lesson.num < 10 else lesson.num }}</span>
               {% if lesson.image %}
                 <img src="{{ lesson.image }}" alt="{{ lesson.title }}" class="module-lesson__img" loading="lazy">
@@ -61,7 +61,7 @@ activeNav: academy
     <!-- CTA -->
     <section class="section cta-section glow-bg">
       <div class="container">
-        <div class="cta-section__inner">
+        <div class="cta-section__inner" data-animate="fade-up">
           <div class="cta-section__content">
             <span class="label-overline">Commencez à apprendre</span>
             <h2 class="heading-section mt-4">Débloquez toutes les leçons</h2>
