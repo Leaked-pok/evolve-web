@@ -82,6 +82,8 @@
     "hero_title": "Devenez un joueur",
     "hero_gradient": "redoutable",
     "hero_subtitle": "Et si vous aviez un assistant personnel entièrement dédié à votre progression au poker ? Evolve Poker vous accompagne des toutes premières mains jusqu'aux concepts avancés — structuré, mobile, gratuit, et pensé pour durer.",
+    "hero_tagline": "Conçu par des joueurs — perfectionné",
+    "hero_tagline_gradient": "grâce à vous.",
     "stats": [
       {
         "value": "400+",
@@ -212,17 +214,19 @@
         "overline": "Conçu pour progresser vraiment",
         "title": "Apprenez n'importe où, avancez à chaque leçon",
         "desc": "L'Academy ne vous demande pas de réorganiser votre emploi du temps. Elle s'y glisse. Des leçons de 15 minutes maximum, un suivi de progression qui reprend exactement là où vous vous êtes arrêté, et un contenu structuré pour que chaque session — même courte — vous fasse avancer concrètement. C'est ça, apprendre efficacement sur mobile.",
-        "image": "/assets/images/academy1.png"
+        "image": "/assets/images/aca1.png"
       },
       {
         "overline": "La progression que vous ressentez",
         "title": "Chaque leçon vous rend meilleur à la table",
-        "desc": "Le vrai test d'un apprentissage, c'est ce qui se passe quand les cartes sont distribuées. L'Evolve Academy est construite pour que les concepts appris se traduisent en décisions concrètes — pas en théorie abstraite. Après quelques semaines, vous ne jouez plus pareil. Vous comprenez ce que vous faites, pourquoi vous le faites, et comment vous améliorer encore."
+        "desc": "Le vrai test d'un apprentissage, c'est ce qui se passe quand les cartes sont distribuées. L'Evolve Academy est construite pour que les concepts appris se traduisent en décisions concrètes — pas en théorie abstraite. Après quelques semaines, vous ne jouez plus pareil. Vous comprenez ce que vous faites, pourquoi vous le faites, et comment vous améliorer encore.",
+        "image": "/assets/images/aca2.png"
       },
       {
         "overline": "Ce qui vous attend",
         "title": "Un curriculum complet, structuré et libre à la fois",
-        "desc": "400+ leçons réparties en 9 modules : un parcours en 4 niveaux progressifs du débutant à l'expert, et 5 modules spécialisés sur la stratégie, les maths du poker, la gestion mentale, l'histoire du jeu et les grandes légendes. Suivez le parcours guidé ou explorez librement — l'Academy s'adapte à la façon dont vous aimez apprendre."
+        "desc": "400+ leçons réparties en 9 modules : un parcours en 4 niveaux progressifs du débutant à l'expert, et 5 modules spécialisés sur la stratégie, les maths du poker, la gestion mentale, l'histoire du jeu et les grandes légendes. Suivez le parcours guidé ou explorez librement — l'Academy s'adapte à la façon dont vous aimez apprendre.",
+        "image": "/assets/images/aca3.png"
       }
     ],
     "cta_title": "100% gratuit, pour toujours",
@@ -252,7 +256,8 @@
         "title": "Apprenez le poker comme il devrait être enseigné",
         "desc": "Pas de vidéos interminables, pas de contenu dilué. Evolve Poker vous propose des leçons structurées, pensées pour aller droit au but et construire vos connaissances sur des bases solides. Des règles fondamentales aux spots les plus complexes — chaque module avance étape par étape, sans jamais brûler les étapes.",
         "link": "/pages/academy/academies.html",
-        "cta": "Découvrir les modules →"
+        "cta": "Découvrir les modules →",
+        "image": "/assets/images/academy2.png"
       },
       {
         "id": "ranges",

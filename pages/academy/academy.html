@@ -45,7 +45,9 @@ activeNav: academy
             </div>
             <div class="feature-row__visual" data-animate="{% if loop.index0 is odd %}fade-left{% else %}fade-right{% endif %}" style="--delay: 0.12s">
               {% if row.image %}
-                <img src="{{ row.image }}" alt="{{ row.title }}" class="feature-row__img">
+                <div class="feature-row__img-wrap">
+                  <img src="{{ row.image }}" alt="{{ row.title }}" class="feature-row__img">
+                </div>
               {% else %}
                 <div class="feature-row__placeholder">
                   <span>Illustration</span>

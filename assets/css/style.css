@@ -962,7 +962,7 @@ p {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-block: var(--space-32) var(--space-24);
+  padding-block: var(--space-32) var(--space-16);
   overflow: hidden;
 }
 
@@ -1019,6 +1019,28 @@ p {
   justify-content: center;
   gap: var(--space-4);
   flex-wrap: wrap;
+}
+
+.hero__tagline {
+  margin-top: var(--space-10);
+  font-size: clamp(1.575rem, 4.2vw, 2.625rem);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.hero__tagline::before,
+.hero__tagline::after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-border-light));
+  flex-shrink: 0;
+}
+.hero__tagline::after {
+  background: linear-gradient(90deg, var(--color-border-light), transparent);
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -1359,8 +1381,9 @@ p {
 .feature-card__illus-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  padding: clamp(var(--space-3), 6%, var(--space-6));
 }
 
 /* Card body */
@@ -2305,12 +2328,27 @@ p {
   }
 }
 
-.feature-row__img {
+.feature-row__img-wrap {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
   border-radius: var(--radius-2xl);
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-2) 100%);
+  border: 1px solid var(--color-border-light);
+  padding: clamp(var(--space-4), 5%, var(--space-8));
+  box-shadow: inset 0 0 40px rgba(212, 53, 106, 0.04);
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.feature-row__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .feature-row__placeholder span {
@@ -4106,6 +4144,7 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
 .hero__title    { animation: hero-enter 0.8s ease both 0.1s; }
 .hero__subtitle { animation: hero-enter 0.8s ease both 0.3s; }
 .hero__actions  { animation: hero-enter 0.8s ease both 0.55s; }
+.hero__tagline  { animation: hero-enter 0.8s ease both 0.7s; }
 
 /* ── Hero background orbs ───────────────────────────────────── */
 @keyframes orb-float {
@@ -4146,7 +4185,10 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: var(--space-16);
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
   animation: hero-enter 0.8s ease both 0.85s;
 }
 .hero__scroll-line {
@@ -4198,6 +4240,13 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
 .feature-row:hover .feature-row__placeholder {
   border-color: rgba(212, 53, 106, 0.2);
   box-shadow: 0 0 0 1px rgba(212, 53, 106, 0.08), inset 0 0 40px rgba(212, 53, 106, 0.04);
+}
+.feature-row:hover .feature-row__img-wrap {
+  border-color: rgba(212, 53, 106, 0.2);
+  box-shadow: 0 0 0 1px rgba(212, 53, 106, 0.08), inset 0 0 40px rgba(212, 53, 106, 0.07);
+}
+.feature-row:hover .feature-row__img {
+  transform: scale(1.06);
 }
 
 /* ── La suite card hover glow ───────────────────────────────── */
