@@ -117,28 +117,28 @@
         "title": "Ranges",
         "desc": "Visualisez, créez et maîtrisez vos ranges préflop et postflop pour chaque position. Fini de jouer au feeling.",
         "cta": "En savoir plus",
-        "link": "/pages/features/features.html",
+        "link": "/pages/features/features.html#ranges",
         "image": "/assets/images/ranges1.png"
       },
       {
         "title": "Mains",
         "desc": "Notez vos mains en quelques secondes, rejouez-les à tête reposée et transformez chaque erreur en leçon concrète.",
         "cta": "En savoir plus",
-        "link": "/pages/features/features.html",
+        "link": "/pages/features/features.html#mains",
         "image": "/assets/images/mains1.png"
       },
       {
         "title": "Calendrier",
         "desc": "Tournois live et online centralisés dans un seul calendrier — WSOP, EPT, WCOOP et bien plus. Ne planifiez plus à l'aveugle.",
         "cta": "En savoir plus",
-        "link": "/pages/features/features.html",
+        "link": "/pages/features/features.html#calendrier",
         "image": "/assets/images/calendrier1.png"
       },
       {
         "title": "News",
         "desc": "L'actualité poker sélectionnée pour vous — tournois, résultats marquants et tendances du jeu, directement dans l'app.",
         "cta": "En savoir plus",
-        "link": "/pages/features/news.html",
+        "link": "/pages/features/features.html#news",
         "image": "/assets/images/news1.png"
       }
     ],
@@ -185,7 +185,7 @@
     "meta_desc": "9 modules, plus de 400 leçons, du niveau débutant au niveau expert — l'Academy Evolve Poker couvre l'intégralité du jeu : stratégie, statistiques, psychologie, histoire et les légendes qui ont façonné le poker moderne.",
     "hero_title": "La meilleure façon",
     "hero_gradient": "d'apprendre le poker",
-    "hero_desc": "L'Academy Evolve Poker, c'est un curriculum complet dans votre poche — disponible partout, à tout moment, sans débourser un centime. Des centaines de leçons pensées pour aller droit au but et vous faire progresser vraiment, session après session.",
+    "hero_desc": "L'Academy Evolve Poker, c'est un curriculum complet dans votre poche — disponible partout, à tout moment, sans débourser un centime. Des centaines de leçons ponctuées de quiz pour ancrer vos acquis, pensées pour aller droit au but et vous faire progresser vraiment, session après session.",
     "hero_cta": "Explorer les modules →",
     "stats": [
       {
@@ -207,6 +207,10 @@
       {
         "value": "100%",
         "label": "Mobile"
+      },
+      {
+        "value": "+400",
+        "label": "Quiz"
       }
     ],
     "feature_rows": [
@@ -219,7 +223,7 @@
       {
         "overline": "La progression que vous ressentez",
         "title": "Chaque leçon vous rend meilleur à la table",
-        "desc": "Le vrai test d'un apprentissage, c'est ce qui se passe quand les cartes sont distribuées. L'Evolve Academy est construite pour que les concepts appris se traduisent en décisions concrètes — pas en théorie abstraite. Après quelques semaines, vous ne jouez plus pareil. Vous comprenez ce que vous faites, pourquoi vous le faites, et comment vous améliorer encore.",
+        "desc": "Le vrai test d'un apprentissage, c'est ce qui se passe quand les cartes sont distribuées. L'Evolve Academy est construite pour que les concepts appris se traduisent en décisions concrètes — pas en théorie abstraite. Après quelques semaines, vous ne jouez plus pareil. Vous comprenez ce que vous faites, pourquoi vous le faites, et comment vous améliorer encore. Un quiz clôture chaque leçon pour valider vos acquis avant de passer à la suite — court, ciblé, sans pression.",
         "image": "/assets/images/aca2.png"
       },
       {

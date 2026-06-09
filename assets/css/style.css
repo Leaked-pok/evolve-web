@@ -2928,10 +2928,14 @@ p {
 }
 
 /* Module grid */
+.academy-panel + .academy-panel {
+  margin-top: var(--space-12);
+}
+
 .module-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  gap: var(--space-8);
 }
 @media (max-width: 1024px) {
   .module-grid { grid-template-columns: repeat(2, 1fr); }
