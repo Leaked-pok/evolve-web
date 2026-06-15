@@ -3,3 +3,7 @@ _site/
 
 # Local Netlify folder
 .netlify
+
+# Local dev tools
+.claude/
+deno.lock

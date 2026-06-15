@@ -487,7 +487,7 @@ activeNav: evolve
 
       <!-- PANEL : Conditions Générales -->
       <div id="panel-terms" class="cgu-panel cgu-panel--hidden">
-        <p class="cgu-panel__updated">Dernière mise à jour : janvier 2025</p>
+        <p class="cgu-panel__updated">Dernière mise à jour : juin 2026</p>
         {% for section in texts.terms.sections %}
           <div class="cgu-card">
             <div class="cgu-card__icon">
@@ -496,7 +496,7 @@ activeNav: evolve
             <div class="cgu-card__body">
               <span class="cgu-card__overline">{{ section.overline }}</span>
               <h3 class="cgu-card__title">{{ section.title }}</h3>
-              <p class="cgu-card__desc">{{ section.desc }}</p>
+              <div class="cgu-card__desc">{{ section.desc | safe }}</div>
             </div>
           </div>
         {% endfor %}
@@ -513,7 +513,7 @@ activeNav: evolve
             <div class="cgu-card__body">
               <span class="cgu-card__overline">{{ section.overline }}</span>
               <h3 class="cgu-card__title">{{ section.title }}</h3>
-              <p class="cgu-card__desc">{{ section.desc }}</p>
+              <div class="cgu-card__desc">{{ section.desc | safe }}</div>
             </div>
           </div>
         {% endfor %}

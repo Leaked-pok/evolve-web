@@ -1,7 +1,5 @@
 // Evolve Poker Academy — main.js
 
-// Disable right-click
-document.addEventListener('contextmenu', e => e.preventDefault());
 
 // Disable image drag
 document.querySelectorAll('img').forEach(img => {

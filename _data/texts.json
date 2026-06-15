@@ -13,32 +13,72 @@
     "meta_desc": "Découvrez comment Evolve Poker collecte, utilise et protège vos données personnelles.",
     "hero_title": "Politique de",
     "hero_gradient": "confidentialité",
-    "hero_desc": "Dernière mise à jour : janvier 2025",
+    "hero_desc": "Dernière mise à jour : juin 2026",
     "sections": [
       {
-        "overline": "Collecte des données",
-        "title": "Quelles données collectons-nous ?",
-        "desc": "[Placeholder] Description des données collectées lors de l'utilisation de l'application et du site web Evolve Poker."
+        "overline": "Responsable du traitement",
+        "title": "Qui traite vos données ?",
+        "desc": "<p>Le responsable du traitement au sens du Règlement (UE) 2016/679 (RGPD) est <strong>[NOM_EDITEUR]</strong>, domicilié(e) au <strong>[ADRESSE_EDITEUR]</strong> — SIRET&nbsp;: <strong>[SIRET]</strong> — email&nbsp;: <strong>[EMAIL_CONTACT]</strong>.</p><p>La présente Politique de confidentialité s'applique à l'ensemble du Service Evolve Poker&nbsp;: site vitrine, application mobile Android et iOS, et contenus pédagogiques accessibles via webview depuis l'application.</p>"
       },
       {
-        "overline": "Utilisation",
-        "title": "Comment utilisons-nous vos données ?",
-        "desc": "[Placeholder] Explication de l'usage des données collectées : amélioration du service, personnalisation, communications."
+        "overline": "Données collectées",
+        "title": "Quelles données traitons-nous ?",
+        "desc": "<p><strong>Données de compte&nbsp;:</strong> adresse email, pseudo choisi par l'utilisateur, photo de profil (si connexion via Google OAuth 2.0), mot de passe chiffré (si inscription email).</p><p><strong>Données de progression&nbsp;:</strong> leçons consultées, scores obtenus, modules complétés, statistiques d'apprentissage, badges et niveaux atteints.</p><p><strong>Contenu utilisateur&nbsp;:</strong> mains de poker enregistrées et annotées, ranges personnalisées, notes de session saisies dans l'application.</p><p><strong>Données de communauté&nbsp;:</strong> pseudo et score rendus publics dans les classements de l'application.</p><p><strong>Données techniques&nbsp;:</strong> adresse IP, type d'appareil, système d'exploitation, version de l'application, logs d'accès et identifiants de session.</p><p><strong>Données publicitaires (à venir, avec consentement)&nbsp;:</strong> identifiant publicitaire (IDFA sur iOS, GAID sur Android) et données d'interaction avec les publicités affichées.</p>"
       },
       {
-        "overline": "Partage",
-        "title": "Partageons-nous vos données ?",
-        "desc": "[Placeholder] Informations sur les tiers avec lesquels les données peuvent être partagées et dans quelles circonstances."
+        "overline": "Base légale et finalités",
+        "title": "Pourquoi traitons-nous vos données ?",
+        "desc": "<p><strong>Exécution du contrat (art.&nbsp;6.1.b RGPD)&nbsp;:</strong> gestion du compte, fourniture des fonctionnalités (Academy, Ranges, Mains, Communauté), synchronisation de la progression.</p><p><strong>Intérêt légitime (art.&nbsp;6.1.f)&nbsp;:</strong> sécurité du service, prévention des abus, logs techniques, amélioration de la qualité.</p><p><strong>Consentement (art.&nbsp;6.1.a)&nbsp;:</strong> publicités personnalisées (AdMob), analytics (Firebase Analytics), notifications push. Le consentement peut être retiré à tout moment sans affecter l'accès aux autres fonctionnalités.</p><p><strong>Obligation légale (art.&nbsp;6.1.c)&nbsp;:</strong> conservation des données liées aux achats in-app conformément aux obligations comptables françaises (à venir).</p>"
       },
       {
-        "overline": "Vos droits",
-        "title": "Vos droits sur vos données",
-        "desc": "[Placeholder] Droits d'accès, de rectification, d'effacement et de portabilité conformément au RGPD."
+        "overline": "Sous-traitants",
+        "title": "Qui a accès à vos données ?",
+        "desc": "<p>Vos données ne sont <strong>jamais vendues</strong>. Elles sont transmises uniquement aux sous-traitants techniques indispensables au fonctionnement du Service&nbsp;:</p><p><strong>Supabase, Inc.</strong> (supabase.com) — authentification et base de données applicatives.</p><p><strong>Netlify, Inc.</strong> (netlify.com) — hébergement du site vitrine et des contenus pédagogiques accessibles via webview.</p><p><strong>Google LLC</strong> (google.com) — authentification OAuth 2.0&nbsp;; à venir&nbsp;: publicité mobile (AdMob) et analytics (Firebase Analytics).</p><p><strong>Apple Inc. / Google LLC</strong> — traitement des achats in-app via l'App Store et le Google Play Store (à venir). Ces plateformes disposent de leurs propres politiques de confidentialité.</p>"
+      },
+      {
+        "overline": "Transferts hors UE",
+        "title": "Vos données sont-elles transférées hors de l'Union européenne ?",
+        "desc": "<p>Certains sous-traitants sont établis aux États-Unis. Ces transferts sont encadrés par des garanties appropriées conformément à l'article&nbsp;46 du RGPD&nbsp;:</p><p><strong>Supabase&nbsp;:</strong> si la région de stockage est européenne (ex.&nbsp;eu-west-1 — Irlande), vos données restent dans l'UE. Dans le cas contraire, le transfert est couvert par les Clauses Contractuelles Types (CCT) de la Commission européenne et un accord de traitement des données (DPA) signé avec Supabase.</p><p><strong>Netlify et Google&nbsp;:</strong> transferts encadrés par des CCT et DPA conformes au RGPD.</p><p>Vous pouvez obtenir copie de ces garanties en contactant <strong>[EMAIL_CONTACT]</strong>.</p>"
+      },
+      {
+        "overline": "Durée de conservation",
+        "title": "Combien de temps conservons-nous vos données ?",
+        "desc": "<p><strong>Données de compte, de progression et contenu utilisateur&nbsp;:</strong> conservées pendant toute la durée d'utilisation, puis supprimées définitivement dans un délai de <strong>30 jours</strong> suivant la suppression du compte.</p><p><strong>Logs techniques&nbsp;:</strong> 12 mois maximum, puis suppression automatique.</p><p><strong>Données publicitaires (à venir)&nbsp;:</strong> 13 mois maximum, conformément aux recommandations de la CNIL.</p><p><strong>Données liées aux achats in-app (à venir)&nbsp;:</strong> 10 ans conformément aux obligations comptables françaises (art.&nbsp;L.&nbsp;123-22 du Code de commerce).</p>"
+      },
+      {
+        "overline": "Vos droits RGPD",
+        "title": "Comment exercer vos droits ?",
+        "desc": "<p>Conformément au RGPD, vous disposez des droits suivants&nbsp;: <strong>accès</strong> (art.&nbsp;15) — obtenir une copie de vos données&nbsp;; <strong>rectification</strong> (art.&nbsp;16) — corriger des informations inexactes&nbsp;; <strong>effacement</strong> (art.&nbsp;17) — demander la suppression de vos données&nbsp;; <strong>limitation</strong> (art.&nbsp;18) — suspendre un traitement&nbsp;; <strong>portabilité</strong> (art.&nbsp;20) — recevoir vos données dans un format structuré&nbsp;; <strong>opposition</strong> (art.&nbsp;21) — vous opposer à un traitement fondé sur l'intérêt légitime.</p><p><strong>Comment exercer vos droits&nbsp;:</strong> depuis l'application (Paramètres → Supprimer mon compte) ou par email à <strong>[EMAIL_CONTACT]</strong>. Délai de réponse&nbsp;: <strong>30 jours</strong>.</p><p>Vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--color-gold)\">www.cnil.fr</a>.</p>"
+      },
+      {
+        "overline": "Cookies et traceurs",
+        "title": "Politique de cookies",
+        "desc": "<p><strong>Situation actuelle&nbsp;:</strong> le site vitrine n'utilise aucun cookie tiers. Seuls des cookies strictement nécessaires au fonctionnement (session d'authentification) sont déposés — aucun consentement requis pour ces derniers.</p><p><strong>À venir&nbsp;:</strong> lors de l'activation de la publicité (AdMob) et des analytics (Firebase), un mécanisme de consentement conforme au RGPD sera intégré dans l'application avant tout dépôt de traceur non essentiel. Vous pourrez accepter, refuser ou modifier votre choix à tout moment depuis les paramètres de l'application.</p><p>Les contenus accessibles via webview depuis l'application ne déposent pas de cookies tiers supplémentaires en dehors de ceux gérés par le consentement applicatif.</p>"
+      },
+      {
+        "overline": "Notifications push",
+        "title": "Notifications et communications",
+        "desc": "<p>L'application prévoit l'envoi de notifications push (nouveaux contenus, rappels de progression, informations sur le service). Ces notifications sont soumises à votre <strong>consentement préalable explicite</strong>, recueilli via la fenêtre système de votre appareil lors de votre première utilisation.</p><p>Vous pouvez retirer ce consentement à tout moment depuis les paramètres de l'application Evolve Poker, ou via les réglages système de votre téléphone (iOS&nbsp;: Réglages → Notifications / Android&nbsp;: Paramètres → Applications → Notifications).</p>"
+      },
+      {
+        "overline": "Protection des mineurs",
+        "title": "Données des utilisateurs mineurs",
+        "desc": "<p>Le Service est interdit aux personnes de moins de <strong>16 ans</strong>. Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 16 ans. Si nous découvrons qu'un utilisateur est mineur de moins de 16 ans, son compte et l'ensemble de ses données seront supprimés sans délai.</p><p>Si vous êtes le représentant légal d'un mineur dont les données auraient été collectées à notre insu, contactez-nous à <strong>[EMAIL_CONTACT]</strong> pour en obtenir la suppression immédiate.</p>"
+      },
+      {
+        "overline": "Sécurité",
+        "title": "Comment protégeons-nous vos données ?",
+        "desc": "<p><strong>Chiffrement&nbsp;:</strong> toutes les communications sont chiffrées via TLS/HTTPS. Les données au repos sont chiffrées par Supabase (AES-256). Les mots de passe sont hashés (bcrypt) et ne sont jamais stockés en clair.</p><p><strong>Accès restreint&nbsp;:</strong> seul l'éditeur dispose d'un accès aux données de production, selon le principe de moindre privilège.</p><p><strong>En cas de violation de données&nbsp;:</strong> conformément à l'art.&nbsp;33 du RGPD, la CNIL sera notifiée dans les 72 heures. Les utilisateurs concernés seront informés sans délai si la violation est susceptible d'engendrer un risque élevé pour leurs droits et libertés.</p>"
+      },
+      {
+        "overline": "Modifications",
+        "title": "Évolution de cette politique",
+        "desc": "<p>Nous nous réservons le droit de modifier la présente Politique de confidentialité à tout moment, notamment pour refléter des évolutions légales, réglementaires ou fonctionnelles du Service.</p><p>En cas de modification substantielle, vous serez notifié(e) via l'application. La date de dernière mise à jour est indiquée en haut de cette page. La poursuite de l'utilisation du Service après notification vaut acceptation de la nouvelle politique.</p>"
       },
       {
         "overline": "Contact",
         "title": "Nous contacter",
-        "desc": "[Placeholder] Pour toute question relative à vos données personnelles, contactez-nous à privacy@evolvepoker.com."
+        "desc": "<p>Pour toute question relative à vos données personnelles ou à la présente politique&nbsp;:</p><p><strong>Email&nbsp;:</strong> <strong>[EMAIL_CONTACT]</strong> — réponse sous <strong>30 jours ouvrés</strong>.</p><p>Vous pouvez également utiliser notre <a href=\"/pages/contact/contact.html\" style=\"color:var(--color-gold)\">formulaire de contact</a>.</p><p>Aucun délégué à la protection des données (DPO) n'est désigné à ce stade&nbsp;: l'éditeur traite les données personnelles à une échelle qui ne rend pas cette désignation obligatoire au sens de l'article&nbsp;37 du RGPD.</p>"
       }
     ]
   },
@@ -47,32 +87,77 @@
     "meta_desc": "Lisez les conditions générales d'utilisation de l'application et du site Evolve Poker.",
     "hero_title": "Conditions",
     "hero_gradient": "d'utilisation",
-    "hero_desc": "Dernière mise à jour : janvier 2025",
+    "hero_desc": "Dernière mise à jour : juin 2026",
     "sections": [
       {
-        "overline": "Acceptation",
-        "title": "Acceptation des conditions",
-        "desc": "[Placeholder] En utilisant l'application ou le site Evolve Poker, vous acceptez les présentes conditions d'utilisation."
+        "overline": "Éditeur du service",
+        "title": "Présentation et mentions légales",
+        "desc": "<p>Evolve Poker est une application mobile de formation au poker (ci-après «&nbsp;le Service&nbsp;»), éditée à titre personnel par <strong>[NOM_EDITEUR]</strong>, domicilié(e) au <strong>[ADRESSE_EDITEUR]</strong> — SIRET&nbsp;: <strong>[SIRET]</strong> — email&nbsp;: <strong>[EMAIL_CONTACT]</strong>. Le site vitrine constitue le support de présentation de cette application.</p><p>Hébergeurs&nbsp;: <strong>Netlify, Inc.</strong> (2325 3rd Street, San Francisco, CA 94107, USA) pour le site vitrine&nbsp;; <strong>Supabase, Inc.</strong> pour les données applicatives (conditions disponibles sur supabase.com/privacy). Le Service ne constitue pas un opérateur de jeux d'argent en ligne au sens de la réglementation ANJ.</p>"
       },
       {
-        "overline": "Utilisation du service",
-        "title": "Règles d'utilisation",
-        "desc": "[Placeholder] Description des usages autorisés et interdits de la plateforme Evolve Poker."
+        "overline": "Acceptation & Âge minimum",
+        "title": "Conditions d'accès et âge requis",
+        "desc": "<p>L'utilisation du Service implique l'acceptation pleine et entière des présentes Conditions Générales d'Utilisation (CGU). Si vous n'acceptez pas ces conditions, vous devez cesser d'utiliser le Service immédiatement.</p><p><strong>Âge minimum&nbsp;: 16 ans.</strong> En créant un compte, vous déclarez avoir au moins 16 ans. Si vous avez entre 16 et 18 ans, vous confirmez avoir obtenu l'accord de votre représentant légal. Evolve Poker se réserve le droit de suspendre tout compte dont l'utilisateur serait mineur de moins de 16 ans.</p>"
+      },
+      {
+        "overline": "Compte utilisateur",
+        "title": "Création et sécurité de votre compte",
+        "desc": "<p>L'inscription s'effectue via email et mot de passe, ou via authentification Google (OAuth 2.0). Vous êtes seul(e) responsable de la confidentialité de vos identifiants et de toute activité réalisée depuis votre compte. Tout compte est strictement personnel et non cessible.</p><p>En cas de perte, de vol ou d'utilisation non autorisée de vos identifiants, contactez Evolve Poker sans délai à <strong>[EMAIL_CONTACT]</strong>. Un seul compte par personne est autorisé. Tout compte dupliqué pourra être supprimé sans préavis.</p>"
+      },
+      {
+        "overline": "Description du service",
+        "title": "Fonctionnalités proposées",
+        "desc": "<p>Evolve Poker propose les fonctionnalités suivantes à titre gratuit, sans garantie de disponibilité permanente&nbsp;: <strong>Academy</strong> (leçons structurées sur la stratégie et la théorie du poker)&nbsp;; <strong>Ranges</strong> (consultation et personnalisation de ranges préétablies)&nbsp;; <strong>Calendrier</strong> (tournois live et en ligne)&nbsp;; <strong>Mains</strong> (prise de notes et analyse post-session)&nbsp;; <strong>News</strong> (actualités du poker)&nbsp;; <strong>Communauté</strong> (échanges entre utilisateurs et classements publics).</p><p>L'ensemble du contenu est fourni à des fins <strong>strictement pédagogiques</strong>. Evolve Poker ne fournit pas de conseils financiers et ne garantit aucun résultat en termes de performance ou de gains au poker.</p>"
+      },
+      {
+        "overline": "Usages autorisés & interdits",
+        "title": "Règles d'utilisation du Service",
+        "desc": "<p>Le Service est destiné à un usage <strong>personnel, non commercial et pédagogique</strong>. Sont notamment interdits&nbsp;: tout usage commercial ou revente du Service&nbsp;; la reproduction ou diffusion du contenu sans autorisation écrite préalable&nbsp;; toute tentative de contournement des mécanismes de sécurité&nbsp;; l'utilisation de robots ou scrapers automatisés&nbsp;; la publication dans la Communauté de contenus illicites, haineux ou discriminatoires&nbsp;; le harcèlement ou l'usurpation d'identité d'un autre utilisateur.</p><p>Evolve Poker se réserve le droit de supprimer tout contenu inapproprié et de suspendre ou résilier tout compte en violation de ces règles, sans préavis ni indemnité.</p>"
+      },
+      {
+        "overline": "Contenu utilisateur",
+        "title": "Publications dans la Communauté",
+        "desc": "<p>En publiant du contenu dans l'espace Communauté, vous accordez à Evolve Poker une licence non exclusive, mondiale et gratuite d'afficher, reproduire et distribuer ce contenu dans le cadre du Service. Vous conservez l'intégralité de vos droits sur vos créations.</p><p>Vous êtes seul(e) responsable des contenus publiés et garantissez qu'ils ne portent pas atteinte aux droits de tiers. Les classements publics (rankings) sont calculés automatiquement à partir de votre activité dans l'application et sont visibles par l'ensemble des utilisateurs. La messagerie directe entre utilisateurs n'est pas disponible.</p>"
       },
       {
         "overline": "Propriété intellectuelle",
-        "title": "Droits et contenus",
-        "desc": "[Placeholder] Tous les contenus de l'application et du site sont la propriété exclusive d'Evolve Poker."
+        "title": "Droits sur les contenus du Service",
+        "desc": "<p>L'ensemble des éléments constituant le Service (leçons, textes, graphiques, logo, interface, code source, données pédagogiques) sont la propriété exclusive d'Evolve Poker ou de ses ayants droit, et sont protégés par le droit d'auteur, le droit des marques et tout autre droit de propriété intellectuelle applicable.</p><p>Toute reproduction, représentation, modification ou exploitation du Service, quel qu'en soit le moyen ou le procédé, est interdite sans l'autorisation écrite préalable d'Evolve Poker. Toute exploitation non autorisée engage la responsabilité civile et pénale de son auteur.</p>"
+      },
+      {
+        "overline": "Modèle économique & Achats",
+        "title": "Service gratuit et futurs achats in-app",
+        "desc": "<p>Le Service est proposé <strong>gratuitement</strong> dans sa version actuelle&nbsp;: aucun abonnement n'est requis pour accéder aux fonctionnalités existantes et à l'intégralité du contenu pédagogique.</p><p>Evolve Poker se réserve le droit d'introduire dans le futur des fonctionnalités payantes (offre Premium sans publicité, achat de «&nbsp;vies&nbsp;» ou d'autres éléments) uniquement via les systèmes de paiement officiels (Google Play, App Store). Les prix seront communiqués avant toute transaction. Conformément à l'article L221-28 du Code de la consommation, les achats de contenus numériques dont l'exécution a débuté avec votre accord exprès ne bénéficient pas du droit de rétractation de 14 jours.</p>"
       },
       {
         "overline": "Responsabilité",
         "title": "Limitation de responsabilité",
-        "desc": "[Placeholder] Evolve Poker ne saurait être tenu responsable des pertes financières liées à l'utilisation du service."
+        "desc": "<p>Le Service est fourni «&nbsp;en l'état&nbsp;», sans garantie quant à son exactitude ou son adéquation à un objectif particulier. <strong>Toute décision de jeu demeure de la seule responsabilité de l'utilisateur.</strong> Evolve Poker ne saurait être tenu responsable des pertes financières ou de tout préjudice résultant d'une pratique du poker, quelle que soit l'utilisation du Service.</p><p>Evolve Poker n'est pas responsable des interruptions du Service pour maintenance ou incident technique, ni des pertes de données liées à une défaillance technique. En tout état de cause, sa responsabilité est limitée, dans les cas où la loi le permet, aux montants effectivement payés par l'utilisateur au cours des 12 derniers mois.</p>"
+      },
+      {
+        "overline": "Disponibilité & Évolution",
+        "title": "Continuité et modification du Service",
+        "desc": "<p>Evolve Poker s'efforce d'assurer la disponibilité du Service 24h/24 et 7j/7, sans pouvoir en garantir la continuité absolue. Des interruptions peuvent survenir pour maintenance, mise à jour ou incident technique, sans ouvrir droit à indemnisation.</p><p>Evolve Poker se réserve le droit de modifier, suspendre ou mettre fin à tout ou partie des fonctionnalités à tout moment, notamment pour faire évoluer l'offre ou pour des raisons légales. Les modifications substantielles des CGU feront l'objet d'une notification dans l'application.</p>"
       },
       {
         "overline": "Résiliation",
-        "title": "Suspension et résiliation",
-        "desc": "[Placeholder] Conditions dans lesquelles un compte peut être suspendu ou résilié."
+        "title": "Suppression et suspension de compte",
+        "desc": "<p><strong>À votre initiative&nbsp;:</strong> vous pouvez demander la suppression de votre compte à tout moment depuis l'application (Paramètres → Supprimer mon compte) ou par email à <strong>[EMAIL_CONTACT]</strong>. La suppression entraîne l'effacement de vos données dans les délais prévus par notre Politique de confidentialité.</p><p><strong>À l'initiative d'Evolve Poker&nbsp;:</strong> en cas de violation des présentes CGU, comportement abusif, frauduleux ou illicite, votre compte peut être suspendu ou résilié sans préavis ni indemnité. Les achats in-app validés ne donnent pas lieu à remboursement sauf obligation légale contraire.</p>"
+      },
+      {
+        "overline": "Modifications des CGU",
+        "title": "Mise à jour des présentes conditions",
+        "desc": "<p>Evolve Poker se réserve le droit de modifier les présentes CGU à tout moment. Les nouvelles conditions entrent en vigueur dès leur publication dans l'application et sur le site vitrine. Vous serez informé(e) des modifications substantielles via une notification dans l'application.</p><p>La poursuite de l'utilisation du Service après notification vaut acceptation des nouvelles CGU. Si vous refusez les modifications, vous devez cesser d'utiliser le Service et supprimer votre compte.</p>"
+      },
+      {
+        "overline": "Droit applicable & Médiation",
+        "title": "Loi applicable et règlement des litiges",
+        "desc": "<p>Les présentes CGU sont régies par le droit français. En cas de litige, une solution amiable sera recherchée en priorité. Conformément aux articles L612-1 et suivants du Code de la consommation, vous pouvez recourir gratuitement à un médiateur de la consommation. La plateforme européenne de règlement en ligne des litiges est accessible à l'adresse&nbsp;: <a href=\"https://ec.europa.eu/consumers/odr\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--color-gold)\">ec.europa.eu/consumers/odr</a>.</p><p>À défaut de résolution amiable, tout litige sera soumis aux juridictions compétentes du ressort du domicile du défendeur ou, pour un consommateur, du tribunal du lieu de son domicile en France.</p>"
+      },
+      {
+        "overline": "Contact",
+        "title": "Nous contacter",
+        "desc": "<p>Pour toute question relative aux présentes CGU, pour exercer vos droits ou déposer une réclamation&nbsp;: par email à <strong>[EMAIL_CONTACT]</strong> ou via la <a href=\"/pages/contact/contact.html\" style=\"color:var(--color-gold)\">page Contact</a>. Nous nous engageons à répondre dans un délai de 30 jours ouvrés à compter de la réception de votre demande.</p>"
       }
     ]
   },

@@ -28,14 +28,18 @@ _includes/
 assets/
   css/style.css       — Feuille CSS unique (~4000 lignes), tout le design system
   js/main.js          — JS global
-  images/logo.png
+  images/             — logo, favicons, og-default, visuels par feature
+netlify/
+  functions/
+    lesson-vote.js    — API likes/dislikes leçons (Netlify Blobs)
 pages/
-  academy/academy.html · academies.html · module.njk
-  features/features.html + calendrier/mains/news/ranges.html (sous-pages)
-  lasuite/            — lasuite.html (page principale) + jeux/analyse/communaute.html (sous-pages)
-  contact/contact.html
+  academy/            — academy.html (listing) · academies.html · module.njk
+  features/           — features.html (listing) · calendrier · mains · news · ranges
+  lasuite/            — lasuite.html (page principale) · jeux · analyse · communaute · calculateur (pot odds)
+  contact/            — contact.html (2 panels : Contact / Nous aider)
+  lessons/            — lesson.njk (template leçons générées depuis CSV)
   cgu.njk             — Page multi-panels : Le projet / Risques / Aide inscriptions / CGU / Privacy / FAQ
-  lessons/lesson.njk
+manifest.json         — PWA manifest
 index.html            — Homepage
 robots.njk · 404.njk
 ```
@@ -126,9 +130,9 @@ if (hash === 'panel-help' || hash === 'panel-contact') showPanel(hash);
 
 ### La suite — feature rows avec anchors
 Chaque feature row a `id="{{ row.id }}"` dans `_data/texts.json` (`jeux`, `analyse`, `communaute`, `potodds`).
-Back buttons des sous-pages → `/pages/next/lasuite.html#jeux` etc.
+Back buttons des sous-pages → `/pages/lasuite/lasuite.html#jeux` etc.
 
-Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutral` "Bientôt disponible" à la place du bouton "Découvrir →" (voir `pages/next/lasuite.html`).
+Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutral` "Bientôt disponible" à la place du bouton "Découvrir →" (voir `pages/lasuite/lasuite.html`).
 
 ---
 
@@ -138,14 +142,14 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - Homepage complète (hero, features, CTA stores)
 - Academy : listing, modules, pages leçons (CSV)
 - Fonctionnalités : page listing + 5 sous-pages détail (calendrier, mains, ranges, news + 1)
-- La suite : page avec 4 features (Jeux, Analyse, Communauté, Pot odds "coming soon") + 3 sous-pages éditoriales
+- La suite : page avec 4 features (Jeux, Analyse, Communauté, Pot odds "coming soon") + 4 sous-pages (jeux, analyse, communaute, calculateur)
 - Contact : formulaire 2 panels (Contact / Nous aider), hash deep-link
 - CGU / Le projet : 6 panels accordéons (Le projet, Risques poker, Aide inscriptions, CGU, Privacy, FAQ)
 - Nav responsive (drawer mobile), footer beta
 - SEO base : robots.njk, 404.njk, meta title/desc par page
 - Open Graph complet (og:title, og:description, og:url, og:image 1200×630) — `layout.njk`
 - Canonical URL — `layout.njk`
-- Favicon complet — favicon.ico, favicon-96x96.png, favicon.svg, apple-touch-icon.png, site.webmanifest, web-app-manifest-192×192/512×512, og-default.png
+- Favicon complet — favicon.ico, favicon-96x96.png, favicon.svg, apple-touch-icon.png, web-app-manifest-192×192/512×512, og-default.png, manifest.json (PWA)
 - Schema.org JSON-LD (LearningResource) — `lesson-layout.njk`
 - netlify.toml (base build + redirects API)
 - Design system cohérent, CSS unique, 0 dépendance UI
@@ -157,7 +161,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) |
 | 🔴 | **Codes parrainage** — remplacer les 4 `[TON_CODE_*]` dans `pages/cgu.njk` |
 | 🔴 | **Contenu Privacy** — 5 sections `[Placeholder]` dans `_data/texts.json` |
-| 🔴 | **Contenu CGU/Terms** — 5 sections `[Placeholder]` dans `_data/texts.json` |
 | 🔴 | **Déploiement Netlify** — jamais fait |
 | 🟡 | **Vulnérabilités npm** — 3 détectées par GitHub (1 high, 2 moderate) — `npm audit fix` |
 | 🟡 | **Security headers** — `netlify.toml` sans `[[headers]]` (CSP, X-Frame, HSTS…) |
@@ -165,12 +168,11 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🟡 | **Google AdSense** — slots `.ad-slot--inline` présents, à configurer |
 | 🟡 | **Axeptio** (cookies) — obligatoire RGPD dès qu'AdSense est actif |
 | 🟡 | **Analytics** (GA ou Plausible) |
-| 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains, lasuite_detail |
+| 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains |
 | 🟠 | **Photos / visuels** — blocs `feature-row__placeholder` partout |
 | 🟠 | **Logo "E"** pour l'en-tête des pages leçons |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) |
 | 🟠 | **Webhook rebuild** Netlify auto sur push/syncAll |
-| 🟠 | **Sous-page Pot odds** — bloc "coming soon" présent, page à créer |
 | 🟠 | **i18n** (langues) — non démarré |
 | 🟠 | **SEO/SEA strategy** |
 
