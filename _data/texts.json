@@ -340,7 +340,7 @@
         "overline": "Calculateur",
         "title": "Chaque décision a un prix — connaissez-le",
         "desc": "Le poker est un jeu de décisions sous incertitude, et les meilleures décisions sont celles qui tiennent compte des probabilités. Le calculateur de pot odds et d'équité vous permet de savoir en un coup d'œil si un call est mathématiquement profitable, quelle est votre équité face à une range adverse, et comment la taille du pot influence chaque choix. Des fondamentaux mathématiques rendus accessibles, directement depuis l'application — pour que chaque décision repose sur du concret, pas sur l'intuition seule.",
-        "coming_soon": true,
+        "link": "/pages/lasuite/calculateur.html",
         "image": "/assets/images/odds1.png"
       }
     ],
