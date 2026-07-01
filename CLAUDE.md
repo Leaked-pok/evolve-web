@@ -153,28 +153,32 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - Schema.org JSON-LD (LearningResource) — `lesson-layout.njk`
 - netlify.toml (base build + redirects API)
 - Design system cohérent, CSS unique, 0 dépendance UI
+- GA4 web stream intégré — `gtag.js` dans `layout.njk` (ID : `G-6Q1X0GBT65`)
+- Vulnérabilités npm critiques corrigées (liquidjs + ws)
 
 ### Reste à faire ✗
 
-| Priorité | Tâche |
-|----------|-------|
-| 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) |
-| 🔴 | **Codes parrainage** — remplacer les 4 `[TON_CODE_*]` dans `pages/cgu.njk` |
-| 🔴 | **Contenu Privacy** — 5 sections `[Placeholder]` dans `_data/texts.json` |
-| 🔴 | **Déploiement Netlify** — jamais fait |
-| 🟡 | **Vulnérabilités npm** — 3 détectées par GitHub (1 high, 2 moderate) — `npm audit fix` |
-| 🟡 | **Security headers** — `netlify.toml` sans `[[headers]]` (CSP, X-Frame, HSTS…) |
-| 🟡 | **Formulaire contact backend** — activer Netlify Forms |
-| 🟡 | **Google AdSense** — slots `.ad-slot--inline` présents, à configurer |
-| 🟡 | **Axeptio** (cookies) — obligatoire RGPD dès qu'AdSense est actif |
-| 🟡 | **Analytics** (GA ou Plausible) |
-| 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains |
-| 🟠 | **Photos / visuels** — blocs `feature-row__placeholder` partout |
-| 🟠 | **Logo "E"** pour l'en-tête des pages leçons |
-| 🟠 | **Deep link** `evolvepoker://` (Flutter) |
-| 🟠 | **Webhook rebuild** Netlify auto sur push/syncAll |
-| 🟠 | **i18n** (langues) — non démarré |
-| 🟠 | **SEO/SEA strategy** |
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
+| 🔴 | **Codes parrainage** — remplacer les 4 `[TON_CODE_*]` dans `pages/cgu.njk` | Site |
+| 🔴 | **Placeholders légaux** — `[NOM_EDITEUR]`, `[ADRESSE_EDITEUR]`, `[SIRET]`, `[EMAIL_CONTACT]` dans `_data/texts.json` | Site |
+| 🔴 | **Déploiement Netlify** — jamais fait | Site |
+| 🟡 | **Bannière consentement cookies** — obligatoire RGPD avant mise en ligne (Axeptio ou équivalent) | Site |
+| 🟡 | **Security headers** — `netlify.toml` sans `[[headers]]` (CSP, X-Frame, HSTS…) | Site |
+| 🟡 | **Formulaire contact backend** — activer Netlify Forms | Site |
+| 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
+| 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
+| 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |
+| 🟡 | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
+| 🟡 | **Vulnérabilité npm restante** — `markdown-it` (moderate ReDoS) — correction = Eleventy v2→v3 (breaking change, reporter) | Site |
+| 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains | Site |
+| 🟠 | **Photos / visuels** — blocs `feature-row__placeholder` partout | Site |
+| 🟠 | **Logo "E"** pour l'en-tête des pages leçons | Site |
+| 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
+| 🟠 | **Webhook rebuild** Netlify auto sur push | Site |
+| 🟠 | **i18n** (langues) — non démarré | Site |
+| 🟠 | **SEO/SEA strategy** | Site |
 
 ---
 
