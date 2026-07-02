@@ -40,7 +40,9 @@ activeNav: contact
 
             </div>
 
-            <form class="contact-form" id="form-contact" novalidate>
+            <form class="contact-form" id="form-contact" name="contact" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="contact">
+              <p style="display:none"><input name="bot-field"></p>
               <div class="contact-form__row">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="c-name">Nom</label>
@@ -69,7 +71,7 @@ activeNav: contact
                 <textarea class="contact-form__input contact-form__textarea" id="c-message" name="message" placeholder="Décrivez votre demande..." rows="6" required></textarea>
               </div>
               <button type="submit" class="btn btn--primary btn--full btn--lg">Envoyer le message</button>
-              <p class="contact-form__note">Ce formulaire ouvre votre client mail. Aucune donnée n'est stockée sur ce site.</p>
+              <p class="contact-form__note">Vos données sont transmises directement à l'équipe Evolve via Netlify et supprimées après traitement.</p>
             </form>
 
           </div>
@@ -93,7 +95,9 @@ activeNav: contact
               </div>
             </div>
 
-            <form class="contact-form" id="form-help" novalidate>
+            <form class="contact-form" id="form-help" name="contribution" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+              <input type="hidden" name="form-name" value="contribution">
+              <p style="display:none"><input name="bot-field"></p>
               <div class="contact-form__row">
                 <div class="contact-form__field">
                   <label class="contact-form__label" for="h-name">Nom</label>
@@ -140,7 +144,7 @@ activeNav: contact
                 <textarea class="contact-form__input contact-form__textarea" id="h-message" name="message" placeholder="Dites-nous ce que vous aimeriez apporter au projet et pourquoi vous souhaitez rejoindre Evolve…" rows="6" required></textarea>
               </div>
               <button type="submit" class="btn btn--primary btn--full btn--lg">Envoyer ma candidature</button>
-              <p class="contact-form__note">Ce formulaire ouvre votre client mail. Aucune donnée n'est stockée sur ce site.</p>
+              <p class="contact-form__note">Vos données sont transmises directement à l'équipe Evolve via Netlify et supprimées après traitement.</p>
             </form>
 
           </div>
@@ -186,7 +190,6 @@ activeNav: contact
     const hash = window.location.hash.replace('#', '');
     if (hash === 'panel-help' || hash === 'panel-contact') showPanel(hash);
 
-    // Pré-remplir depuis un lien de leçon (?lesson=...)
     const params = new URLSearchParams(window.location.search);
     const lessonName = params.get('lesson');
     if (lessonName) {
@@ -197,30 +200,46 @@ activeNav: contact
       msgField.value = 'Leçon : ' + lessonName + '\n\n';
     }
 
-    document.getElementById('form-contact').addEventListener('submit', function(e) {
+    async function netlifySubmit(formEl) {
+      let valid = true;
+      formEl.querySelectorAll('[required]').forEach(f => {
+        if (!f.value.trim()) { valid = false; f.classList.add('is-invalid'); }
+        else { f.classList.remove('is-invalid'); }
+      });
+      if (!valid) return;
+
+      const btn = formEl.querySelector('[type="submit"]');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Envoi…';
+
+      try {
+        const res = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(formEl)).toString()
+        });
+        if (!res.ok) throw new Error();
+        formEl.innerHTML = '<p class="contact-form__success-msg">Message envoyé. Nous vous répondrons dans les meilleurs délais.</p>';
+      } catch {
+        btn.disabled = false;
+        btn.textContent = originalText;
+        if (!formEl.querySelector('.contact-form__error-msg')) {
+          const err = document.createElement('p');
+          err.className = 'contact-form__error-msg';
+          err.textContent = 'Erreur d\'envoi. Réessayez ou écrivez-nous directement.';
+          btn.before(err);
+        }
+      }
+    }
+
+    document.getElementById('form-contact').addEventListener('submit', e => {
       e.preventDefault();
-      const name    = this.name.value.trim();
-      const email   = this.email.value.trim();
-      const topic   = this.topic.value || 'Contact';
-      const message = this.message.value.trim();
-      const subject = lessonName && topic === 'Commentaire sur une leçon'
-        ? `Commentaire — ${lessonName}`
-        : topic;
-      const body    = `Nom : ${name}\nEmail : ${email}\n\n${message}`;
-      window.location.href = `mailto:{{ texts.contact.email_contact }}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      netlifySubmit(e.currentTarget);
     });
 
-    document.getElementById('form-help').addEventListener('submit', function(e) {
+    document.getElementById('form-help').addEventListener('submit', e => {
       e.preventDefault();
-      const name         = this.name.value.trim();
-      const email        = this.email.value.trim();
-      const domain       = this.domain.value;
-      const type         = this.type.value;
-      const availability = this.availability.value.trim();
-      const portfolio    = this.portfolio.value.trim();
-      const message      = this.message.value.trim();
-      const subject      = `Contribution — ${domain || 'Autre'}`;
-      const body = `Nom : ${name}\nEmail : ${email}\nDomaine : ${domain}\nType : ${type}\nDisponibilité : ${availability}\nLien : ${portfolio}\n\n${message}`;
-      window.location.href = `mailto:{{ texts.contact.email_team }}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      netlifySubmit(e.currentTarget);
     });
   </script>

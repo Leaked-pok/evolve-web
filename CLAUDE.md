@@ -153,7 +153,9 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - Schema.org JSON-LD (LearningResource) — `lesson-layout.njk`
 - netlify.toml (base build + redirects API)
 - Design system cohérent, CSS unique, 0 dépendance UI
-- GA4 web stream intégré — `gtag.js` dans `layout.njk` (ID : `G-6Q1X0GBT65`)
+- GA4 web stream intégré + bannière consentement CNIL (Tarteaucitron) — `layout.njk`
+- Security headers — `netlify.toml` (CSP, HSTS, X-Frame, etc.)
+- Netlify Forms — formulaire contact et contribution opérationnels
 - Vulnérabilités npm critiques corrigées (liquidjs + ws)
 
 ### Reste à faire ✗
@@ -164,9 +166,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🔴 | **Codes parrainage** — remplacer les 4 `[TON_CODE_*]` dans `pages/cgu.njk` | Site |
 | 🔴 | **Placeholders légaux** — `[NOM_EDITEUR]`, `[ADRESSE_EDITEUR]`, `[SIRET]`, `[EMAIL_CONTACT]` dans `_data/texts.json` | Site |
 | 🔴 | **Déploiement Netlify** — jamais fait | Site |
-| 🟡 | **Bannière consentement cookies** — obligatoire RGPD avant mise en ligne (Axeptio ou équivalent) | Site |
-| 🟡 | **Security headers** — `netlify.toml` sans `[[headers]]` (CSP, X-Frame, HSTS…) | Site |
-| 🟡 | **Formulaire contact backend** — activer Netlify Forms | Site |
 | 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
 | 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
 | 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |

@@ -4304,6 +4304,104 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
 .module-hero__visual  { animation: hero-enter 0.8s ease both 0.1s; }
 .module-hero__content { animation: hero-enter 0.8s ease both 0.3s; }
 
+/* ── Tarteaucitron — thème Evolve ───────────────────────────── */
+#tarteaucitronAlertBig {
+  background: #0f0f1a !important;
+  border-top: 1px solid var(--color-border) !important;
+  box-shadow: 0 -8px 32px rgba(0,0,0,0.5) !important;
+  padding: 16px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+}
+#tarteaucitronDisclaimerAlert {
+  color: var(--color-text-2) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.5 !important;
+  flex: 1 1 220px !important;
+}
+.tarteaucitronAlertBigPrivacyUrl {
+  color: var(--color-gold-light) !important;
+  text-decoration: underline !important;
+  white-space: nowrap !important;
+}
+#tarteaucitronAlertBigBtns {
+  display: flex !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+#tarteaucitronPersonalize2 {
+  background: var(--color-gold) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 8px 18px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: background 0.2s !important;
+}
+#tarteaucitronPersonalize2:hover { background: var(--color-gold-light) !important; }
+#tarteaucitronCloseAlert {
+  background: transparent !important;
+  color: var(--color-text-2) !important;
+  border: 1px solid var(--color-border-light) !important;
+  border-radius: 8px !important;
+  padding: 8px 18px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: border-color 0.2s, color 0.2s !important;
+}
+#tarteaucitronCloseAlert:hover {
+  border-color: var(--color-text-2) !important;
+  color: var(--color-text) !important;
+}
+#tarteaucitronCookiesListBanner {
+  background: transparent !important;
+  color: var(--color-text-3) !important;
+  border: none !important;
+  font-size: 0.75rem !important;
+  font-family: 'Inter', sans-serif !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  text-decoration: underline !important;
+}
+#tarteaucitronIcon {
+  background: #0f0f1a !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px 8px 0 0 !important;
+  bottom: 0 !important;
+}
+#tarteaucitronIcon a { color: var(--color-text-3) !important; font-family: 'Inter', sans-serif !important; font-size: 0.75rem !important; }
+@media (max-width: 640px) {
+  #tarteaucitronAlertBig { padding: 14px 16px !important; }
+  #tarteaucitronAlertBigBtns { width: 100% !important; }
+  #tarteaucitronPersonalize2,
+  #tarteaucitronCloseAlert { flex: 1 !important; text-align: center !important; }
+}
+
+/* ── Formulaire contact — états ─────────────────────────────── */
+.contact-form__input.is-invalid { border-color: var(--color-gold) !important; }
+.contact-form__success-msg {
+  color: #4ade80;
+  font-size: 1rem;
+  padding: var(--space-8) 0;
+  text-align: center;
+  line-height: 1.6;
+}
+.contact-form__error-msg {
+  color: var(--color-gold-light);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-3);
+}
+
 /* ── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   [data-animate],
