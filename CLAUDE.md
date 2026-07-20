@@ -161,6 +161,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Déploiement Netlify** — site créé et lié au repo GitHub (`ubiquitous-tiramisu-7fd9e1.netlify.app`), CI/CD auto sur push `main` configuré
 - Fix CSP bloquant le CSS Tarteaucitron (bandeau cookies s'affichait en texte brut) — `style-src` autorise désormais `cdn.jsdelivr.net`
 - **Adresse email de contact** — `contact.evolvepoker@gmail.com` créée (base aussi pour les futurs comptes réseaux sociaux), remplace `[EMAIL_CONTACT]` dans CGU/Privacy et alimente `email_contact/support/partners/team` (alias `+support`/`+partners`/`+team`) dans `_data/texts.json`
+- **Notification Netlify Forms** — email de notification configuré vers `contact.evolvepoker@gmail.com` pour les formulaires `contact` et `contribution`
 
 ### Reste à faire ✗
 
@@ -171,7 +172,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | ⏸️ | **Identité éditeur légal** — nom/adresse/SIRET masqués dans CGU/Privacy tant que l'entreprise n'est pas créée | Site |
 | 🟠 | **Relecture textes** — passe de relecture/finalisation de tout le contenu éditorial dans `_data/texts.json` (au-delà des `[Placeholder]` déjà identifiés) | Site |
 | 🔴 | **Supabase region** — vérifier dans Dashboard Supabase → Settings → General → Database region, puis mettre à jour la section "Transferts hors UE" dans `_data/texts.json` (privacy) | Externe |
-| 🔴 | **Notification Netlify Forms** — dans le dashboard Netlify (Site settings → Forms → Form notifications), ajouter une notification email vers `contact.evolvepoker@gmail.com` pour les 2 formulaires (contact + contribution) | Externe |
 | ⏸️ | **Migration domaine email** — une fois `evolvepoker.app` acheté (cf. tâche "URL domaine"), basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.app` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
 | 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
 | 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
