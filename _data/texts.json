@@ -18,7 +18,7 @@
       {
         "overline": "Responsable du traitement",
         "title": "Qui traite vos données ?",
-        "desc": "<p>Le responsable du traitement au sens du Règlement (UE) 2016/679 (RGPD) est l'éditeur du Service Evolve Poker, joignable par email à <strong>[EMAIL_CONTACT]</strong>.</p><p>La présente Politique de confidentialité s'applique à l'ensemble du Service Evolve Poker&nbsp;: site vitrine, application mobile Android et iOS, et contenus pédagogiques accessibles via webview depuis l'application.</p>"
+        "desc": "<p>Le responsable du traitement au sens du Règlement (UE) 2016/679 (RGPD) est l'éditeur du Service Evolve Poker, joignable par email à <strong>contact.evolvepoker@gmail.com</strong>.</p><p>La présente Politique de confidentialité s'applique à l'ensemble du Service Evolve Poker&nbsp;: site vitrine, application mobile Android et iOS, et contenus pédagogiques accessibles via webview depuis l'application.</p>"
       },
       {
         "overline": "Données collectées",
@@ -38,7 +38,7 @@
       {
         "overline": "Transferts hors UE",
         "title": "Vos données sont-elles transférées hors de l'Union européenne ?",
-        "desc": "<p>Certains sous-traitants sont établis aux États-Unis. Ces transferts sont encadrés par des garanties appropriées conformément à l'article&nbsp;46 du RGPD&nbsp;:</p><p><strong>Supabase&nbsp;:</strong> si la région de stockage est européenne (ex.&nbsp;eu-west-1 — Irlande), vos données restent dans l'UE. Dans le cas contraire, le transfert est couvert par les Clauses Contractuelles Types (CCT) de la Commission européenne et un accord de traitement des données (DPA) signé avec Supabase.</p><p><strong>Netlify et Google&nbsp;:</strong> transferts encadrés par des CCT et DPA conformes au RGPD.</p><p>Vous pouvez obtenir copie de ces garanties en contactant <strong>[EMAIL_CONTACT]</strong>.</p>"
+        "desc": "<p>Certains sous-traitants sont établis aux États-Unis. Ces transferts sont encadrés par des garanties appropriées conformément à l'article&nbsp;46 du RGPD&nbsp;:</p><p><strong>Supabase&nbsp;:</strong> si la région de stockage est européenne (ex.&nbsp;eu-west-1 — Irlande), vos données restent dans l'UE. Dans le cas contraire, le transfert est couvert par les Clauses Contractuelles Types (CCT) de la Commission européenne et un accord de traitement des données (DPA) signé avec Supabase.</p><p><strong>Netlify et Google&nbsp;:</strong> transferts encadrés par des CCT et DPA conformes au RGPD.</p><p>Vous pouvez obtenir copie de ces garanties en contactant <strong>contact.evolvepoker@gmail.com</strong>.</p>"
       },
       {
         "overline": "Durée de conservation",
@@ -48,7 +48,7 @@
       {
         "overline": "Vos droits RGPD",
         "title": "Comment exercer vos droits ?",
-        "desc": "<p>Conformément au RGPD, vous disposez des droits suivants&nbsp;: <strong>accès</strong> (art.&nbsp;15) — obtenir une copie de vos données&nbsp;; <strong>rectification</strong> (art.&nbsp;16) — corriger des informations inexactes&nbsp;; <strong>effacement</strong> (art.&nbsp;17) — demander la suppression de vos données&nbsp;; <strong>limitation</strong> (art.&nbsp;18) — suspendre un traitement&nbsp;; <strong>portabilité</strong> (art.&nbsp;20) — recevoir vos données dans un format structuré&nbsp;; <strong>opposition</strong> (art.&nbsp;21) — vous opposer à un traitement fondé sur l'intérêt légitime.</p><p><strong>Comment exercer vos droits&nbsp;:</strong> depuis l'application (Paramètres → Supprimer mon compte) ou par email à <strong>[EMAIL_CONTACT]</strong>. Délai de réponse&nbsp;: <strong>30 jours</strong>.</p><p>Vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--color-gold)\">www.cnil.fr</a>.</p>"
+        "desc": "<p>Conformément au RGPD, vous disposez des droits suivants&nbsp;: <strong>accès</strong> (art.&nbsp;15) — obtenir une copie de vos données&nbsp;; <strong>rectification</strong> (art.&nbsp;16) — corriger des informations inexactes&nbsp;; <strong>effacement</strong> (art.&nbsp;17) — demander la suppression de vos données&nbsp;; <strong>limitation</strong> (art.&nbsp;18) — suspendre un traitement&nbsp;; <strong>portabilité</strong> (art.&nbsp;20) — recevoir vos données dans un format structuré&nbsp;; <strong>opposition</strong> (art.&nbsp;21) — vous opposer à un traitement fondé sur l'intérêt légitime.</p><p><strong>Comment exercer vos droits&nbsp;:</strong> depuis l'application (Paramètres → Supprimer mon compte) ou par email à <strong>contact.evolvepoker@gmail.com</strong>. Délai de réponse&nbsp;: <strong>30 jours</strong>.</p><p>Vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — <a href=\"https://www.cnil.fr\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--color-gold)\">www.cnil.fr</a>.</p>"
       },
       {
         "overline": "Cookies et traceurs",
@@ -63,7 +63,7 @@
       {
         "overline": "Protection des mineurs",
         "title": "Données des utilisateurs mineurs",
-        "desc": "<p>Le Service est interdit aux personnes de moins de <strong>16 ans</strong>. Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 16 ans. Si nous découvrons qu'un utilisateur est mineur de moins de 16 ans, son compte et l'ensemble de ses données seront supprimés sans délai.</p><p>Si vous êtes le représentant légal d'un mineur dont les données auraient été collectées à notre insu, contactez-nous à <strong>[EMAIL_CONTACT]</strong> pour en obtenir la suppression immédiate.</p>"
+        "desc": "<p>Le Service est interdit aux personnes de moins de <strong>16 ans</strong>. Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 16 ans. Si nous découvrons qu'un utilisateur est mineur de moins de 16 ans, son compte et l'ensemble de ses données seront supprimés sans délai.</p><p>Si vous êtes le représentant légal d'un mineur dont les données auraient été collectées à notre insu, contactez-nous à <strong>contact.evolvepoker@gmail.com</strong> pour en obtenir la suppression immédiate.</p>"
       },
       {
         "overline": "Sécurité",
@@ -78,7 +78,7 @@
       {
         "overline": "Contact",
         "title": "Nous contacter",
-        "desc": "<p>Pour toute question relative à vos données personnelles ou à la présente politique&nbsp;:</p><p><strong>Email&nbsp;:</strong> <strong>[EMAIL_CONTACT]</strong> — réponse sous <strong>30 jours ouvrés</strong>.</p><p>Vous pouvez également utiliser notre <a href=\"/pages/contact/contact.html\" style=\"color:var(--color-gold)\">formulaire de contact</a>.</p><p>Aucun délégué à la protection des données (DPO) n'est désigné à ce stade&nbsp;: l'éditeur traite les données personnelles à une échelle qui ne rend pas cette désignation obligatoire au sens de l'article&nbsp;37 du RGPD.</p>"
+        "desc": "<p>Pour toute question relative à vos données personnelles ou à la présente politique&nbsp;:</p><p><strong>Email&nbsp;:</strong> <strong>contact.evolvepoker@gmail.com</strong> — réponse sous <strong>30 jours ouvrés</strong>.</p><p>Vous pouvez également utiliser notre <a href=\"/pages/contact/contact.html\" style=\"color:var(--color-gold)\">formulaire de contact</a>.</p><p>Aucun délégué à la protection des données (DPO) n'est désigné à ce stade&nbsp;: l'éditeur traite les données personnelles à une échelle qui ne rend pas cette désignation obligatoire au sens de l'article&nbsp;37 du RGPD.</p>"
       }
     ]
   },
@@ -92,7 +92,7 @@
       {
         "overline": "Éditeur du service",
         "title": "Présentation et mentions légales",
-        "desc": "<p>Evolve Poker est une application mobile de formation au poker (ci-après «&nbsp;le Service&nbsp;»), éditée à titre personnel, joignable par email à <strong>[EMAIL_CONTACT]</strong>. Le site vitrine constitue le support de présentation de cette application.</p><p>Hébergeurs&nbsp;: <strong>Netlify, Inc.</strong> (2325 3rd Street, San Francisco, CA 94107, USA) pour le site vitrine&nbsp;; <strong>Supabase, Inc.</strong> pour les données applicatives (conditions disponibles sur supabase.com/privacy). Le Service ne constitue pas un opérateur de jeux d'argent en ligne au sens de la réglementation ANJ.</p>"
+        "desc": "<p>Evolve Poker est une application mobile de formation au poker (ci-après «&nbsp;le Service&nbsp;»), éditée à titre personnel, joignable par email à <strong>contact.evolvepoker@gmail.com</strong>. Le site vitrine constitue le support de présentation de cette application.</p><p>Hébergeurs&nbsp;: <strong>Netlify, Inc.</strong> (2325 3rd Street, San Francisco, CA 94107, USA) pour le site vitrine&nbsp;; <strong>Supabase, Inc.</strong> pour les données applicatives (conditions disponibles sur supabase.com/privacy). Le Service ne constitue pas un opérateur de jeux d'argent en ligne au sens de la réglementation ANJ.</p>"
       },
       {
         "overline": "Acceptation & Âge minimum",
@@ -102,7 +102,7 @@
       {
         "overline": "Compte utilisateur",
         "title": "Création et sécurité de votre compte",
-        "desc": "<p>L'inscription s'effectue via email et mot de passe, ou via authentification Google (OAuth 2.0). Vous êtes seul(e) responsable de la confidentialité de vos identifiants et de toute activité réalisée depuis votre compte. Tout compte est strictement personnel et non cessible.</p><p>En cas de perte, de vol ou d'utilisation non autorisée de vos identifiants, contactez Evolve Poker sans délai à <strong>[EMAIL_CONTACT]</strong>. Un seul compte par personne est autorisé. Tout compte dupliqué pourra être supprimé sans préavis.</p>"
+        "desc": "<p>L'inscription s'effectue via email et mot de passe, ou via authentification Google (OAuth 2.0). Vous êtes seul(e) responsable de la confidentialité de vos identifiants et de toute activité réalisée depuis votre compte. Tout compte est strictement personnel et non cessible.</p><p>En cas de perte, de vol ou d'utilisation non autorisée de vos identifiants, contactez Evolve Poker sans délai à <strong>contact.evolvepoker@gmail.com</strong>. Un seul compte par personne est autorisé. Tout compte dupliqué pourra être supprimé sans préavis.</p>"
       },
       {
         "overline": "Description du service",
@@ -142,7 +142,7 @@
       {
         "overline": "Résiliation",
         "title": "Suppression et suspension de compte",
-        "desc": "<p><strong>À votre initiative&nbsp;:</strong> vous pouvez demander la suppression de votre compte à tout moment depuis l'application (Paramètres → Supprimer mon compte) ou par email à <strong>[EMAIL_CONTACT]</strong>. La suppression entraîne l'effacement de vos données dans les délais prévus par notre Politique de confidentialité.</p><p><strong>À l'initiative d'Evolve Poker&nbsp;:</strong> en cas de violation des présentes CGU, comportement abusif, frauduleux ou illicite, votre compte peut être suspendu ou résilié sans préavis ni indemnité. Les achats in-app validés ne donnent pas lieu à remboursement sauf obligation légale contraire.</p>"
+        "desc": "<p><strong>À votre initiative&nbsp;:</strong> vous pouvez demander la suppression de votre compte à tout moment depuis l'application (Paramètres → Supprimer mon compte) ou par email à <strong>contact.evolvepoker@gmail.com</strong>. La suppression entraîne l'effacement de vos données dans les délais prévus par notre Politique de confidentialité.</p><p><strong>À l'initiative d'Evolve Poker&nbsp;:</strong> en cas de violation des présentes CGU, comportement abusif, frauduleux ou illicite, votre compte peut être suspendu ou résilié sans préavis ni indemnité. Les achats in-app validés ne donnent pas lieu à remboursement sauf obligation légale contraire.</p>"
       },
       {
         "overline": "Modifications des CGU",
@@ -157,7 +157,7 @@
       {
         "overline": "Contact",
         "title": "Nous contacter",
-        "desc": "<p>Pour toute question relative aux présentes CGU, pour exercer vos droits ou déposer une réclamation&nbsp;: par email à <strong>[EMAIL_CONTACT]</strong> ou via la <a href=\"/pages/contact/contact.html\" style=\"color:var(--color-gold)\">page Contact</a>. Nous nous engageons à répondre dans un délai de 30 jours ouvrés à compter de la réception de votre demande.</p>"
+        "desc": "<p>Pour toute question relative aux présentes CGU, pour exercer vos droits ou déposer une réclamation&nbsp;: par email à <strong>contact.evolvepoker@gmail.com</strong> ou via la <a href=\"/pages/contact/contact.html\" style=\"color:var(--color-gold)\">page Contact</a>. Nous nous engageons à répondre dans un délai de 30 jours ouvrés à compter de la réception de votre demande.</p>"
       }
     ]
   },
@@ -641,10 +641,10 @@
     "tab_help": "🤝 Nous aider",
     "contact_panel_title": "On vous répond",
     "contact_panel_desc": "Pas de formulaire qui disparaît dans le vide. On lit tout et on répond sous 48h ouvrées. Pour une question urgente liée à l'application, mentionnez-le dans votre message et on accélère.",
-    "email_contact": "contact@evolvepoker.app",
-    "email_support": "support@evolvepoker.app",
-    "email_partners": "partners@evolvepoker.app",
-    "email_team": "team@evolvepoker.app",
+    "email_contact": "contact.evolvepoker@gmail.com",
+    "email_support": "contact.evolvepoker+support@gmail.com",
+    "email_partners": "contact.evolvepoker+partners@gmail.com",
+    "email_team": "contact.evolvepoker+team@gmail.com",
     "help_panel_title": "Rejoignez l'aventure",
     "help_panel_desc": "On construit quelque chose d'ambitieux, et on ne le fait pas seuls. Si vous êtes développeur, designer, joueur passionné ou marketeur — et que vous voulez mettre votre énergie dans un projet qui compte vraiment — la porte est ouverte.",
     "download_band_title": "Votre progression commence maintenant",
