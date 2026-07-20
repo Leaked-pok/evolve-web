@@ -158,6 +158,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - Netlify Forms — formulaire contact et contribution opérationnels
 - Vulnérabilités npm critiques corrigées (liquidjs + ws)
 - Logo favicon.svg dans l'en-tête des pages leçons — `_includes/lesson-layout.njk`
+- **Déploiement Netlify** — site créé et lié au repo GitHub (`ubiquitous-tiramisu-7fd9e1.netlify.app`), CI/CD auto sur push `main` configuré
 
 ### Reste à faire ✗
 
@@ -169,7 +170,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🔴 | **Adresse mail** — créer/choisir l'adresse email de contact dédiée, puis remplacer `[EMAIL_CONTACT]` dans `_data/texts.json` (CGU + Privacy) | Externe |
 | 🟠 | **Relecture textes** — passe de relecture/finalisation de tout le contenu éditorial dans `_data/texts.json` (au-delà des `[Placeholder]` déjà identifiés) | Site |
 | 🔴 | **Supabase region** — vérifier dans Dashboard Supabase → Settings → General → Database region, puis mettre à jour la section "Transferts hors UE" dans `_data/texts.json` (privacy) | Externe |
-| 🔴 | **Déploiement Netlify** — jamais fait | Site |
 | 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
 | 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
 | 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |
@@ -177,7 +177,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🟡 | **Vulnérabilité npm restante** — `markdown-it` (moderate ReDoS) — correction = Eleventy v2→v3 (breaking change, reporter) | Site |
 | 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains | Site |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
-| 🟠 | **Webhook rebuild** Netlify auto sur push | Site |
 | 🟠 | **i18n** (langues) — non démarré | Site |
 | 🟠 | **Sitemap.xml** — non généré (template Nunjucks à créer ou plugin `@11ty/eleventy-plugin-sitemap`) | Site |
 | 🟠 | **SEO/SEA strategy** | Site |
