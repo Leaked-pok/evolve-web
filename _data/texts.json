@@ -18,7 +18,7 @@
       {
         "overline": "Responsable du traitement",
         "title": "Qui traite vos données ?",
-        "desc": "<p>Le responsable du traitement au sens du Règlement (UE) 2016/679 (RGPD) est <strong>[NOM_EDITEUR]</strong>, domicilié(e) au <strong>[ADRESSE_EDITEUR]</strong> — SIRET&nbsp;: <strong>[SIRET]</strong> — email&nbsp;: <strong>[EMAIL_CONTACT]</strong>.</p><p>La présente Politique de confidentialité s'applique à l'ensemble du Service Evolve Poker&nbsp;: site vitrine, application mobile Android et iOS, et contenus pédagogiques accessibles via webview depuis l'application.</p>"
+        "desc": "<p>Le responsable du traitement au sens du Règlement (UE) 2016/679 (RGPD) est l'éditeur du Service Evolve Poker, joignable par email à <strong>[EMAIL_CONTACT]</strong>.</p><p>La présente Politique de confidentialité s'applique à l'ensemble du Service Evolve Poker&nbsp;: site vitrine, application mobile Android et iOS, et contenus pédagogiques accessibles via webview depuis l'application.</p>"
       },
       {
         "overline": "Données collectées",
@@ -92,7 +92,7 @@
       {
         "overline": "Éditeur du service",
         "title": "Présentation et mentions légales",
-        "desc": "<p>Evolve Poker est une application mobile de formation au poker (ci-après «&nbsp;le Service&nbsp;»), éditée à titre personnel par <strong>[NOM_EDITEUR]</strong>, domicilié(e) au <strong>[ADRESSE_EDITEUR]</strong> — SIRET&nbsp;: <strong>[SIRET]</strong> — email&nbsp;: <strong>[EMAIL_CONTACT]</strong>. Le site vitrine constitue le support de présentation de cette application.</p><p>Hébergeurs&nbsp;: <strong>Netlify, Inc.</strong> (2325 3rd Street, San Francisco, CA 94107, USA) pour le site vitrine&nbsp;; <strong>Supabase, Inc.</strong> pour les données applicatives (conditions disponibles sur supabase.com/privacy). Le Service ne constitue pas un opérateur de jeux d'argent en ligne au sens de la réglementation ANJ.</p>"
+        "desc": "<p>Evolve Poker est une application mobile de formation au poker (ci-après «&nbsp;le Service&nbsp;»), éditée à titre personnel, joignable par email à <strong>[EMAIL_CONTACT]</strong>. Le site vitrine constitue le support de présentation de cette application.</p><p>Hébergeurs&nbsp;: <strong>Netlify, Inc.</strong> (2325 3rd Street, San Francisco, CA 94107, USA) pour le site vitrine&nbsp;; <strong>Supabase, Inc.</strong> pour les données applicatives (conditions disponibles sur supabase.com/privacy). Le Service ne constitue pas un opérateur de jeux d'argent en ligne au sens de la réglementation ANJ.</p>"
       },
       {
         "overline": "Acceptation & Âge minimum",

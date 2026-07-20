@@ -87,7 +87,7 @@ Panel unique avec selector `<select>` + JS `cguShow(val)`. 6 panels :
 Hash navigation : `/cgu/#aide` active directement le bon panel.
 Les panels Risques et Aide utilisent des `<details class="accordion">` — style card (icon 40px rose + overline rose + titre bold + preview 2 lignes + flèche).
 
-**Codes parrainage à remplir** : `[TON_CODE_WINAMAX]` · `[TON_CODE_POKERSTARS]` · `[TON_CODE_PMU]` · `[TON_CODE_UNIBET]`
+**Codes parrainage** : masqués pour le moment (affichent "Bientôt disponible" dans les 4 blocs `.accordion__referral` de `pages/cgu.njk`) — à renseigner quand les comptes affiliés existeront.
 
 ---
 
@@ -157,14 +157,18 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - Security headers — `netlify.toml` (CSP, HSTS, X-Frame, etc.)
 - Netlify Forms — formulaire contact et contribution opérationnels
 - Vulnérabilités npm critiques corrigées (liquidjs + ws)
+- Logo favicon.svg dans l'en-tête des pages leçons — `_includes/lesson-layout.njk`
 
 ### Reste à faire ✗
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
 | 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
-| 🔴 | **Codes parrainage** — remplacer les 4 `[TON_CODE_*]` dans `pages/cgu.njk` | Site |
-| 🔴 | **Placeholders légaux** — `[NOM_EDITEUR]`, `[ADRESSE_EDITEUR]`, `[SIRET]`, `[EMAIL_CONTACT]` dans `_data/texts.json` | Site |
+| ⏸️ | **Codes parrainage** — masqués ("Bientôt disponible") tant que les comptes affiliés n'existent pas | Site |
+| ⏸️ | **Identité éditeur légal** — nom/adresse/SIRET masqués dans CGU/Privacy tant que l'entreprise n'est pas créée ; email de contact `[EMAIL_CONTACT]` reste à remplir | Site |
+| 🔴 | **Adresse mail** — créer/choisir l'adresse email de contact dédiée, puis remplacer `[EMAIL_CONTACT]` dans `_data/texts.json` (CGU + Privacy) | Externe |
+| 🟠 | **Relecture textes** — passe de relecture/finalisation de tout le contenu éditorial dans `_data/texts.json` (au-delà des `[Placeholder]` déjà identifiés) | Site |
+| 🔴 | **Supabase region** — vérifier dans Dashboard Supabase → Settings → General → Database region, puis mettre à jour la section "Transferts hors UE" dans `_data/texts.json` (privacy) | Externe |
 | 🔴 | **Déploiement Netlify** — jamais fait | Site |
 | 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
 | 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
@@ -172,11 +176,10 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🟡 | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
 | 🟡 | **Vulnérabilité npm restante** — `markdown-it` (moderate ReDoS) — correction = Eleventy v2→v3 (breaking change, reporter) | Site |
 | 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains | Site |
-| 🟠 | **Photos / visuels** — blocs `feature-row__placeholder` partout | Site |
-| 🟠 | **Logo "E"** pour l'en-tête des pages leçons | Site |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
 | 🟠 | **Webhook rebuild** Netlify auto sur push | Site |
 | 🟠 | **i18n** (langues) — non démarré | Site |
+| 🟠 | **Sitemap.xml** — non généré (template Nunjucks à créer ou plugin `@11ty/eleventy-plugin-sitemap`) | Site |
 | 🟠 | **SEO/SEA strategy** | Site |
 
 ---
