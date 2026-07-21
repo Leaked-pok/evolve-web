@@ -164,6 +164,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Notification Netlify Forms** — email de notification configuré vers `contact.evolvepoker@gmail.com` pour les formulaires `contact` et `contribution`
 - **Supabase region** — confirmée en `eu-west-1` (Irlande, UE) ; section "Transferts hors UE" de `_data/texts.json` mise à jour en conséquence
 - **Eleventy v2 → v3** — migration effectuée (`@11ty/eleventy@3.1.6`), build vérifié byte-identique à l'ancienne version, plus aucune vulnérabilité npm (`npm audit` propre)
+- **Nettoyage `[Placeholder]` feature pages** — page Leçons (`feature_lecons`) et bloc `lasuite_detail` supprimés de `_data/texts.json` (orphelins, non référencés par aucun template) ; `hero_desc`/`sections` (jamais rendus) retirés de `feature_ranges`/`feature_calendrier`/`feature_news`/`feature_mains` ; `cta_desc` rédigé pour ces 4 pages
 
 ### Reste à faire ✗
 
@@ -179,7 +180,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
 | 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |
 | 🟡 | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
-| 🟠 | **Contenu feature pages** — `[Placeholder]` dans leçons, ranges, calendrier, news, mains | Site |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
 | 🟠 | **i18n** (langues) — non démarré | Site |
 | 🟠 | **Sitemap.xml** — non généré (template Nunjucks à créer ou plugin `@11ty/eleventy-plugin-sitemap`) | Site |
