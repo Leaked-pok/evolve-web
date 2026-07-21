@@ -166,6 +166,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Eleventy v2 → v3** — migration effectuée (`@11ty/eleventy@3.1.6`), build vérifié byte-identique à l'ancienne version, plus aucune vulnérabilité npm (`npm audit` propre)
 - **Nettoyage `[Placeholder]` feature pages** — page Leçons (`feature_lecons`) et bloc `lasuite_detail` supprimés de `_data/texts.json` (orphelins, non référencés par aucun template) ; `hero_desc`/`sections` (jamais rendus) retirés de `feature_ranges`/`feature_calendrier`/`feature_news`/`feature_mains` ; `cta_desc` rédigé pour ces 4 pages
 - **Clés API Supabase legacy → nouvelle clé publishable** — `SUPABASE_ANON_KEY` dans `_data/allLessons.js` remplacée par la nouvelle clé `sb_publishable_...` (RLS déjà correctement configuré) ; vérifié en local (`npm start`) : 480 leçons uniques récupérées
+- **Sitemap.xml** — `sitemap.njk` créé (template natif, boucle sur `collections.all`, pas de plugin), `robots.njk` mis à jour pour pointer dessus dynamiquement via `texts.site.url` ; corrigé au passage : pagination leçons/modules n'ajoutait que sa 1ère page à `collections.all` (`addAllPagesToCollections: true` ajouté) et `CLAUDE.md` était buildé comme page publique (`.eleventyignore`) — build vérifié : 534 URLs (480 leçons + 39 modules + 15 pages statiques). URLs encore en `VOTRE_DOMAINE` en attendant la tâche "URL domaine"
 
 ### Reste à faire ✗
 
@@ -175,7 +176,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🟠 | **Relecture textes** — passe de relecture/finalisation de tout le contenu éditorial dans `_data/texts.json` (au-delà des `[Placeholder]` déjà identifiés) | Site |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
 | 🟠 | **i18n** (langues) — non démarré | Site |
-| 🟠 | **Sitemap.xml** — non généré (template Nunjucks à créer ou plugin `@11ty/eleventy-plugin-sitemap`) | Site |
 | 🟠 | **SEO/SEA strategy** | Site |
 
 ### Tests / Sécurité
