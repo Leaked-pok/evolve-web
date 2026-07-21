@@ -1,7 +1,7 @@
 const https = require('https');
 
 const SUPABASE_URL      = 'https://vpzqboqbaosguyyqyzmx.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZwenFib3FiYW9zZ3V5eXF5em14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMwNzIwNTUsImV4cCI6MjA4ODY0ODA1NX0.bCi67w5WsfgQlRL3H-LVh_7hJRsl9dNAFWVvrqYCL54';
+const SUPABASE_ANON_KEY = 'sb_publishable_lL_-i8PPoRrHfW9kjEXt7Q_Eoxna5Uq';
 
 // Met à true pour tester l'UI sans Supabase
 const USE_MOCK = false;

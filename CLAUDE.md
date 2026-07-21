@@ -165,25 +165,71 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Supabase region** — confirmée en `eu-west-1` (Irlande, UE) ; section "Transferts hors UE" de `_data/texts.json` mise à jour en conséquence
 - **Eleventy v2 → v3** — migration effectuée (`@11ty/eleventy@3.1.6`), build vérifié byte-identique à l'ancienne version, plus aucune vulnérabilité npm (`npm audit` propre)
 - **Nettoyage `[Placeholder]` feature pages** — page Leçons (`feature_lecons`) et bloc `lasuite_detail` supprimés de `_data/texts.json` (orphelins, non référencés par aucun template) ; `hero_desc`/`sections` (jamais rendus) retirés de `feature_ranges`/`feature_calendrier`/`feature_news`/`feature_mains` ; `cta_desc` rédigé pour ces 4 pages
+- **Clés API Supabase legacy → nouvelle clé publishable** — `SUPABASE_ANON_KEY` dans `_data/allLessons.js` remplacée par la nouvelle clé `sb_publishable_...` (RLS déjà correctement configuré) ; vérifié en local (`npm start`) : 480 leçons uniques récupérées
 
 ### Reste à faire ✗
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🔴 | **Clés API Supabase legacy désactivées** — `_data/allLessons.js` retourne 0 leçons en local (`npm start`) : "Legacy API keys are disabled" depuis le 2026-04-30. À corriger avec les nouvelles clés API Supabase (probablement `sb_publishable_...` / `sb_secret_...`) | Externe |
 | 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
-| ⏸️ | **Codes parrainage** — masqués ("Bientôt disponible") tant que les comptes affiliés n'existent pas | Site |
-| ⏸️ | **Identité éditeur légal** — nom/adresse/SIRET masqués dans CGU/Privacy tant que l'entreprise n'est pas créée | Site |
 | 🟠 | **Relecture textes** — passe de relecture/finalisation de tout le contenu éditorial dans `_data/texts.json` (au-delà des `[Placeholder]` déjà identifiés) | Site |
-| ⏸️ | **Migration domaine email** — une fois `evolvepoker.app` acheté (cf. tâche "URL domaine"), basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.app` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
-| 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
-| 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
-| 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |
-| 🟡 | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
 | 🟠 | **i18n** (langues) — non démarré | Site |
 | 🟠 | **Sitemap.xml** — non généré (template Nunjucks à créer ou plugin `@11ty/eleventy-plugin-sitemap`) | Site |
 | 🟠 | **SEO/SEA strategy** | Site |
+
+### Tests / Sécurité
+
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| 🔴 | **RLS Supabase désactivé** — 2 alertes critiques Advisor (`user_tournament_saves`, `tournaments`) non résolues | App/Backend |
+| 🟡 | **Aucun test automatisé** — pas de test unitaire/e2e sur le build Eleventy ni sur les Netlify Functions (`lesson-vote.js`) | Site |
+| 🟡 | **Rate limiting / anti-abus** — `lesson-vote.js` n'a aucune protection contre le vote en boucle (spam likes/dislikes) | Site |
+| 🟢 | **Audit npm périodique** — propre depuis la migration Eleventy v3, prévoir un contrôle régulier | Site |
+
+### Doc pro et après
+
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| 🟠 | **Documentation technique repo** — pas de README pour un futur contributeur/repreneur du projet | Site |
+| 🟠 | **Press kit / fiche stores** — argumentaire et visuels pour App Store / Play Store à préparer avant lancement | Externe |
+| 🟠 | **KPIs post-lancement** — définir les métriques à suivre une fois l'app publiée (installs, rétention, etc.) | App |
+
+### Réseaux sociaux
+
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| 🔴 | **Création des comptes** — aucun compte réseau social créé (X, Instagram, TikTok...) ; `contact.evolvepoker@gmail.com` déjà prévu comme base | Externe |
+| 🟠 | **Liens réseaux sociaux** — footer du site prêt à recevoir les liens, actuellement absents de `_data/texts.json` | Site |
+| 🟠 | **Calendrier de contenu** — stratégie de publication à définir | Externe |
+
+### Erreur message
+
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| 🟡 | **Échec Supabase silencieux** — `allLessons.js` retourne `[]` sans alerte visible si le fetch échoue (juste un `console.warn`), risque de build "vide" passé inaperçu | Site |
+| 🟠 | **Page erreur 500/serveur** — seule la 404 (`404.njk`) existe, pas de page générique pour les erreurs serveur | Site |
+| 🟠 | **Messages d'erreur formulaires** — vérifier le retour utilisateur en cas d'échec Netlify Forms (contact/contribution) | Site |
+| 🟠 | **Messages d'erreur app Flutter** — cohérence UX à définir avec le site | App |
+
+### Backend (Firebase Analytics et Google)
+
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
+| 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
+| 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |
+| 🟠 | **Google Search Console** — non configuré pour le site | Site |
+| 🟠 | **Google Play Console** — fiche/setup de l'app à préparer | Externe |
+
+### Todo v2 — en pause (à ne traiter que sur demande explicite)
+
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| ⏸️ | **Codes parrainage** — masqués ("Bientôt disponible") tant que les comptes affiliés n'existent pas | Site |
+| ⏸️ | **Identité éditeur légal** — nom/adresse/SIRET masqués dans CGU/Privacy tant que l'entreprise n'est pas créée | Site |
+| ⏸️ | **Migration domaine email** — une fois `evolvepoker.app` acheté (cf. tâche "URL domaine"), basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.app` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
+| ⏸️ | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
 
 ---
 
