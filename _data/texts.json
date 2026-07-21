@@ -38,7 +38,7 @@
       {
         "overline": "Transferts hors UE",
         "title": "Vos données sont-elles transférées hors de l'Union européenne ?",
-        "desc": "<p>Certains sous-traitants sont établis aux États-Unis. Ces transferts sont encadrés par des garanties appropriées conformément à l'article&nbsp;46 du RGPD&nbsp;:</p><p><strong>Supabase&nbsp;:</strong> si la région de stockage est européenne (ex.&nbsp;eu-west-1 — Irlande), vos données restent dans l'UE. Dans le cas contraire, le transfert est couvert par les Clauses Contractuelles Types (CCT) de la Commission européenne et un accord de traitement des données (DPA) signé avec Supabase.</p><p><strong>Netlify et Google&nbsp;:</strong> transferts encadrés par des CCT et DPA conformes au RGPD.</p><p>Vous pouvez obtenir copie de ces garanties en contactant <strong>contact.evolvepoker@gmail.com</strong>.</p>"
+        "desc": "<p>Certains sous-traitants sont établis aux États-Unis. Ces transferts sont encadrés par des garanties appropriées conformément à l'article&nbsp;46 du RGPD&nbsp;:</p><p><strong>Supabase&nbsp;:</strong> vos données applicatives sont stockées dans la région <strong>eu-west-1 (Irlande)</strong>, au sein de l'Union européenne — aucun transfert hors UE ne s'applique pour cet hébergement.</p><p><strong>Netlify et Google&nbsp;:</strong> transferts encadrés par des Clauses Contractuelles Types (CCT) de la Commission européenne et un accord de traitement des données (DPA) conformes au RGPD.</p><p>Vous pouvez obtenir copie de ces garanties en contactant <strong>contact.evolvepoker@gmail.com</strong>.</p>"
       },
       {
         "overline": "Durée de conservation",
