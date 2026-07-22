@@ -4,7 +4,8 @@
   "description": "Evolve Poker — site vitrine",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "test": "node --test"
   },
   "dependencies": {
     "@netlify/blobs": "^8.1.0"

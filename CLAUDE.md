@@ -167,13 +167,15 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Nettoyage `[Placeholder]` feature pages** — page Leçons (`feature_lecons`) et bloc `lasuite_detail` supprimés de `_data/texts.json` (orphelins, non référencés par aucun template) ; `hero_desc`/`sections` (jamais rendus) retirés de `feature_ranges`/`feature_calendrier`/`feature_news`/`feature_mains` ; `cta_desc` rédigé pour ces 4 pages
 - **Clés API Supabase legacy → nouvelle clé publishable** — `SUPABASE_ANON_KEY` dans `_data/allLessons.js` remplacée par la nouvelle clé `sb_publishable_...` (RLS déjà correctement configuré) ; vérifié en local (`npm start`) : 480 leçons uniques récupérées
 - **Sitemap.xml** — `sitemap.njk` créé (template natif, boucle sur `collections.all`, pas de plugin), `robots.njk` mis à jour pour pointer dessus dynamiquement via `texts.site.url` ; corrigé au passage : pagination leçons/modules n'ajoutait que sa 1ère page à `collections.all` (`addAllPagesToCollections: true` ajouté) et `CLAUDE.md` était buildé comme page publique (`.eleventyignore`) — build vérifié : 534 URLs (480 leçons + 39 modules + 15 pages statiques). URLs encore en `VOTRE_DOMAINE` en attendant la tâche "URL domaine"
+- **Relecture textes des 8 sous-pages features/lasuite** — réduction du contenu (calendrier -32%, mains -24%, news -36%, jeux -29%, communaute -27%, calculateur -45%) : suppression des redondances, retrait des noms de logiciels/sites concurrents cités explicitement (mains, news), francisation des anglicismes évitables (mains), réordonnancement de `lasuite/jeux` en En construction > Pourquoi > L'idée actuelle ; fix CSS au passage (`--space-14` manquante cassait le margin des `h2.feature-article__heading`, aucun espace visible sous les sous-titres à deux couleurs)
+- **Rate limiting `lesson-vote.js`** — anti-spam vote en boucle : max 3 requêtes par (IP, leçon) toutes les 15 min via un store Blobs dédié (`lesson-vote-limits`), 429 au-delà, fail-open si le store est indisponible ; logique extraite en fonctions pures (`getClientIp`, `applyVote`, `checkRateLimit`) pour rester testable
+- **Premiers tests automatisés** — `test/lesson-vote.test.js` (10 tests, `node --test`, natif Node, zéro dépendance) couvrant la logique de vote et le rate limiting ; `npm test` ajouté à `package.json`
 
 ### Reste à faire ✗
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
 | 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
-| 🟠 | **Relecture textes** — passe de relecture/finalisation de tout le contenu éditorial dans `_data/texts.json` (au-delà des `[Placeholder]` déjà identifiés) | Site |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
 | 🟠 | **i18n** (langues) — non démarré | Site |
 | 🟠 | **SEO/SEA strategy** | Site |
@@ -183,8 +185,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
 | 🔴 | **RLS Supabase désactivé** — 2 alertes critiques Advisor (`user_tournament_saves`, `tournaments`) non résolues | App/Backend |
-| 🟡 | **Aucun test automatisé** — pas de test unitaire/e2e sur le build Eleventy ni sur les Netlify Functions (`lesson-vote.js`) | Site |
-| 🟡 | **Rate limiting / anti-abus** — `lesson-vote.js` n'a aucune protection contre le vote en boucle (spam likes/dislikes) | Site |
 | 🟢 | **Audit npm périodique** — propre depuis la migration Eleventy v3, prévoir un contrôle régulier | Site |
 
 ### Doc pro et après
