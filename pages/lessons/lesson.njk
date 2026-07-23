@@ -112,10 +112,33 @@ layout: lesson-layout.njk
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ lesson: slug, vote: action })
     })
-      .then(function(r) { return r.json(); })
+      .then(function(r) {
+        if (!r.ok) throw new Error();
+        return r.json();
+      })
       .then(function(d) {
         countLike.textContent = d.likes || 0;
+        hideVoteError();
+      })
+      .catch(function() {
+        showVoteError();
       });
+  }
+
+  function showVoteError() {
+    var el = document.getElementById('lesson-feedback-error');
+    if (!el) {
+      el = document.createElement('p');
+      el.id = 'lesson-feedback-error';
+      el.className = 'lesson-feedback__error';
+      el.textContent = 'Vote non enregistré. Réessayez plus tard.';
+      document.querySelector('.lesson-feedback__row').insertAdjacentElement('afterend', el);
+    }
+  }
+
+  function hideVoteError() {
+    var el = document.getElementById('lesson-feedback-error');
+    if (el) el.remove();
   }
 
   // Restaurer l'état depuis localStorage

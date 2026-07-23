@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% set _title %}{% if module %}{{ module.title }} — Evolve Poker Academy{% else %}{{ texts[page_key].meta_title }}{% endif %}{% endset %}
-  {% set _desc %}{% if module %}{{ module.description | truncate(160) }}{% else %}{{ texts[page_key].meta_desc }}{% endif %}{% endset %}
+  {% if module %}
+    {% set _title = module.title + " — Evolve Poker Academy" %}
+    {% set _desc = module.description | truncate(160) %}
+  {% elif title %}
+    {% set _title = title %}
+    {% set _desc = description %}
+  {% else %}
+    {% set _title = texts[page_key].meta_title %}
+    {% set _desc = texts[page_key].meta_desc %}
+  {% endif %}
 
   <title>{{ _title }}</title>
   <meta name="description" content="{{ _desc }}">

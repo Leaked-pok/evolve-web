@@ -170,6 +170,12 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Relecture textes des 8 sous-pages features/lasuite** — réduction du contenu (calendrier -32%, mains -24%, news -36%, jeux -29%, communaute -27%, calculateur -45%) : suppression des redondances, retrait des noms de logiciels/sites concurrents cités explicitement (mains, news), francisation des anglicismes évitables (mains), réordonnancement de `lasuite/jeux` en En construction > Pourquoi > L'idée actuelle ; fix CSS au passage (`--space-14` manquante cassait le margin des `h2.feature-article__heading`, aucun espace visible sous les sous-titres à deux couleurs)
 - **Rate limiting `lesson-vote.js`** — anti-spam vote en boucle : max 3 requêtes par (IP, leçon) toutes les 15 min via un store Blobs dédié (`lesson-vote-limits`), 429 au-delà, fail-open si le store est indisponible ; logique extraite en fonctions pures (`getClientIp`, `applyVote`, `checkRateLimit`) pour rester testable
 - **Premiers tests automatisés** — `test/lesson-vote.test.js` (10 tests, `node --test`, natif Node, zéro dépendance) couvrant la logique de vote et le rate limiting ; `npm test` ajouté à `package.json`
+- **Audit mots-clés poker FR + optimisation meta_title/meta_desc** — recherche web sur le champ lexical français (apprendre le poker, application poker gratuite, ranges/calculateur pot odds, calendrier tournois) ; meta_title/meta_desc réécrits pour `home`, `academy` et `features` dans `_data/texts.json` (mots-clés + longueur resserrée sous ~160 caractères, les anciennes meta_desc de `home`/`academy` dépassaient 190-218 caractères et étaient tronquées par Google) ; textes visibles (hero) non modifiés pour préserver la relecture éditoriale récente
+- **Page erreur 500** — `500.njk` créé (même style que `404.njk` : `page-header`, `glow-bg`, `text-gradient`, boutons "Réessayer"/"Retour à l'accueil") ; à noter : Netlify ne sert ce fichier automatiquement que pour un statut 500, ce qui n'arrive pas nativement sur de l'hébergement statique — cette page sert de filet de sécurité, pas d'un mécanisme auto-déclenché comme la 404
+- **Fix meta title/description vides sur la 404** — `layout.njk` ignorait le frontmatter `title`/`description` des pages sans `page_key` (comme `404.njk`) ; ajout d'un fallback, et `description` renseignée sur `404.njk`
+- **Fix double-échappement HTML des apostrophes** — `layout.njk` capturait `_title`/`_desc` via `{% set %}...{% endset %}` (échappement Nunjucks une 1ère fois à la capture) puis les affichait via `{{ }}` (échappement une 2e fois), produisant `&amp;#39;` au lieu de `&#39;` dans tout le HTML généré (meta description, og:description, twitter:description) — bug préexistant sur tout le site, corrigé en passant à une assignation directe (`{% set _title = ... %}`)
+- **Gestion d'erreur vote leçons** — `sendVote()` dans `lesson.njk` n'avait pas de `.catch()` : un échec réseau ou un rate-limit (429) échouait silencieusement ; ajout d'un message "Vote non enregistré. Réessayez plus tard." (`.lesson-feedback__error` dans `style.css`, même pattern que `.contact-form__error-msg`)
+- **Vérification messages d'erreur formulaires** — `contact.html` gérait déjà correctement succès/échec Netlify Forms (`.contact-form__success-msg`/`.contact-form__error-msg`) ; rien à corriger
 
 ### Reste à faire ✗
 
@@ -178,7 +184,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
 | 🟠 | **i18n** (langues) — non démarré | Site |
-| 🟠 | **SEO/SEA strategy** | Site |
+| 🟠 | **Core Web Vitals / PageSpeed** — audit vitesse une fois le domaine final en place | Site — dépend de : URL domaine |
 
 ### Tests / Sécurité
 
@@ -208,8 +214,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
 | 🟡 | **Échec Supabase silencieux** — `allLessons.js` retourne `[]` sans alerte visible si le fetch échoue (juste un `console.warn`), risque de build "vide" passé inaperçu | Site |
-| 🟠 | **Page erreur 500/serveur** — seule la 404 (`404.njk`) existe, pas de page générique pour les erreurs serveur | Site |
-| 🟠 | **Messages d'erreur formulaires** — vérifier le retour utilisateur en cas d'échec Netlify Forms (contact/contribution) | Site |
 | 🟠 | **Messages d'erreur app Flutter** — cohérence UX à définir avec le site | App |
 
 ### Backend (Firebase Analytics et Google)
@@ -219,7 +223,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
 | 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
 | 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |
-| 🟠 | **Google Search Console** — non configuré pour le site | Site |
+| 🟠 | **Google Search Console** — non configuré pour le site | Site — dépend de : URL domaine |
 | 🟠 | **Google Play Console** — fiche/setup de l'app à préparer | Externe |
 
 ### Todo v2 — en pause (à ne traiter que sur demande explicite)
@@ -230,6 +234,8 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | ⏸️ | **Identité éditeur légal** — nom/adresse/SIRET masqués dans CGU/Privacy tant que l'entreprise n'est pas créée | Site |
 | ⏸️ | **Migration domaine email** — une fois `evolvepoker.app` acheté (cf. tâche "URL domaine"), basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.app` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
 | ⏸️ | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
+| ⏸️ | **SEA — campagnes Google Ads Search** (test petit budget, mots-clés ciblés issus de l'audit) | Site/Externe — dépend de : Firebase Analytics, Lien Firebase → GA4 |
+| ⏸️ | **SEA — Google Ads App Campaigns (UAC)** — format optimisé installs (Search + YouTube + Play Store + Display) | Externe — dépend de : Google Play Console, Firebase Analytics |
 
 ---
 

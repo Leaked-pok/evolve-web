@@ -3505,6 +3505,11 @@ p {
 .lesson-feedback__comment:hover {
   color: var(--color-gold-light);
 }
+.lesson-feedback__error {
+  color: var(--color-gold-light);
+  font-size: var(--text-sm);
+  margin: var(--space-3) 0 0;
+}
 
 @media (max-width: 640px) {
   .lesson-hero__img  { height: 200px; }
