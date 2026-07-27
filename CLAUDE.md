@@ -177,6 +177,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Gestion d'erreur vote leçons** — `sendVote()` dans `lesson.njk` n'avait pas de `.catch()` : un échec réseau ou un rate-limit (429) échouait silencieusement ; ajout d'un message "Vote non enregistré. Réessayez plus tard." (`.lesson-feedback__error` dans `style.css`, même pattern que `.contact-form__error-msg`)
 - **Vérification messages d'erreur formulaires** — `contact.html` gérait déjà correctement succès/échec Netlify Forms (`.contact-form__success-msg`/`.contact-form__error-msg`) ; rien à corriger
 - **Fix échec Supabase silencieux** — `allLessons.js` retournait `[]` sans bloquer le build en cas d'échec de fetch (0 leçon ou erreur réseau), risquant une publication Netlify avec l'Academy vide sans alerte ; ajout d'un seuil `MIN_EXPECTED_LESSONS = 400` (vs ~480 en base) et détection du contexte build via `process.env.NETLIFY` — en build Netlify, un fetch en échec ou sous le seuil fait désormais échouer le build (au lieu de publier un site incomplet), déclenchant l'email de notification d'échec Netlify ; en local (`npm start`), comportement inchangé (`console.warn` + `[]`) pour ne pas bloquer le dev hors-ligne
+- **Cohérence UX messages d'erreur app Flutter** (repo `ProjetP30/flutter_application_1`) — décision : registre tu/vous **non unifié** entre app et site (app = tutoiement partout, site = vouvoiement partout ; scission volontaire et déjà cohérente en interne de chaque côté, pattern courant en FR app-vs-vitrine — ne pas essayer d'aligner). Travail effectif : audit de 18 messages d'erreur qui fuitaient l'exception brute côté utilisateur (`'Erreur : $e'` / `e.toString()` dans des `UiFeedback.error(...)` ou des `Text()` directs) → remplacés par des messages français curatés, courts, actionnables ("Réessaie plus tard."), cohérents avec le pattern déjà en place (`ErrorPage`, `AppErrorWidget`) ; 3 de ces cas (`calendar_page.dart`, `my_tournaments_list_page.dart`, `hand_notes_dashboard_page.dart`) affichaient un `Text()` brut au lieu du composant `AppErrorWidget` standard — remplacés, avec bouton "Réessayer" branché sur l'invalidation du provider concerné. Bug additionnel trouvé et corrigé au passage : `quiz_page.dart` ne repassait jamais `_isLoading` à `false` en cas d'erreur de chargement → l'écran d'erreur ne s'affichait jamais (loader infini)
 
 ### Reste à faire ✗
 
@@ -207,13 +208,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 |----------|-------|-------|
 | 🔴 | **Création des comptes** — aucun compte réseau social créé (X, Instagram, TikTok...) ; `contact.evolvepoker@gmail.com` déjà prévu comme base | Externe |
 | 🟠 | **Liens réseaux sociaux** — footer du site prêt à recevoir les liens, actuellement absents de `_data/texts.json` | Site |
-| 🟠 | **Calendrier de contenu** — stratégie de publication à définir | Externe |
-
-### Erreur message
-
-| Priorité | Tâche | Scope |
-|----------|-------|-------|
-| 🟠 | **Messages d'erreur app Flutter** — cohérence UX à définir avec le site | App |
 
 ### Backend (Firebase Analytics et Google)
 
