@@ -176,6 +176,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Fix double-échappement HTML des apostrophes** — `layout.njk` capturait `_title`/`_desc` via `{% set %}...{% endset %}` (échappement Nunjucks une 1ère fois à la capture) puis les affichait via `{{ }}` (échappement une 2e fois), produisant `&amp;#39;` au lieu de `&#39;` dans tout le HTML généré (meta description, og:description, twitter:description) — bug préexistant sur tout le site, corrigé en passant à une assignation directe (`{% set _title = ... %}`)
 - **Gestion d'erreur vote leçons** — `sendVote()` dans `lesson.njk` n'avait pas de `.catch()` : un échec réseau ou un rate-limit (429) échouait silencieusement ; ajout d'un message "Vote non enregistré. Réessayez plus tard." (`.lesson-feedback__error` dans `style.css`, même pattern que `.contact-form__error-msg`)
 - **Vérification messages d'erreur formulaires** — `contact.html` gérait déjà correctement succès/échec Netlify Forms (`.contact-form__success-msg`/`.contact-form__error-msg`) ; rien à corriger
+- **Fix échec Supabase silencieux** — `allLessons.js` retournait `[]` sans bloquer le build en cas d'échec de fetch (0 leçon ou erreur réseau), risquant une publication Netlify avec l'Academy vide sans alerte ; ajout d'un seuil `MIN_EXPECTED_LESSONS = 400` (vs ~480 en base) et détection du contexte build via `process.env.NETLIFY` — en build Netlify, un fetch en échec ou sous le seuil fait désormais échouer le build (au lieu de publier un site incomplet), déclenchant l'email de notification d'échec Netlify ; en local (`npm start`), comportement inchangé (`console.warn` + `[]`) pour ne pas bloquer le dev hors-ligne
 
 ### Reste à faire ✗
 
@@ -183,7 +184,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 |----------|-------|-------|
 | 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
 | 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
-| 🟠 | **i18n** (langues) — non démarré | Site |
 | 🟠 | **Core Web Vitals / PageSpeed** — audit vitesse une fois le domaine final en place | Site — dépend de : URL domaine |
 
 ### Tests / Sécurité
@@ -198,8 +198,8 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
 | 🟠 | **Documentation technique repo** — pas de README pour un futur contributeur/repreneur du projet | Site |
-| 🟠 | **Press kit / fiche stores** — argumentaire et visuels pour App Store / Play Store à préparer avant lancement | Externe |
-| 🟠 | **KPIs post-lancement** — définir les métriques à suivre une fois l'app publiée (installs, rétention, etc.) | App |
+| 🟠 | **Lien store** — ajouter les liens App Store / Play Store une fois l'app publiée | Externe |
+| 🟠 | **KPIs post-lancement** — définir les métriques à suivre une fois l'app publiée (installs, rétention, etc.) | Site |
 
 ### Réseaux sociaux
 
@@ -213,7 +213,6 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🟡 | **Échec Supabase silencieux** — `allLessons.js` retourne `[]` sans alerte visible si le fetch échoue (juste un `console.warn`), risque de build "vide" passé inaperçu | Site |
 | 🟠 | **Messages d'erreur app Flutter** — cohérence UX à définir avec le site | App |
 
 ### Backend (Firebase Analytics et Google)
@@ -234,6 +233,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | ⏸️ | **Identité éditeur légal** — nom/adresse/SIRET masqués dans CGU/Privacy tant que l'entreprise n'est pas créée | Site |
 | ⏸️ | **Migration domaine email** — une fois `evolvepoker.app` acheté (cf. tâche "URL domaine"), basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.app` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
 | ⏸️ | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
+| ⏸️ | **i18n** (langues) — non démarré, à réévaluer une fois l'app multi-langue et le trafic international avéré | Site |
 | ⏸️ | **SEA — campagnes Google Ads Search** (test petit budget, mots-clés ciblés issus de l'audit) | Site/Externe — dépend de : Firebase Analytics, Lien Firebase → GA4 |
 | ⏸️ | **SEA — Google Ads App Campaigns (UAC)** — format optimisé installs (Search + YouTube + Play Store + Display) | Externe — dépend de : Google Play Console, Firebase Analytics |
 

@@ -80,17 +80,24 @@ async function fetchAllLessons() {
   return all;
 }
 
+// En dessous de ce seuil (~480 leçons en base), on considère le fetch en échec plutôt que de publier un site incomplet
+const MIN_EXPECTED_LESSONS = 400;
+
 module.exports = async function () {
   if (USE_MOCK) {
     console.log('[allLessons] MODE MOCK — 2 leçons de test');
     return MOCK_LESSONS;
   }
 
+  const isNetlifyBuild = !!process.env.NETLIFY;
+
   try {
     const lessons = await fetchAllLessons();
 
     if (!lessons.length) {
-      console.warn('[allLessons] 0 leçons retournées — vérifie RLS et les slugs dans Supabase');
+      const msg = '[allLessons] 0 leçons retournées — vérifie RLS et les slugs dans Supabase';
+      if (isNetlifyBuild) throw new Error(msg);
+      console.warn(msg);
       return [];
     }
 
@@ -102,8 +109,14 @@ module.exports = async function () {
       return true;
     });
     console.log(`[allLessons] Total: ${unique.length} leçons uniques (${lessons.length - unique.length} doublons ignorés)`);
+
+    if (isNetlifyBuild && unique.length < MIN_EXPECTED_LESSONS) {
+      throw new Error(`[allLessons] Seulement ${unique.length} leçons récupérées (minimum attendu: ${MIN_EXPECTED_LESSONS}) — build annulé pour éviter une publication incomplète`);
+    }
+
     return unique;
   } catch(e) {
+    if (isNetlifyBuild) throw e;
     console.warn('[allLessons] Erreur fetch Supabase:', e.message);
     return [];
   }
