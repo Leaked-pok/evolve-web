@@ -8,7 +8,7 @@
 
 **Evolve Poker** — site vitrine d'une application mobile de progression au poker, développé en solo par un passionné. L'app est **gratuite**, pensée pour tous niveaux (débutant → avancé), en français.
 
-- **Stack** : Eleventy (11ty) v2 · Nunjucks templates · CSS custom properties (pas de framework) · JS vanilla · Netlify (hébergement cible)
+- **Stack** : Eleventy (11ty) v3 · Nunjucks templates · CSS custom properties (pas de framework) · JS vanilla · Netlify (hébergement cible)
 - **Dev** : `npm start` → Eleventy avec live reload sur `localhost:8080`
 - **Build** : `npm run build` → `_site/`
 - **Repo** : git, branche `main`, déploiements via commit + push
@@ -178,27 +178,30 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Vérification messages d'erreur formulaires** — `contact.html` gérait déjà correctement succès/échec Netlify Forms (`.contact-form__success-msg`/`.contact-form__error-msg`) ; rien à corriger
 - **Fix échec Supabase silencieux** — `allLessons.js` retournait `[]` sans bloquer le build en cas d'échec de fetch (0 leçon ou erreur réseau), risquant une publication Netlify avec l'Academy vide sans alerte ; ajout d'un seuil `MIN_EXPECTED_LESSONS = 400` (vs ~480 en base) et détection du contexte build via `process.env.NETLIFY` — en build Netlify, un fetch en échec ou sous le seuil fait désormais échouer le build (au lieu de publier un site incomplet), déclenchant l'email de notification d'échec Netlify ; en local (`npm start`), comportement inchangé (`console.warn` + `[]`) pour ne pas bloquer le dev hors-ligne
 - **Cohérence UX messages d'erreur app Flutter** (repo `ProjetP30/flutter_application_1`) — décision : registre tu/vous **non unifié** entre app et site (app = tutoiement partout, site = vouvoiement partout ; scission volontaire et déjà cohérente en interne de chaque côté, pattern courant en FR app-vs-vitrine — ne pas essayer d'aligner). Travail effectif : audit de 18 messages d'erreur qui fuitaient l'exception brute côté utilisateur (`'Erreur : $e'` / `e.toString()` dans des `UiFeedback.error(...)` ou des `Text()` directs) → remplacés par des messages français curatés, courts, actionnables ("Réessaie plus tard."), cohérents avec le pattern déjà en place (`ErrorPage`, `AppErrorWidget`) ; 3 de ces cas (`calendar_page.dart`, `my_tournaments_list_page.dart`, `hand_notes_dashboard_page.dart`) affichaient un `Text()` brut au lieu du composant `AppErrorWidget` standard — remplacés, avec bouton "Réessayer" branché sur l'invalidation du provider concerné. Bug additionnel trouvé et corrigé au passage : `quiz_page.dart` ne repassait jamais `_isLoading` à `false` en cas d'erreur de chargement → l'écran d'erreur ne s'affichait jamais (loader infini)
+- **RLS Supabase activé** — les 2 alertes critiques Advisor (`user_tournament_saves`, `tournaments`) sont résolues : Row Level Security activé avec policies scopées, confirmé côté Supabase
+- **Firebase Analytics + lien GA4** (repo Flutter) — SDK intégré, propriété GA4 dédiée créée et activée, événements custom + tracking d'écran confirmés fonctionnels en DebugView
+- **Deep link `evolvepoker://`** (repo Flutter) — scheme fonctionnel ; bug de course trouvé et corrigé au passage : le Splash écrasait la navigation d'un deep link entrant au lieu de la respecter
+- **Google UMP SDK** (repo Flutter) — formulaire de consentement RGPD confirmé fonctionnel en conditions réelles ; aucune unité pub AdMob activée (AdMob reste en pause, cf. Todo v2)
+- **Comptes X + Instagram créés** — `https://x.com/evolvepokerFr` et `https://www.instagram.com/evolvepokerfr/` ; liens branchés dans le footer (`_includes/layout.njk`, icônes Instagram/X) avec `target="_blank" rel="noopener noreferrer"` ; icônes Discord et Facebook ajoutées en attendant (lien `#`, comptes non créés — cf. Todo v2)
+- **README.md remis à jour** — l'ancien README référençait encore Eleventy v2 et une todo "à compléter avant mise en ligne" quasi entièrement obsolète (presque tout fait depuis) ; réécrit pour un contributeur/repreneur humain (stack, install, structure à jour, déploiement), et ne duplique plus la todo — renvoie vers `CLAUDE.md` comme source unique pour éviter que les deux redivergent
 
 ### Reste à faire ✗
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
 | 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
-| 🟠 | **Deep link** `evolvepoker://` (Flutter) | App |
 | 🟠 | **Core Web Vitals / PageSpeed** — audit vitesse une fois le domaine final en place | Site — dépend de : URL domaine |
 
 ### Tests / Sécurité
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🔴 | **RLS Supabase désactivé** — 2 alertes critiques Advisor (`user_tournament_saves`, `tournaments`) non résolues | App/Backend |
 | 🟢 | **Audit npm périodique** — propre depuis la migration Eleventy v3, prévoir un contrôle régulier | Site |
 
 ### Doc pro et après
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🟠 | **Documentation technique repo** — pas de README pour un futur contributeur/repreneur du projet | Site |
 | 🟠 | **Lien store** — ajouter les liens App Store / Play Store une fois l'app publiée | Externe |
 | 🟠 | **KPIs post-lancement** — définir les métriques à suivre une fois l'app publiée (installs, rétention, etc.) | Site |
 
@@ -206,18 +209,13 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🔴 | **Création des comptes** — aucun compte réseau social créé (X, Instagram, TikTok...) ; `contact.evolvepoker@gmail.com` déjà prévu comme base | Externe |
-| 🟠 | **Liens réseaux sociaux** — footer du site prêt à recevoir les liens, actuellement absents de `_data/texts.json` | Site |
+| 🟢 | ~~Création comptes X + Instagram~~ | Fait — voir section "Fait ✓" |
 
 ### Backend (Firebase Analytics et Google)
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🟡 | **Firebase Analytics** — ajouter `firebase_analytics` dans le projet Flutter | App |
-| 🟡 | **Lier Firebase → GA4** — connecter le projet Firebase à la propriété GA4 `G-6Q1X0GBT65` | Console Firebase |
-| 🟡 | **Google UMP SDK** — consentement RGPD in-app (obligatoire avant activation AdMob) | App |
 | 🟠 | **Google Search Console** — non configuré pour le site | Site — dépend de : URL domaine |
-| 🟠 | **Google Play Console** — fiche/setup de l'app à préparer | Externe |
 
 ### Todo v2 — en pause (à ne traiter que sur demande explicite)
 
@@ -228,8 +226,9 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 | ⏸️ | **Migration domaine email** — une fois `evolvepoker.app` acheté (cf. tâche "URL domaine"), basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.app` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
 | ⏸️ | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
 | ⏸️ | **i18n** (langues) — non démarré, à réévaluer une fois l'app multi-langue et le trafic international avéré | Site |
-| ⏸️ | **SEA — campagnes Google Ads Search** (test petit budget, mots-clés ciblés issus de l'audit) | Site/Externe — dépend de : Firebase Analytics, Lien Firebase → GA4 |
-| ⏸️ | **SEA — Google Ads App Campaigns (UAC)** — format optimisé installs (Search + YouTube + Play Store + Display) | Externe — dépend de : Google Play Console, Firebase Analytics |
+| ⏸️ | **SEA — campagnes Google Ads Search** (test petit budget, mots-clés ciblés issus de l'audit) | Site/Externe — dépendances Firebase Analytics/GA4 déjà remplies |
+| ⏸️ | **SEA — Google Ads App Campaigns (UAC)** — format optimisé installs (Search + YouTube + Play Store + Display) | Externe |
+| ⏸️ | **Comptes Discord / YouTube / TikTok / Facebook** — X et Instagram déjà créés (voir "Fait ✓") ; ces 4 restent à créer, icônes déjà présentes dans le footer (`layout.njk`, ordre : Discord · Instagram · X · TikTok · YouTube · Facebook) en lien `#` en attendant | Externe |
 
 ---
 

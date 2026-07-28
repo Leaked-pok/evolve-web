@@ -1,16 +1,18 @@
 # Evolve Poker — Site vitrine
 
-Site de présentation de l'application mobile **Evolve Poker**, outil de progression au poker (Academy, Ranges, Analyse de mains, Communauté). Développé en solo, gratuit, en français.
+Site de présentation de l'application mobile **Evolve Poker**, outil gratuit de progression au poker (Academy, Ranges, Analyse de mains, Communauté), pensé pour tous niveaux. Développé en solo, en français.
+
+Site en ligne : `https://ubiquitous-tiramisu-7fd9e1.netlify.app` (domaine définitif à venir).
 
 ---
 
 ## Stack
 
-- **[Eleventy (11ty) v2](https://www.11ty.dev/)** — générateur de site statique
+- **[Eleventy (11ty) v3](https://www.11ty.dev/)** — générateur de site statique
 - **Nunjucks** — templates HTML
 - **CSS custom properties** — design system maison, 0 framework UI
 - **JS vanilla** — pas de librairies
-- **[Netlify](https://netlify.com)** — hébergement + fonctions serverless
+- **[Netlify](https://netlify.com)** — hébergement, CI/CD (déploiement auto sur push `main`), fonctions serverless, formulaires
 
 ---
 
@@ -18,8 +20,9 @@ Site de présentation de l'application mobile **Evolve Poker**, outil de progres
 
 ```bash
 npm install
-npm start        # Démarre le serveur local sur http://localhost:8080
+npm start        # Démarre le serveur local avec live reload sur http://localhost:8080
 npm run build    # Génère le site statique dans _site/
+npm test         # Lance les tests (node --test)
 ```
 
 ---
@@ -28,65 +31,56 @@ npm run build    # Génère le site statique dans _site/
 
 ```
 _data/
-  texts.json        — Tout le contenu éditorial (titres, textes, meta)
-  lessons.csv       — Données des leçons Academy (source)
-  modules.csv       — Données des modules Academy (source)
+  texts.json          — Tout le contenu éditorial (titres, textes, meta) — voir "Modifier le contenu"
+  academy.js / allLessons.js / allModules.js — Récupération des données Academy (Supabase)
+  lessons.csv / modules.csv — Source CSV des leçons
 _includes/
-  layout.njk        — Layout global (nav, head, footer)
-  lesson-layout.njk — Layout spécifique pages leçons
+  layout.njk          — Layout global (nav, head, footer, réseaux sociaux)
+  lesson-layout.njk   — Layout spécifique pages leçons
 assets/
-  css/style.css     — Feuille CSS unique, tout le design system
-  js/main.js        — JS global (nav, scroll, animations)
-  images/           — Favicons, OG image, visuels
+  css/style.css       — Feuille CSS unique (~4000 lignes), tout le design system
+  js/main.js          — JS global (nav, scroll, animations)
+  images/             — Favicons, image OG, visuels par feature
 netlify/
   functions/
-    lesson-vote.js  — API likes/dislikes par leçon (Netlify Blobs)
+    lesson-vote.js    — API likes/dislikes par leçon (Netlify Blobs + rate limiting)
 pages/
-  academy/          — Listing Academy + modules + template leçons
-  features/         — Fonctionnalités : listing + 4 sous-pages détail
-  lasuite/          — La suite : listing + 4 sous-pages (jeux, analyse, communauté, pot odds)
-  contact/          — Formulaire de contact (2 panels)
-  lessons/          — Template leçons générées depuis CSV
-  cgu.njk           — CGU multi-panels (Le projet, Risques, CGU, Privacy, FAQ)
-index.html          — Homepage
+  academy/            — Listing Academy + modules + template leçons
+  features/           — Fonctionnalités : listing + sous-pages détail
+  lasuite/             — La suite : listing + sous-pages (jeux, analyse, communauté, calculateur pot odds)
+  contact/             — Formulaire de contact (2 panels : Contact / Nous aider)
+  lessons/             — Template leçons générées depuis CSV/Supabase
+  cgu.njk              — Page multi-panels : Le projet, Risques, Aide inscriptions, CGU, Privacy, FAQ
+test/
+  lesson-vote.test.js  — Tests unitaires (node --test) de la logique de vote et du rate limiting
+index.html             — Homepage
+manifest.json          — Manifest PWA
+robots.njk / sitemap.njk / 404.njk / 500.njk
+netlify.toml            — Config build, redirects, headers de sécurité
 ```
 
 ---
 
 ## Modifier le contenu
 
-Tout le texte du site passe par **`_data/texts.json`** — aucun texte hardcodé dans les templates.
+Tout le texte du site passe par **`_data/texts.json`** — aucun texte hardcodé dans les templates (sauf exceptions ponctuelles).
 
 Pour modifier un titre, une description, ou ajouter du contenu : ouvrir `_data/texts.json` et chercher la clé correspondante (ex. `home`, `lasuite`, `features`, `terms`…).
 
-Pour les leçons Academy : modifier `_data/lessons.csv` et `_data/modules.csv`.
+Les leçons Academy sont servies depuis Supabase (voir `_data/allLessons.js`) ; `lessons.csv`/`modules.csv` restent comme source de référence.
 
 ---
 
 ## Déploiement
 
-Le site est configuré pour **Netlify** via `netlify.toml` :
+Le site est lié à Netlify (`netlify.toml`) :
 - Build command : `npm run build`
 - Publish directory : `_site/`
 - Fonctions serverless dans `netlify/functions/`
-
-Déploiement via commit + push sur la branche `main`.
+- Déploiement automatique sur chaque push de la branche `main`
 
 ---
 
-## À compléter avant mise en ligne
+## État du projet et todo
 
-| Priorité | Tâche |
-|----------|-------|
-| 🔴 | Remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` |
-| 🔴 | Remplacer les 4 codes parrainage `[TON_CODE_*]` dans `pages/cgu.njk` |
-| 🔴 | Remplir les placeholders légaux (`[NOM_EDITEUR]`, `[SIRET]`, `[EMAIL_CONTACT]`) dans `_data/texts.json` |
-| 🔴 | Rédiger la Politique de confidentialité (sections `privacy` dans `_data/texts.json`) |
-| 🔴 | Déployer sur Netlify et connecter le domaine |
-| 🟡 | Activer Netlify Forms (formulaire de contact) |
-| 🟡 | Ajouter les security headers dans `netlify.toml` |
-| 🟡 | Configurer Analytics (Plausible recommandé) |
-| 🟠 | Remplacer les blocs `[Placeholder]` dans les pages features/lasuite |
-| 🟠 | Intégrer les visuels / illustrations (`feature-row__placeholder`) |
-
-Voir `CLAUDE.md` pour le contexte technique complet.
+Ce README couvre la prise en main technique. Pour l'état d'avancement à jour, la todo priorisée, les décisions prises et le contexte détaillé de chaque fonctionnalité, voir **[`CLAUDE.md`](CLAUDE.md)** — c'est la source de référence unique, tenue à jour à chaque changement (pour éviter qu'elle diverge de ce README, comme c'était le cas avant).
