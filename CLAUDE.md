@@ -11,7 +11,36 @@
 - **Stack** : Eleventy (11ty) v3 · Nunjucks templates · CSS custom properties (pas de framework) · JS vanilla · Netlify (hébergement cible)
 - **Dev** : `npm start` → Eleventy avec live reload sur `localhost:8080`
 - **Build** : `npm run build` → `_site/`
-- **Repo** : git, branche `main`, déploiements via commit + push
+- **Repo** : git — branche `dev` pour le travail courant, branche `main` = production (voir "Workflow Git / déploiement Netlify" ci-dessous)
+
+---
+
+## Workflow Git / déploiement Netlify (économie de credits)
+
+**Contexte** : Netlify facture en "credits" mensuels (300/mois sur le plan actuel, cycle du 20 au 19 du mois). Diagnostic du 13/08/2026 sur une alerte à 75% du quota (cycle 20/07–19/08) : **les déploiements de prod dominent la conso à 97%** (16 déploiements = 240 credits, soit ~15 credits/déploiement, peu importe le nombre de commits regroupés dans un même push). Le trafic du site est négligeable (1 863 requêtes = ~7 credits, soit ~0,004 credit/requête) — la fréquentation n'est pas un risque de dépassement, la fréquence de mise en ligne l'est.
+
+**Principe** : 2 branches, 2 usages.
+
+| Branche | Usage | Coût Netlify |
+|---|---|---|
+| `dev` | Tout le travail courant : commits, push, tests | **0 credit** (`Branch deploys` = `None` côté Netlify → aucun build déclenché) |
+| `main` | Production uniquement | 1 déploiement (~15 credits) à **chaque** push |
+
+**Réglages Netlify** (Site configuration → Build & deploy → Continuous deployment) : Production branch = `main`, Branch deploys = `None`, Deploy Previews = "Any pull request..." (⚠️ ne jamais ouvrir de PR GitHub vers `main` — ça déclencherait un build de preview facturé ; toujours merger en local).
+
+**Procédure** :
+```
+# Travail courant (aussi souvent que voulu, gratuit)
+git checkout dev
+git add … && git commit -m "…" && git push origin dev
+
+# Mise en ligne (uniquement sur demande explicite : "publie" / "mets en ligne" / "déploie")
+git checkout main
+git merge dev
+git push origin main   # déclenche le déploiement Netlify
+```
+
+Test local (`npm start`) reste évidemment gratuit et illimité, indépendant de tout ça.
 
 ---
 
@@ -184,6 +213,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Google UMP SDK** (repo Flutter) — formulaire de consentement RGPD confirmé fonctionnel en conditions réelles ; aucune unité pub AdMob activée (AdMob reste en pause, cf. Todo v2)
 - **Comptes X + Instagram créés** — `https://x.com/evolvepokerFr` et `https://www.instagram.com/evolvepokerfr/` ; liens branchés dans le footer (`_includes/layout.njk`, icônes Instagram/X) avec `target="_blank" rel="noopener noreferrer"` ; icônes Discord et Facebook ajoutées en attendant (lien `#`, comptes non créés — cf. Todo v2)
 - **README.md remis à jour** — l'ancien README référençait encore Eleventy v2 et une todo "à compléter avant mise en ligne" quasi entièrement obsolète (presque tout fait depuis) ; réécrit pour un contributeur/repreneur humain (stack, install, structure à jour, déploiement), et ne duplique plus la todo — renvoie vers `CLAUDE.md` comme source unique pour éviter que les deux redivergent
+- **Workflow Git anti-conso de credits Netlify** — suite à une alerte à 75% du quota mensuel (300 credits, cycle 20/07–19/08/2026), diagnostic du breakdown Netlify : 16 déploiements de prod = 240 credits (97% du total), trafic négligeable (~0,004 credit/requête) ; branche `dev` créée et poussée sur GitHub pour absorber tous les commits de travail (`Branch deploys` = `None` côté Netlify → 0 build déclenché), `main` réservé aux mises en ligne explicites — détail dans la section "Workflow Git / déploiement Netlify" plus haut
 
 ### Reste à faire ✗
 
@@ -239,4 +269,4 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **texts.json** pour tout contenu éditorial (pas de texte hardcodé dans les templates sauf exceptions)
 - **JS vanilla uniquement** — pas de librairies
 - **Mobile-first** — breakpoints principaux : 640px, 768px, 1024px
-- **Commit + push** uniquement sur demande explicite
+- **Commit sur `dev`** possible à tout moment (0 conséquence, 0 credit Netlify) ; **push sur `main`** (= mise en ligne, consomme des credits) uniquement sur demande explicite ("publie" / "mets en ligne" / "déploie")
