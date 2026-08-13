@@ -13,7 +13,7 @@
     "meta_desc": "Découvrez comment Evolve Poker collecte, utilise et protège vos données personnelles.",
     "hero_title": "Politique de",
     "hero_gradient": "confidentialité",
-    "hero_desc": "Dernière mise à jour : juin 2026",
+    "hero_desc": "Dernière mise à jour : août 2026",
     "sections": [
       {
         "overline": "Responsable du traitement",
@@ -23,7 +23,7 @@
       {
         "overline": "Données collectées",
         "title": "Quelles données traitons-nous ?",
-        "desc": "<p><strong>Données de compte&nbsp;:</strong> adresse email, pseudo choisi par l'utilisateur, photo de profil (si connexion via Google OAuth 2.0), mot de passe chiffré (si inscription email).</p><p><strong>Données de progression&nbsp;:</strong> leçons consultées, scores obtenus, modules complétés, statistiques d'apprentissage, badges et niveaux atteints.</p><p><strong>Contenu utilisateur&nbsp;:</strong> mains de poker enregistrées et annotées, ranges personnalisées, notes de session saisies dans l'application.</p><p><strong>Données de communauté&nbsp;:</strong> pseudo et score rendus publics dans les classements de l'application.</p><p><strong>Données techniques&nbsp;:</strong> adresse IP, type d'appareil, système d'exploitation, version de l'application, logs d'accès et identifiants de session.</p><p><strong>Données publicitaires (à venir, avec consentement)&nbsp;:</strong> identifiant publicitaire (IDFA sur iOS, GAID sur Android) et données d'interaction avec les publicités affichées.</p>"
+        "desc": "<p><strong>Données de compte&nbsp;:</strong> adresse email, pseudo choisi par l'utilisateur, photo de profil (si connexion via Google OAuth 2.0), mot de passe chiffré (si inscription email), prénom, nom, pays et âge (facultatifs, renseignés depuis les Réglages), email et numéro de téléphone de récupération de compte (facultatifs).</p><p><strong>Données de progression&nbsp;:</strong> leçons consultées, scores obtenus, modules complétés, statistiques d'apprentissage, badges et niveaux atteints.</p><p><strong>Contenu utilisateur&nbsp;:</strong> mains de poker enregistrées et annotées, ranges personnalisées, notes de session saisies dans l'application.</p><p><strong>Données de communauté&nbsp;:</strong> pseudo et score rendus publics dans les classements de l'application.</p><p><strong>Données techniques&nbsp;:</strong> adresse IP, type d'appareil, système d'exploitation, version de l'application, logs d'accès et identifiants de session.</p><p><strong>Données publicitaires (à venir, avec consentement)&nbsp;:</strong> identifiant publicitaire (IDFA sur iOS, GAID sur Android) et données d'interaction avec les publicités affichées.</p>"
       },
       {
         "overline": "Base légale et finalités",
@@ -33,7 +33,7 @@
       {
         "overline": "Sous-traitants",
         "title": "Qui a accès à vos données ?",
-        "desc": "<p>Vos données ne sont <strong>jamais vendues</strong>. Elles sont transmises uniquement aux sous-traitants techniques indispensables au fonctionnement du Service&nbsp;:</p><p><strong>Supabase, Inc.</strong> (supabase.com) — authentification et base de données applicatives.</p><p><strong>Netlify, Inc.</strong> (netlify.com) — hébergement du site vitrine et des contenus pédagogiques accessibles via webview.</p><p><strong>Google LLC</strong> (google.com) — authentification OAuth 2.0&nbsp;; à venir&nbsp;: publicité mobile (AdMob) et analytics (Firebase Analytics).</p><p><strong>Apple Inc. / Google LLC</strong> — traitement des achats in-app via l'App Store et le Google Play Store (à venir). Ces plateformes disposent de leurs propres politiques de confidentialité.</p>"
+        "desc": "<p>Vos données ne sont <strong>jamais vendues</strong>. Elles sont transmises uniquement aux sous-traitants techniques indispensables au fonctionnement du Service&nbsp;:</p><p><strong>Supabase, Inc.</strong> (supabase.com) — authentification et base de données applicatives.</p><p><strong>Netlify, Inc.</strong> (netlify.com) — hébergement du site vitrine et des contenus pédagogiques accessibles via webview.</p><p><strong>Google LLC</strong> (google.com) — authentification OAuth 2.0&nbsp;; Firebase Analytics (statistiques d'usage anonymisées)&nbsp;; Firebase Crashlytics (rapports de plantage techniques)&nbsp;; à venir&nbsp;: publicité mobile (AdMob). Firebase Analytics et Crashlytics traitent des données techniques (identifiant d'installation, type d'appareil, événements d'usage, journaux de plantage) hébergées par Google LLC, y compris hors Union européenne, encadrées par les Clauses Contractuelles Types.</p><p><strong>Apple Inc. / Google LLC</strong> — traitement des achats in-app via l'App Store et le Google Play Store (à venir). Ces plateformes disposent de leurs propres politiques de confidentialité.</p>"
       },
       {
         "overline": "Transferts hors UE",
@@ -63,7 +63,7 @@
       {
         "overline": "Protection des mineurs",
         "title": "Données des utilisateurs mineurs",
-        "desc": "<p>Le Service est interdit aux personnes de moins de <strong>16 ans</strong>. Nous ne collectons pas sciemment de données personnelles concernant des enfants de moins de 16 ans. Si nous découvrons qu'un utilisateur est mineur de moins de 16 ans, son compte et l'ensemble de ses données seront supprimés sans délai.</p><p>Si vous êtes le représentant légal d'un mineur dont les données auraient été collectées à notre insu, contactez-nous à <strong>contact.evolvepoker@gmail.com</strong> pour en obtenir la suppression immédiate.</p>"
+        "desc": "<p>Le Service est interdit aux personnes de moins de <strong>16 ans</strong>. L'inscription ne fait l'objet d'aucune vérification d'âge automatisée&nbsp;: en créant un compte, l'utilisateur déclare avoir 16 ans ou plus (ou disposer de l'accord de son représentant légal s'il a entre 16 et 18 ans).</p><p>Tout compte découvert comme appartenant à un mineur de moins de 16 ans sera suspendu et ses données supprimées, sur simple signalement à <strong>contact.evolvepoker@gmail.com</strong>.</p>"
       },
       {
         "overline": "Sécurité",
@@ -87,7 +87,7 @@
     "meta_desc": "Lisez les conditions générales d'utilisation de l'application et du site Evolve Poker.",
     "hero_title": "Conditions",
     "hero_gradient": "d'utilisation",
-    "hero_desc": "Dernière mise à jour : juin 2026",
+    "hero_desc": "Dernière mise à jour : août 2026",
     "sections": [
       {
         "overline": "Éditeur du service",
@@ -107,7 +107,7 @@
       {
         "overline": "Description du service",
         "title": "Fonctionnalités proposées",
-        "desc": "<p>Evolve Poker propose les fonctionnalités suivantes à titre gratuit, sans garantie de disponibilité permanente&nbsp;: <strong>Academy</strong> (leçons structurées sur la stratégie et la théorie du poker)&nbsp;; <strong>Ranges</strong> (consultation et personnalisation de ranges préétablies)&nbsp;; <strong>Calendrier</strong> (tournois live et en ligne)&nbsp;; <strong>Mains</strong> (prise de notes et analyse post-session)&nbsp;; <strong>News</strong> (actualités du poker)&nbsp;; <strong>Communauté</strong> (échanges entre utilisateurs et classements publics).</p><p>L'ensemble du contenu est fourni à des fins <strong>strictement pédagogiques</strong>. Evolve Poker ne fournit pas de conseils financiers et ne garantit aucun résultat en termes de performance ou de gains au poker.</p>"
+        "desc": "<p>Evolve Poker propose les fonctionnalités suivantes à titre gratuit, sans garantie de disponibilité permanente&nbsp;: <strong>Academy</strong> (leçons structurées sur la stratégie et la théorie du poker)&nbsp;; <strong>Ranges</strong> (consultation et personnalisation de ranges préétablies)&nbsp;; <strong>Calendrier</strong> (tournois live et en ligne)&nbsp;; <strong>Mes Tournois</strong> (création de structures de tournois personnalisées, minuteur de blindes en direct)&nbsp;; <strong>Mains</strong> (prise de notes et analyse post-session)&nbsp;; <strong>News</strong> (actualités du poker)&nbsp;; <strong>Classement</strong> (classement public entre utilisateurs).</p><p>L'ensemble du contenu est fourni à des fins <strong>strictement pédagogiques</strong>. Evolve Poker ne fournit pas de conseils financiers et ne garantit aucun résultat en termes de performance ou de gains au poker.</p>"
       },
       {
         "overline": "Usages autorisés & interdits",
