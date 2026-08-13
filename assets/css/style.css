@@ -3215,36 +3215,18 @@ p {
 .lesson-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   max-width: 720px;
   margin: 0 auto;
   padding: 0 var(--space-4);
 }
-.lesson-header__back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text);
-  border-radius: var(--radius-md);
-  flex-shrink: 0;
-}
-.lesson-header__back:hover { background: var(--color-surface); }
 .lesson-header__logo {
   display: inline-flex;
   align-items: center;
 }
 .lesson-header .nav__logo-img {
   height: 28px;
-}
-.lesson-header__spacer {
-  width: 36px;
-  flex-shrink: 0;
 }
 
 /* Footer minimal */
