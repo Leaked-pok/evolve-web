@@ -45,9 +45,14 @@ function fetchPage(offset, limit) {
       }
     };
     https.get(url, options, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
+      const chunks = [];
+      // Accumule les Buffer bruts et ne décode qu'une fois à la fin : concaténer des
+      // chunks déjà convertis en string (`data += chunk`) coupe parfois un caractère
+      // multi-octets (ex. "è") pile à la frontière réseau entre deux chunks, ce qui le
+      // corrompt en "?" — d'où les accents cassés vus dans le contenu des leçons.
+      res.on('data', chunk => chunks.push(chunk));
       res.on('end', () => {
+        const data = Buffer.concat(chunks).toString('utf8');
         try {
           resolve(JSON.parse(data));
         } catch(e) {
