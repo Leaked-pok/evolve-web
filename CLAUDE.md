@@ -219,7 +219,12 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 
 ### Reste à faire ✗
 
-Aucune tâche active pour le moment — tout ce qui n'est pas en pause (Todo v2) est fait. Prochaines tâches naturelles : déployer sur `main` pour mesurer le vrai gain PageSpeed, puis Google Search Console.
+| Priorité | Tâche | Scope |
+|----------|-------|-------|
+| 🔴 | **Mention légale IA sur les leçons** — vérifier si le contenu des leçons (rédigé/assisté par IA) nécessite une mention légale de transparence, et la rédiger si besoin. Vérifié à ce jour : aucune mention de ce type n'existe dans CGU/Privacy (`_data/texts.json`) | Site |
+| 🟠 | **Relecture CGU** — repasser sur le contenu du panel `terms` de `pages/cgu.njk` (pas de relecture dédiée recensée depuis la rédaction initiale) | Site |
+| 🟠 | **Placeholder App Store / lancement iOS en V2** — Android sort en V1, iOS est prévu en V2. Actuellement les 2 boutons `btn-store` (App Store + Google Play) sont traités à l'identique (`href="#"`, même style actif) sur toutes les pages ; à distinguer une fois V1 en ligne (ex. badge "Bientôt disponible" côté App Store). À noter aussi : la Privacy Policy (`_data/texts.json` ligne ~21) mentionne déjà "application mobile Android et iOS" comme si les deux existaient — à corriger/nuancer en fonction du calendrier réel | Site — dépend de : Lien store |
+| 🟢 | **Liste complète des placeholders** — inventaire fait par grep sur le repo (18/08/2026) : (1) boutons `btn-store` `href="#"` sur ~20 pages + nav dropdown + footer (`_includes/layout.njk` + toutes les pages détail) → couvert par "Lien store" ; (2) icônes réseaux sociaux Discord/TikTok/YouTube/Facebook `href="#"` (`layout.njk`) → couvert par Todo v2 ; (3) codes parrainage "Bientôt disponible" ×4 (`pages/cgu.njk`) → couvert par Todo v2 ; (4) identité éditeur légal masquée (CGU/Privacy) → couvert par Todo v2 ; (5) `.feature-row__placeholder` ("Illustration") dans `academy.html`/`features.html`/`lasuite.html` — fallback de template pour `row.image` manquant, actuellement inutilisé (toutes les images sont renseignées), pas un placeholder actif. À revalider avant le lancement public général | Site |
 
 ### Tests / Sécurité
 
