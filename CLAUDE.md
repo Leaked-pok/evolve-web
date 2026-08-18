@@ -215,12 +215,11 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **README.md remis à jour** — l'ancien README référençait encore Eleventy v2 et une todo "à compléter avant mise en ligne" quasi entièrement obsolète (presque tout fait depuis) ; réécrit pour un contributeur/repreneur humain (stack, install, structure à jour, déploiement), et ne duplique plus la todo — renvoie vers `CLAUDE.md` comme source unique pour éviter que les deux redivergent
 - **Workflow Git anti-conso de credits Netlify** — suite à une alerte à 75% du quota mensuel (300 credits, cycle 20/07–19/08/2026), diagnostic du breakdown Netlify : 16 déploiements de prod = 240 credits (97% du total), trafic négligeable (~0,004 credit/requête) ; branche `dev` créée et poussée sur GitHub pour absorber tous les commits de travail (`Branch deploys` = `None` côté Netlify → 0 build déclenché), `main` réservé aux mises en ligne explicites — détail dans la section "Workflow Git / déploiement Netlify" plus haut
 - **URL domaine** — domaine `evolvepoker.eu` acheté (registrar IONOS SE) et branché : `texts.site.url` dans `_data/texts.json` pointe déjà dessus, build vérifié (canonical, OG, sitemap.xml et robots.txt utilisent tous `https://evolvepoker.eu`, plus aucune trace de `VOTRE_DOMAINE`)
+- **Audit Core Web Vitals / PageSpeed + fixes** — Lighthouse (moteur PageSpeed Insights, API publique à quota épuisé donc exécuté en local) sur `evolvepoker.eu` en prod : perf 86, a11y 96→100, best practices 96, SEO 100. Corrigé : 6 images (`ranges1`/`mains1`/`news1`/`calendrier1`/`academy2`/`logo`) converties PNG→WebP et redimensionnées à leur taille d'affichage réelle (`sharp` installé temporairement, `--no-save`, jamais dans `package.json`) — poids homepage -5 Mo (5,66 Mo → ~700 Ko) ; `width`/`height` explicites sur le logo (3 usages) contre le layout shift ; `tarteaucitron.min.js` passé en `defer` (912 ms de render-blocking récupérés, init déplacée sur `DOMContentLoaded`) ; contraste WCAG AA du footer corrigé (`--color-text-3` sur `--color-bg-2` = 2.99:1, insuffisant → `--color-text-2`) ; contraste du bandeau cookies Tarteaucitron corrigé (régression introduite par le passage en bannière "discrète" du même jour — `--color-text-3` sur `--color-surface` = 2.71:1, et le bouton `#tarteaucitronPrivacyUrl` n'était stylé par aucune règle existante = 1.25:1). Le gain de perf réel ne sera mesurable qu'après déploiement sur `main` (un audit local `npm start` n'est pas comparable : pas de gzip contrairement à Netlify)
 
 ### Reste à faire ✗
 
-| Priorité | Tâche | Scope |
-|----------|-------|-------|
-| 🟠 | **Core Web Vitals / PageSpeed** — audit vitesse maintenant que le domaine final (`evolvepoker.eu`) est en place | Site |
+Aucune tâche active pour le moment — tout ce qui n'est pas en pause (Todo v2) est fait. Prochaines tâches naturelles : déployer sur `main` pour mesurer le vrai gain PageSpeed, puis Google Search Console.
 
 ### Tests / Sécurité
 
