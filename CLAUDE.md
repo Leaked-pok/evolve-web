@@ -195,7 +195,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Eleventy v2 → v3** — migration effectuée (`@11ty/eleventy@3.1.6`), build vérifié byte-identique à l'ancienne version, plus aucune vulnérabilité npm (`npm audit` propre)
 - **Nettoyage `[Placeholder]` feature pages** — page Leçons (`feature_lecons`) et bloc `lasuite_detail` supprimés de `_data/texts.json` (orphelins, non référencés par aucun template) ; `hero_desc`/`sections` (jamais rendus) retirés de `feature_ranges`/`feature_calendrier`/`feature_news`/`feature_mains` ; `cta_desc` rédigé pour ces 4 pages
 - **Clés API Supabase legacy → nouvelle clé publishable** — `SUPABASE_ANON_KEY` dans `_data/allLessons.js` remplacée par la nouvelle clé `sb_publishable_...` (RLS déjà correctement configuré) ; vérifié en local (`npm start`) : 480 leçons uniques récupérées
-- **Sitemap.xml** — `sitemap.njk` créé (template natif, boucle sur `collections.all`, pas de plugin), `robots.njk` mis à jour pour pointer dessus dynamiquement via `texts.site.url` ; corrigé au passage : pagination leçons/modules n'ajoutait que sa 1ère page à `collections.all` (`addAllPagesToCollections: true` ajouté) et `CLAUDE.md` était buildé comme page publique (`.eleventyignore`) — build vérifié : 534 URLs (480 leçons + 39 modules + 15 pages statiques). URLs encore en `VOTRE_DOMAINE` en attendant la tâche "URL domaine"
+- **Sitemap.xml** — `sitemap.njk` créé (template natif, boucle sur `collections.all`, pas de plugin), `robots.njk` mis à jour pour pointer dessus dynamiquement via `texts.site.url` ; corrigé au passage : pagination leçons/modules n'ajoutait que sa 1ère page à `collections.all` (`addAllPagesToCollections: true` ajouté) et `CLAUDE.md` était buildé comme page publique (`.eleventyignore`) — build vérifié : 534 URLs (480 leçons + 39 modules + 15 pages statiques)
 - **Relecture textes des 8 sous-pages features/lasuite** — réduction du contenu (calendrier -32%, mains -24%, news -36%, jeux -29%, communaute -27%, calculateur -45%) : suppression des redondances, retrait des noms de logiciels/sites concurrents cités explicitement (mains, news), francisation des anglicismes évitables (mains), réordonnancement de `lasuite/jeux` en En construction > Pourquoi > L'idée actuelle ; fix CSS au passage (`--space-14` manquante cassait le margin des `h2.feature-article__heading`, aucun espace visible sous les sous-titres à deux couleurs)
 - **Rate limiting `lesson-vote.js`** — anti-spam vote en boucle : max 3 requêtes par (IP, leçon) toutes les 15 min via un store Blobs dédié (`lesson-vote-limits`), 429 au-delà, fail-open si le store est indisponible ; logique extraite en fonctions pures (`getClientIp`, `applyVote`, `checkRateLimit`) pour rester testable
 - **Premiers tests automatisés** — `test/lesson-vote.test.js` (10 tests, `node --test`, natif Node, zéro dépendance) couvrant la logique de vote et le rate limiting ; `npm test` ajouté à `package.json`
@@ -214,13 +214,13 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 - **Comptes X + Instagram créés** — `https://x.com/evolvepokerFr` et `https://www.instagram.com/evolvepokerfr/` ; liens branchés dans le footer (`_includes/layout.njk`, icônes Instagram/X) avec `target="_blank" rel="noopener noreferrer"` ; icônes Discord et Facebook ajoutées en attendant (lien `#`, comptes non créés — cf. Todo v2)
 - **README.md remis à jour** — l'ancien README référençait encore Eleventy v2 et une todo "à compléter avant mise en ligne" quasi entièrement obsolète (presque tout fait depuis) ; réécrit pour un contributeur/repreneur humain (stack, install, structure à jour, déploiement), et ne duplique plus la todo — renvoie vers `CLAUDE.md` comme source unique pour éviter que les deux redivergent
 - **Workflow Git anti-conso de credits Netlify** — suite à une alerte à 75% du quota mensuel (300 credits, cycle 20/07–19/08/2026), diagnostic du breakdown Netlify : 16 déploiements de prod = 240 credits (97% du total), trafic négligeable (~0,004 credit/requête) ; branche `dev` créée et poussée sur GitHub pour absorber tous les commits de travail (`Branch deploys` = `None` côté Netlify → 0 build déclenché), `main` réservé aux mises en ligne explicites — détail dans la section "Workflow Git / déploiement Netlify" plus haut
+- **URL domaine** — domaine `evolvepoker.eu` acheté (registrar IONOS SE) et branché : `texts.site.url` dans `_data/texts.json` pointe déjà dessus, build vérifié (canonical, OG, sitemap.xml et robots.txt utilisent tous `https://evolvepoker.eu`, plus aucune trace de `VOTRE_DOMAINE`)
 
 ### Reste à faire ✗
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🔴 | **URL domaine** — remplacer `https://VOTRE_DOMAINE` dans `_data/texts.json` (affecte canonical, OG, sitemap) | Site |
-| 🟠 | **Core Web Vitals / PageSpeed** — audit vitesse une fois le domaine final en place | Site — dépend de : URL domaine |
+| 🟠 | **Core Web Vitals / PageSpeed** — audit vitesse maintenant que le domaine final (`evolvepoker.eu`) est en place | Site |
 
 ### Tests / Sécurité
 
@@ -245,7 +245,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 
 | Priorité | Tâche | Scope |
 |----------|-------|-------|
-| 🟠 | **Google Search Console** — non configuré pour le site | Site — dépend de : URL domaine |
+| 🟠 | **Google Search Console** — non configuré pour le site | Site |
 
 ### Todo v2 — en pause (à ne traiter que sur demande explicite)
 
@@ -253,7 +253,7 @@ Le champ `coming_soon: true` sur une feature row affiche un `.badge.badge--neutr
 |----------|-------|-------|
 | ⏸️ | **Codes parrainage** — masqués ("Bientôt disponible") tant que les comptes affiliés n'existent pas | Site |
 | ⏸️ | **Identité éditeur légal** — nom/adresse/SIRET masqués dans CGU/Privacy tant que l'entreprise n'est pas créée | Site |
-| ⏸️ | **Migration domaine email** — une fois `evolvepoker.app` acheté (cf. tâche "URL domaine"), basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.app` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
+| ⏸️ | **Migration domaine email** — `evolvepoker.eu` déjà acheté (registrar IONOS) ; basculer vers Cloudflare Email Routing (gratuit) pour `contact@evolvepoker.eu` → redirection vers `contact.evolvepoker@gmail.com` | Externe |
 | ⏸️ | **AdMob** — publicités in-app et webview ; plugin Flutter `google_mobile_ads` | App |
 | ⏸️ | **i18n** (langues) — non démarré, à réévaluer une fois l'app multi-langue et le trafic international avéré | Site |
 | ⏸️ | **SEA — campagnes Google Ads Search** (test petit budget, mots-clés ciblés issus de l'audit) | Site/Externe — dépendances Firebase Analytics/GA4 déjà remplies |
