@@ -460,6 +460,12 @@ p {
   background: var(--color-surface-2);
 }
 
+.nav__dropdown-store--soon {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
 .nav__dropdown-store__icon {
   width: 36px;
   height: 36px;
@@ -693,6 +699,20 @@ p {
   border-color: var(--color-gold);
   box-shadow: 0 0 0 1px var(--color-gold), 0 0 12px rgba(212, 53, 106, 0.35);
   transform: translateY(-1px);
+}
+
+/* App Store : lancement prévu en V2 (Android en premier) — bouton visible mais neutralisé */
+.btn-store--soon {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.btn-store--soon:hover {
+  background: transparent;
+  border-color: var(--color-border-light);
+  box-shadow: none;
+  transform: none;
 }
 
 .btn-store__icon {
