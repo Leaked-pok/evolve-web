@@ -1222,7 +1222,8 @@ p {
 
 .footer__beta-text {
   font-size: var(--text-xs);
-  color: var(--color-text-3);
+  /* --color-text-3 sur ce fond très sombre (--color-bg-2) ne passait pas le contraste WCAG AA (2.99:1, il faut 4.5:1) */
+  color: var(--color-text-2);
   line-height: 1.6;
 }
 
@@ -1250,12 +1251,12 @@ p {
 
 .footer__link {
   font-size: var(--text-sm);
-  color: var(--color-text-3);
+  color: var(--color-text-2);
   transition: color var(--transition-fast);
 }
 
 .footer__link:hover {
-  color: var(--color-text-2);
+  color: var(--color-text);
 }
 
 .footer__bottom {
@@ -1269,7 +1270,7 @@ p {
 
 .footer__copy {
   font-size: var(--text-sm);
-  color: var(--color-text-3);
+  color: var(--color-text-2);
 }
 
 .footer__legal {
@@ -1279,12 +1280,12 @@ p {
 
 .footer__legal-link {
   font-size: var(--text-sm);
-  color: var(--color-text-3);
+  color: var(--color-text-2);
   transition: color var(--transition-fast);
 }
 
 .footer__legal-link:hover {
-  color: var(--color-text-2);
+  color: var(--color-text);
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -4304,16 +4305,23 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
   gap: 10px !important;
 }
 #tarteaucitronDisclaimerAlert {
-  color: var(--color-text-3) !important;
+  /* --color-text-3 sur --color-surface ne passait pas le contraste WCAG AA (2.71:1, il faut 4.5:1) */
+  color: var(--color-text-2) !important;
   font-family: 'Inter', sans-serif !important;
   font-size: 0.75rem !important;
   line-height: 1.45 !important;
   flex: 1 1 220px !important;
 }
-.tarteaucitronAlertBigPrivacyUrl {
+.tarteaucitronAlertBigPrivacyUrl,
+#tarteaucitronPrivacyUrl {
   color: var(--color-text-2) !important;
   text-decoration: underline !important;
   white-space: nowrap !important;
+  background: transparent !important;
+  border: none !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: inherit !important;
+  cursor: pointer !important;
 }
 #tarteaucitronAlertBigBtns {
   display: flex !important;
@@ -4336,7 +4344,7 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
 #tarteaucitronPersonalize2:hover { background: var(--color-gold) !important; }
 #tarteaucitronCloseAlert {
   background: transparent !important;
-  color: var(--color-text-3) !important;
+  color: var(--color-text-2) !important;
   border: 1px solid var(--color-border-light) !important;
   border-radius: 6px !important;
   padding: 5px 14px !important;
@@ -4353,7 +4361,7 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
 }
 #tarteaucitronCookiesListBanner {
   background: transparent !important;
-  color: var(--color-text-3) !important;
+  color: var(--color-text-2) !important;
   border: none !important;
   font-size: 0.6875rem !important;
   font-family: 'Inter', sans-serif !important;
@@ -4367,7 +4375,7 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
   border-radius: 8px 8px 0 0 !important;
   bottom: 0 !important;
 }
-#tarteaucitronIcon a { color: var(--color-text-3) !important; font-family: 'Inter', sans-serif !important; font-size: 0.75rem !important; }
+#tarteaucitronIcon a { color: var(--color-text-2) !important; font-family: 'Inter', sans-serif !important; font-size: 0.75rem !important; }
 @media (max-width: 640px) {
   #tarteaucitronAlertBig { padding: 10px 14px !important; }
   #tarteaucitronAlertBigBtns { width: 100% !important; }
