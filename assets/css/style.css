@@ -4294,24 +4294,24 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
 
 /* ── Tarteaucitron — thème Evolve ───────────────────────────── */
 #tarteaucitronAlertBig {
-  background: #0f0f1a !important;
+  background: var(--color-surface) !important;
   border-top: 1px solid var(--color-border) !important;
-  box-shadow: 0 -8px 32px rgba(0,0,0,0.5) !important;
-  padding: 16px 24px !important;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.25) !important;
+  padding: 10px 20px !important;
   display: flex !important;
   align-items: center !important;
   flex-wrap: wrap !important;
-  gap: 12px !important;
+  gap: 10px !important;
 }
 #tarteaucitronDisclaimerAlert {
-  color: var(--color-text-2) !important;
+  color: var(--color-text-3) !important;
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.8125rem !important;
-  line-height: 1.5 !important;
+  font-size: 0.75rem !important;
+  line-height: 1.45 !important;
   flex: 1 1 220px !important;
 }
 .tarteaucitronAlertBigPrivacyUrl {
-  color: var(--color-gold-light) !important;
+  color: var(--color-text-2) !important;
   text-decoration: underline !important;
   white-space: nowrap !important;
 }
@@ -4324,24 +4324,24 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
   background: var(--color-gold) !important;
   color: #fff !important;
   border: none !important;
-  border-radius: 8px !important;
-  padding: 8px 18px !important;
+  border-radius: 6px !important;
+  padding: 5px 14px !important;
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.875rem !important;
-  font-weight: 600 !important;
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
   cursor: pointer !important;
   white-space: nowrap !important;
   transition: background 0.2s !important;
 }
-#tarteaucitronPersonalize2:hover { background: var(--color-gold-light) !important; }
+#tarteaucitronPersonalize2:hover { background: var(--color-gold) !important; }
 #tarteaucitronCloseAlert {
   background: transparent !important;
-  color: var(--color-text-2) !important;
+  color: var(--color-text-3) !important;
   border: 1px solid var(--color-border-light) !important;
-  border-radius: 8px !important;
-  padding: 8px 18px !important;
+  border-radius: 6px !important;
+  padding: 5px 14px !important;
   font-family: 'Inter', sans-serif !important;
-  font-size: 0.875rem !important;
+  font-size: 0.8125rem !important;
   font-weight: 500 !important;
   cursor: pointer !important;
   white-space: nowrap !important;
@@ -4355,21 +4355,21 @@ details[open] .accordion__arrow { transform: rotate(180deg); }
   background: transparent !important;
   color: var(--color-text-3) !important;
   border: none !important;
-  font-size: 0.75rem !important;
+  font-size: 0.6875rem !important;
   font-family: 'Inter', sans-serif !important;
   cursor: pointer !important;
   padding: 0 !important;
   text-decoration: underline !important;
 }
 #tarteaucitronIcon {
-  background: #0f0f1a !important;
+  background: var(--color-surface) !important;
   border: 1px solid var(--color-border) !important;
   border-radius: 8px 8px 0 0 !important;
   bottom: 0 !important;
 }
 #tarteaucitronIcon a { color: var(--color-text-3) !important; font-family: 'Inter', sans-serif !important; font-size: 0.75rem !important; }
 @media (max-width: 640px) {
-  #tarteaucitronAlertBig { padding: 14px 16px !important; }
+  #tarteaucitronAlertBig { padding: 10px 14px !important; }
   #tarteaucitronAlertBigBtns { width: 100% !important; }
   #tarteaucitronPersonalize2,
   #tarteaucitronCloseAlert { flex: 1 !important; text-align: center !important; }
