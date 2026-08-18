@@ -239,19 +239,16 @@
     "lasuite_subtitle": "Jeux interactifs, analyse de mains, communauté active — l'application qui va bien au-delà des leçons.",
     "lasuite_cards": [
       {
-        "icon": "🎮",
         "title": "Jeux",
         "desc": "Des mini-jeux pour ancrer les concepts, des défis pour se challenger et des classements pour rester motivé.",
         "cta": "En savoir plus →"
       },
       {
-        "icon": "📊",
         "title": "Analyse",
         "desc": "Décortiquez vos sessions, identifiez vos erreurs récurrentes et affinez votre jeu. Bientôt enrichi par une analyse assistée par IA.",
         "cta": "En savoir plus →"
       },
       {
-        "icon": "👥",
         "title": "Communauté",
         "desc": "Échangez avec des milliers de joueurs, partagez vos mains et progressez entouré de gens qui ont les mêmes objectifs que vous.",
         "cta": "En savoir plus →"
