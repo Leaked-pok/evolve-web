@@ -23,12 +23,14 @@ const HEADERS_HTML = {
 };
 
 // Extraite pour être testée sans mocker le réseau/Blobs.
+// Ne fait confiance qu'à x-nf-client-connection-ip (posé par la plateforme
+// Netlify elle-même, non falsifiable par le client). x-forwarded-for est
+// fourni par le client et permettrait de contourner le rate limiting en
+// changeant d'IP annoncée à chaque requête — pas utilisé comme fallback.
 function getClientIp(event) {
   const headers = event.headers || {};
   const nfIp = headers['x-nf-client-connection-ip'];
   if (nfIp) return nfIp;
-  const forwarded = headers['x-forwarded-for'];
-  if (forwarded) return forwarded.split(',')[0].trim();
   return 'unknown';
 }
 
@@ -60,6 +62,7 @@ exports.handler = async function(event) {
   try {
     store = getStore('lesson-votes');
   } catch (err) {
+    console.error('[lesson-vote] getStore a levé une exception:', err);
     return { statusCode: 500, headers: HEADERS_JSON, body: JSON.stringify({ error: 'Store unavailable' }) };
   }
 
@@ -67,8 +70,17 @@ exports.handler = async function(event) {
   if (event.httpMethod === 'GET') {
     const lesson = event.queryStringParameters && event.queryStringParameters.lesson;
 
-    // Vue admin : liste toutes les leçons
+    // Vue admin : liste toutes les leçons. Protégée par un token partagé
+    // (var d'env LESSON_VOTE_ADMIN_TOKEN côté Netlify) — sans quoi elle était
+    // accessible publiquement à n'importe qui connaissant l'URL. Fail-closed :
+    // si le token n'est pas configuré, la vue reste indisponible (404).
     if (!lesson) {
+      const adminToken = process.env.LESSON_VOTE_ADMIN_TOKEN;
+      const providedToken = event.queryStringParameters && event.queryStringParameters.token;
+      if (!adminToken || providedToken !== adminToken) {
+        return { statusCode: 404, headers: HEADERS_JSON, body: JSON.stringify({ error: 'Not found' }) };
+      }
+
       const { blobs } = await store.list().catch(() => ({ blobs: [] }));
       const results = [];
       for (const blob of blobs) {

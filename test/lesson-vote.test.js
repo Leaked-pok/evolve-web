@@ -41,9 +41,9 @@ test('getClientIp privilégie x-nf-client-connection-ip', () => {
   assert.equal(ip, '1.2.3.4');
 });
 
-test('getClientIp retombe sur la première IP de x-forwarded-for', () => {
+test('getClientIp ignore x-forwarded-for (falsifiable par le client, contournerait le rate limiting)', () => {
   const ip = getClientIp({ headers: { 'x-forwarded-for': '9.9.9.9, 10.10.10.10' } });
-  assert.equal(ip, '9.9.9.9');
+  assert.equal(ip, 'unknown');
 });
 
 test('getClientIp renvoie "unknown" sans en-tête IP', () => {
