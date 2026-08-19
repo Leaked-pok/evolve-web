@@ -21,6 +21,11 @@
         "desc": "<p>Le responsable du traitement au sens du Règlement (UE) 2016/679 (RGPD) est l'éditeur du Service Evolve Poker, joignable par email à <strong>contact.evolvepoker@gmail.com</strong>.</p><p>La présente Politique de confidentialité s'applique à l'ensemble du Service Evolve Poker&nbsp;: site vitrine, application mobile Android et iOS, et contenus pédagogiques accessibles via webview depuis l'application.</p>"
       },
       {
+        "overline": "Origine des contenus pédagogiques",
+        "title": "Comment sont produits les contenus des leçons ?",
+        "desc": "<p>Les contenus des leçons Academy sont rédigés avec l'assistance d'outils d'intelligence artificielle, puis systématiquement relus et validés par l'éditeur du Service avant publication. Aucun contenu n'est publié sans ce contrôle éditorial humain.</p><p>Cette mention s'inscrit dans une démarche de transparence conforme à l'article&nbsp;50 du Règlement (UE) 2024/1689 sur l'intelligence artificielle (AI Act).</p>"
+      },
+      {
         "overline": "Données collectées",
         "title": "Quelles données traitons-nous ?",
         "desc": "<p><strong>Données de compte&nbsp;:</strong> adresse email, pseudo choisi par l'utilisateur, photo de profil (si connexion via Google OAuth 2.0), mot de passe chiffré (si inscription email), prénom, nom, pays et âge (facultatifs, renseignés depuis les Réglages), email et numéro de téléphone de récupération de compte (facultatifs).</p><p><strong>Données de progression&nbsp;:</strong> leçons consultées, scores obtenus, modules complétés, statistiques d'apprentissage, badges et niveaux atteints.</p><p><strong>Contenu utilisateur&nbsp;:</strong> mains de poker enregistrées et annotées, ranges personnalisées, notes de session saisies dans l'application.</p><p><strong>Données de communauté&nbsp;:</strong> pseudo et score rendus publics dans les classements de l'application.</p><p><strong>Données techniques&nbsp;:</strong> adresse IP, type d'appareil, système d'exploitation, version de l'application, logs d'accès et identifiants de session.</p><p><strong>Données publicitaires (à venir, avec consentement)&nbsp;:</strong> identifiant publicitaire (IDFA sur iOS, GAID sur Android) et données d'interaction avec les publicités affichées.</p>"

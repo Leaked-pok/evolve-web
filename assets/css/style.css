@@ -3474,7 +3474,7 @@ p {
 }
 .lesson-feedback__label {
   font-size: var(--text-sm);
-  color: var(--color-text-3);
+  color: var(--color-text-2);
   margin: 0 0 var(--space-4);
 }
 .lesson-feedback__row {
