@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.evolvepoker.app",
+      "sha256_cert_fingerprints": [
+        "8C:B2:3D:45:AD:C8:FD:C4:8F:02:BC:68:14:04:63:9A:89:C0:CB:93:84:A3:59:89:2B:33:F8:FA:22:9C:A6:38",
+        "84:62:66:68:0D:5B:52:CB:9D:19:69:76:5A:15:94:9F:9E:FF:A0:95:0A:6C:2C:68:74:92:F4:C4:AF:32:4F:F9"
+      ]
+    }
+  }
+]
